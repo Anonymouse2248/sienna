@@ -9,7 +9,7 @@
           </svg>
         </button>
 
-        <button class="nav-btn" onclick="navigate('/g')" data-page="/g" data-tooltip="Games">
+        <button class="nav-btn" onclick="navigate('/games.html')" data-page="/games.html" data-tooltip="Games">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <line x1="6" y1="11" x2="10" y2="11"/>
             <line x1="8" y1="9" x2="8" y2="13"/>
@@ -19,7 +19,7 @@
           </svg>
         </button>
 
-        <button class="nav-btn" onclick="navigate('/a')" data-page="/a" data-tooltip="Apps">
+        <button class="nav-btn" onclick="navigate('/apps.html')" data-page="/apps.html" data-tooltip="Apps">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <rect x="3" y="3" width="7" height="7"/>
             <rect x="14" y="3" width="7" height="7"/>
@@ -28,7 +28,7 @@
           </svg>
         </button>
 
-        <button class="nav-btn" onclick="navigate('/s')" data-page="/s" data-tooltip="Settings">
+        <button class="nav-btn" onclick="navigate('/settings.html')" data-page="/settings.html" data-tooltip="Settings">
           <!-- Unicode gear fallback to avoid SVG rendering issues -->
           <span class="text-icon" aria-hidden="true">⚙</span>
         </button>
@@ -144,83 +144,4 @@ function openInBlank() {
 
 document.addEventListener("DOMContentLoaded", () => {
   loadSidebar();
-  
-  // Add sidebar styles
-  const style = document.createElement('style');
-  style.textContent = `
-    .sidebar {
-      width: 50px;
-      background-color: #000;
-      display: flex;
-      flex-direction: column;
-      padding: 15px 0;
-      gap: 10px;
-    }
-
-    .nav-btn {
-      width: 50px;
-      height: 50px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background-color: transparent;
-      border: none;
-      color: #a0a0a0;
-      cursor: pointer;
-      transition: all 0.2s ease;
-      margin: 0 auto;
-      outline: none;
-    }
-
-    .nav-btn:focus {
-      outline: none !important;
-    }
-
-    .nav-btn:focus-visible {
-      outline: none !important;
-    }
-
-    .nav-btn {
-      -webkit-tap-highlight-color: transparent;
-    }
-
-    .nav-btn:hover {
-      color: #ffffff;
-    }
-
-    .nav-btn.active {
-      color: #ffffff;
-      background-color: transparent;
-      box-shadow: none;
-    }
-
-    /* slightly smaller button for secondary actions */
-    .small-btn {
-      width: 40px;
-      height: 40px;
-    }
-
-    .text-icon {
-      font-size: 28px; /* larger gear */
-      line-height: 1;
-      color: currentColor;
-      display: inline-block;
-      pointer-events: none;
-      transform: translateY(1px);
-    }
-
-    #tooltip {
-      position: fixed;
-      background-color: rgba(255, 255, 255, 0.9);
-      color: #000;
-      padding: 6px 10px;
-      border-radius: 4px;
-      font-size: 12px;
-      pointer-events: none;
-      opacity: 0;
-      transition: opacity 0.2s ease;
-      z-index: 1000;
-    }
-  `;
-  document.head.appendChild(style);
 });

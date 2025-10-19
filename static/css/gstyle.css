@@ -24,7 +24,7 @@ html, body {
     --secondary-text: #888;
     --accent-text: #9ca3af;
     --sidebar-bg: #1f1f1f;
-  --sidebar-width: 80px; /* sidebar width on desktop */
+  --sidebar-width: 60px; /* slimmer sidebar width on desktop */
     --border-color: #333;
     --text-shadow-1: rgba(255, 255, 255, 0.5);
     --text-shadow-2: rgba(255, 255, 255, 0.3);
@@ -63,13 +63,14 @@ body::after {
     left: 0;
     top: 0;
     height: 100vh;
+  width: var(--sidebar-width);
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 24px 0;
     z-index: 1000;
-    background: var(--sidebar-bg);
-    border-right: 1px solid #2a2a2a;
+  background: #000; /* pure black sidebar */
+  border-right: none; /* remove border to avoid seam next to overlay */
 }
 
 /* ===============================
@@ -121,6 +122,28 @@ body::after {
     pointer-events: none; /* allow clicks */
 }
 
+/* Performance mode: when a heavy game modal is open, reduce background work */
+body.performance-mode * {
+  animation-play-state: paused !important;
+  transition: none !important;
+}
+
+/* Allow animations/transitions inside the active game modal to run normally */
+body.performance-mode #game-modal,
+body.performance-mode #game-modal * {
+  animation-play-state: running !important;
+  transition: initial !important;
+}
+
+body.performance-mode #particleCanvas {
+  display: none !important;
+}
+
+/* In performance mode, avoid fixed background-attachment which can be costly */
+body.performance-mode::after {
+  background-attachment: scroll;
+}
+
 
 
     .nav-section {
@@ -152,11 +175,10 @@ body::after {
 
 
     .container {
-      margin-left: 80px;
-      padding: 40px 40px 40px 60px;
+      margin-left: var(--sidebar-width);
+      padding: 40px; /* uniform padding; remove redundant extra-left padding */
       max-width: 1600px;
       margin-right: auto;
-      padding-left: 100px;
     }
 
     .header {
@@ -605,7 +627,7 @@ body::after {
 
     @media (max-width: 768px) {
       .sidebar {
-        width: 60px;
+        width: var(--sidebar-width);
       }
 
       .logo {
@@ -623,7 +645,7 @@ body::after {
       }
 
       .container {
-        margin-left: 60px;
+        margin-left: var(--sidebar-width);
         padding: 20px;
       }
 
@@ -691,11 +713,12 @@ body::after {
   top: 0;
   right: 0;
   bottom: 0;
-  left: var(--sidebar-width); /* leave room for sidebar */
+  left: var(--sidebar-width); /* align to sidebar edge */
   width: calc(100% - var(--sidebar-width));
   height: 100vh;
   background: rgba(0, 0, 0, 0.6); /* slightly dark overlay */
   backdrop-filter: blur(4px); /* glass effect */
+  border-left: 1px solid rgba(0,0,0,0.6); /* fill any subpixel gap without covering sidebar */
   z-index: 2000;
   display: none;
   align-items: center;
@@ -1170,7 +1193,7 @@ body::after {
   border-radius: 50%;
   animation: spin-translate 1s linear infinite;
   display: none;
-  z-index: 10;
+  z-index: 21; /* below overlay (22) so overlay GIF shows above spinner */
 }
 
 @keyframes spin-translate {
@@ -1374,6 +1397,25 @@ body::after {
   }
 }
 
+/* Full-modal loading overlay (shows GIF while iframe/assets load) */
+.modal-loading-overlay {
+  position: absolute;
+  inset: 0;
+  display: none; /* hidden by default; JS toggles it */
+  align-items: center;
+  justify-content: center;
+  background: #0b0b0b; /* solid background over iframe area only */
+  z-index: 22; /* above spinner */
+}
+
+.modal-loading-overlay img {
+  max-width: 40vmin;
+  max-height: 40vmin;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
 /* Modal loading progress bar (thin, browser-like) */
 .modal-progress {
   position: absolute;
@@ -1410,4 +1452,26 @@ body::after {
 .game-modal.active .game-modal-content {
   transform: scale(1);
   opacity: 1;
+}
+
+/* Tooltip for sidebar buttons */
+#tooltip {
+  position: fixed;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #000;
+  padding: 6px 10px;
+  border-radius: 4px;
+  font-size: 12px;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  z-index: 1200;
+}
+
+/* Reduce costly effects during performance mode */
+body.performance-mode .game-modal {
+  backdrop-filter: none;
+}
+body.performance-mode .game-modal-content {
+  box-shadow: none;
 }

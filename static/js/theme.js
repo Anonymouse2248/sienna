@@ -272,90 +272,126 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// Particle system
+// Particle system with pause/resume controls
 const canvas = document.getElementById("particleCanvas");
 // Check if canvas exists before running particle system
 if (canvas) {
-    const ctx = canvas.getContext("2d");
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-    let particles = [];
-    let mouseX = canvas.width / 2;
-    let mouseY = canvas.height / 2;
+    const ctx = canvas.getContext("2d");
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    let particles = [];
+    let mouseX = canvas.width / 2;
+    let mouseY = canvas.height / 2;
+    let rafId = null;
+    let running = false;
 
-    class Particle {
-        constructor() {
-            this.x = Math.random() * canvas.width;
-            this.y = Math.random() * canvas.height;
-            this.size = Math.random() * 2 + 1;
-            this.speedY = Math.random() * 0.8 + 0.3;
-            this.opacity = Math.random() * 0.5 + 0.3;
-        }
-        update() {
-            this.y += this.speedY;
-            if (this.y > canvas.height) {
-                this.y = -10;
-                this.x = Math.random() * canvas.width;
-            }
-        }
-        draw() {
-            ctx.fillStyle = `rgba(255, 255, 255, ${this.opacity})`;
-            ctx.beginPath();
-            ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-            ctx.fill();
-        }
-    }
+    class Particle {
+        constructor() {
+            this.x = Math.random() * canvas.width;
+            this.y = Math.random() * canvas.height;
+            this.size = Math.random() * 2 + 1;
+            this.speedY = Math.random() * 0.8 + 0.3;
+            this.opacity = Math.random() * 0.5 + 0.3;
+        }
+        update() {
+            this.y += this.speedY;
+            if (this.y > canvas.height) {
+                this.y = -10;
+                this.x = Math.random() * canvas.width;
+            }
+        }
+        draw() {
+            ctx.fillStyle = `rgba(255, 255, 255, ${this.opacity})`;
+            ctx.beginPath();
+            ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+            ctx.fill();
+        }
+    }
 
-    // Initialize particles
-    for (let i = 0; i < 125; i++) {
-        particles.push(new Particle());
-    }
+    // Initialize particles
+    for (let i = 0; i < 125; i++) {
+        particles.push(new Particle());
+    }
 
-    // Mouse tracking
-    document.addEventListener("mousemove", (e) => {
-        mouseX = e.clientX;
-        mouseY = e.clientY;
-    });
+    // Mouse tracking
+    document.addEventListener("mousemove", (e) => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+    });
 
-    window.addEventListener("resize", () => {
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
-    });
+    window.addEventListener("resize", () => {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+    });
 
-    function drawLines() {
-        const connectionDistance = 200;
-        for (let i = 0; i < particles.length; i++) {
-            const particle = particles[i];
-            
-            // Draw line from cursor to nearby particles
-            const dx = particle.x - mouseX;
-            const dy = particle.y - mouseY;
-            const distance = Math.sqrt(dx * dx + dy * dy);
-            if (distance < connectionDistance) {
-                const opacity = (1 - distance / connectionDistance) * 0.3;
-                ctx.strokeStyle = `rgba(255, 255, 255, ${opacity})`;
-                ctx.lineWidth = 1;
-                ctx.beginPath();
-                ctx.moveTo(mouseX, mouseY);
-                ctx.lineTo(particle.x, particle.y);
-                ctx.stroke();
-            }
-        }
-    }
+    function drawLines() {
+        const connectionDistance = 200;
+        for (let i = 0; i < particles.length; i++) {
+            const particle = particles[i];
+            const dx = particle.x - mouseX;
+            const dy = particle.y - mouseY;
+            const distance = Math.sqrt(dx * dx + dy * dy);
+            if (distance < connectionDistance) {
+                const opacity = (1 - distance / connectionDistance) * 0.3;
+                ctx.strokeStyle = `rgba(255, 255, 255, ${opacity})`;
+                ctx.lineWidth = 1;
+                ctx.beginPath();
+                ctx.moveTo(mouseX, mouseY);
+                ctx.lineTo(particle.x, particle.y);
+                ctx.stroke();
+            }
+        }
+    }
 
-    function animate() {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        // Update and draw particles
-        particles.forEach((particle) => {
-            particle.update();
-            particle.draw();
-        });
-        // Draw connection lines
-        drawLines();
-        requestAnimationFrame(animate);
-    }
+    function frame() {
+        if (!running) return;
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        // Update and draw particles
+        particles.forEach((particle) => {
+            particle.update();
+            particle.draw();
+        });
+        // Draw connection lines
+        drawLines();
+        rafId = requestAnimationFrame(frame);
+    }
 
-    animate();
+    function start() {
+        if (running) return;
+        running = true;
+        canvas.style.display = 'block';
+        rafId = requestAnimationFrame(frame);
+    }
+
+    function stop() {
+        if (!running) return;
+        running = false;
+        if (rafId) cancelAnimationFrame(rafId);
+        rafId = null;
+        // Clear canvas and hide to avoid paints
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        canvas.style.display = 'none';
+    }
+
+    // Auto start when page loads
+    start();
+
+    // Expose a tiny API for other scripts
+    window.particleBg = {
+        pause: stop,
+        resume: start,
+        isRunning: () => running
+    };
+
+    // Save extra CPU when tab is hidden
+    document.addEventListener('visibilitychange', () => {
+        if (document.hidden) {
+            stop();
+        } else if (!document.hidden && !window.gameModalOpen) {
+            // Only resume if the game modal is not open
+            start();
+        }
+    });
 }
 
 

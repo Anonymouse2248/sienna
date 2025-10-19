@@ -1,0 +1,4478 @@
+﻿[
+    {
+        "name":  "Request A Game!",
+        "image":  "static/icons/link.webp",
+        "url":  "contact.html",
+        "category":  "button",
+        "categories": []
+    },
+    {
+        "name":  "1v1.lol",
+        "image":  "static/icons/1v1lol.webp",
+        "url":  "static/mages/1v1lol/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "BuildNow.GG",
+        "image":  "static/icons/buildnowgg.webp",
+        "url":  "static/mages/buildnowgg/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "JustFall.LOL",
+        "image":  "static/icons/justfalllol.webp",
+        "url":  "static/mages/justfalllol/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Crazy Cattle 3D",
+        "image":  "static/icons/crazycattle3d.webp",
+        "url":  "static/mages/crazycattle3d/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Crazy Cattle 3D+",
+        "image":  "static/icons/crazycattle3d+.webp",
+        "url":  "static/mages/crazycattle3d+/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Crazy Kitten 3d ",
+        "image":  "static/icons/crazykitten3d.webp",
+        "url":  "static/mages/crazykitten3d/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Crazy Chicken 3d ",
+        "image":  "static/icons/crazychicken3d.webp",
+        "url":  "static/mages/crazychicken3d/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Make Sure It\u0027s Closed",
+        "image":  "static/icons/makesureitsclosed.webp",
+        "url":  "static/mages/makesureitsclosed/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "That's Not My Neighbor",
+        "image":  "static/icons/thatsnotmyneighbor.webp",
+        "url":  "static/mages/thatsnotmyneighbor/index.html",
+        "category":  "Casual",
+        "categories": ["Horror"]
+    },
+    {
+        "name":  "Last Train Home",
+        "image":  "static/icons/lasttrainhome.webp",
+        "url":  "static/mages/lasttrainhome/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Granny",
+        "image":  "static/icons/granny.webp",
+        "url":  "static/mages/granny/index.html",
+        "category":  "Adventure",
+        "categories": ["Horror", "Adventure"]
+    },
+    {
+        "name":  "Granny 2",
+        "image":  "static/icons/granny2.webp",
+        "url":  "static/mages/granny2/index.html",
+        "category":  "Adventure",
+        "categories": ["Flash", "Horror", "Adventure"]
+    },
+    {
+        "name":  "10 Minutes Till Dawn",
+        "image":  "static/icons/10minutestilldawn.webp",
+        "url":  "static/mages/10minutestilldawn/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Clash of Vikings",
+        "image":  "static/icons/clashofvikings.webp",
+        "url":  "static/mages/clashofvikings/index.html",
+        "category":  "Strategy",
+        "categories": ["Strategy"]
+    },
+    {
+        "name":  "Bloxors",
+        "image":  "static/icons/bloxors.webp",
+        "url":  "static/mages/bloxors/index.html",
+        "category":  "Strategy",
+        "categories": ["Flash", "Strategy"]
+    },
+    {
+        "name":  "Miss Inconspicuous",
+        "image":  "static/icons/missInconspicuous.webp",
+        "url":  "static/mages/missInconspicuous/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Miss Inconspicuous 2",
+        "image":  "static/icons/missInconspicuous2.webp",
+        "url":  "static/mages/missInconspicuous2/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Doki Doki Literature Club",
+        "image":  "static/icons/dokidoki.webp",
+        "url":  "static/mages/dokidokiliteratureclub/index.html",
+        "category":  "Strategy",
+        "categories": ["Strategy"]
+    },
+    {
+        "name":  "Class of \u002709",
+        "image":  "static/icons/classof09.webp",
+        "url":  "static/mages/classof09/index.html",
+        "category":  "Strategy",
+        "categories": ["Strategy"]
+    },
+    {
+        "name":  "Yandere Simulator DEMO",
+        "image":  "static/icons/yanderesim.webp",
+        "url":  "static/mages/yanderesim/index.html",
+        "category":  "Strategy",
+        "categories": ["Strategy"]
+    },
+    {
+        "name":  "Omori",
+        "image":  "static/icons/omori.webp",
+        "url":  "static/mages/omori/index.html",
+        "category":  "Strategy",
+        "categories": ["Strategy"]
+    },
+    {
+        "name":  "Bad Parenting",
+        "image":  "static/icons/badparenting.webp",
+        "url":  "static/mages/badparenting/index.html",
+        "category":  "Strategy",
+        "categories": ["Strategy"]
+    },
+    {
+        "name":  "Hollow Knight",
+        "image":  "static/icons/hollowknight.webp",
+        "url":  "static/mages/hollowknight/index.html",
+        "category":  "Adventure",
+        "categories": ["Flash", "Adventure"]
+    },
+    {
+        "name":  "Hollow Knight Beta Demake",
+        "image":  "static/icons/hollowknightbd.webp",
+        "url":  "static/mages/hollowknightbd/index.html",
+        "category":  "Adventure",
+        "categories": ["Adventure"]
+    },
+    {
+        "name":  "Hollow Knight Silksong Beta Demake",
+        "image":  "static/icons/hollowknightssbd.webp",
+        "url":  "static/mages/hollowknightssbd/index.html",
+        "category":  "Adventure",
+        "categories": ["Adventure"]
+    },
+    {
+        "name":  "Hollow Knight Fools Song",
+        "image":  "static/icons/hollowknightfs.webp",
+        "url":  "static/mages/hollowknightfs/index.html",
+        "category":  "Adventure",
+        "categories": ["Adventure"]
+    },
+    {
+        "name":  "Hungry Knight",
+        "image":  "static/icons/hungryknight.webp",
+        "url":  "static/mages/hungryknight/index.html",
+        "category":  "Adventure",
+        "categories": ["Adventure"]
+    },
+    {
+        "name":  "Celeste Classic",
+        "image":  "static/icons/celesteclassic.webp",
+        "url":  "static/mages/celesteclassic/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Celeste Classic 2",
+        "image":  "static/icons/celesteclassic2.webp",
+        "url":  "static/mages/celesteclassic2/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "R.E.P.O",
+        "image":  "static/icons/repo.webp",
+        "url":  "static/mages/repo/index.html",
+        "category":  "Strategy",
+        "categories": ["Strategy"]
+    },
+    {
+        "name":  "Ultrakill DEMO",
+        "image":  "static/icons/ultrakill.webp",
+        "url":  "static/mages/ultrakill/index.html",
+        "category":  "Action",
+        "categories": ["Action"]
+    },
+    {
+        "name":  "Get Yoked",
+        "image":  "static/icons/getyoked.webp",
+        "url":  "static/mages/getyoked/index.html",
+        "category":  "Strategy",
+        "categories": ["Strategy"]
+    },
+    {
+        "name":  "Please Don\u0027t Feed Me",
+        "image":  "static/icons/pleasedontfeedme.webp",
+        "url":  "static/mages/pleasedontfeedme/index.html",
+        "category":  "Strategy",
+        "categories": ["Strategy"]
+    },
+    {
+        "name":  "Buckshot Roulette",
+        "image":  "static/icons/buckshotroulette.webp",
+        "url":  "static/mages/buckshotroulette/index.html",
+        "category":  "Strategy",
+        "categories": ["Strategy"]
+    },
+    {
+        "name":  "Bendy and the Ink Machine",
+        "image":  "static/icons/bendyink.webp",
+        "url":  "static/mages/bendyink/index.html",
+        "category":  "Strategy",
+        "categories": ["Strategy"]
+    },
+    {
+        "name":  "Webfishing",
+        "image":  "static/icons/webfishing.webp",
+        "url":  "static/mages/webfishing/index.html",
+        "category":  "Strategy",
+        "categories": ["Strategy"]
+    },
+    {
+        "name":  "Wiggly Paint",
+        "image":  "static/icons/wigglypaint.webp",
+        "url":  "static/mages/wigglypaint/index.html",
+        "category":  "Strategy",
+        "categories": ["Strategy"]
+    },
+    {
+        "name":  "Terraria Scratch",
+        "image":  "static/icons/terrariascratch.webp",
+        "url":  "static/mages/terrariascratch/index.html",
+        "category":  "Adventure",
+        "categories": ["Adventure"]
+    },
+    {
+        "name":  "Terra: Terraria Demake",
+        "image":  "static/icons/terra.webp",
+        "url":  "static/mages/terra/index.html",
+        "category":  "Adventure",
+        "categories": ["Adventure"]
+    },
+    {
+        "name":  "Appel",
+        "image":  "static/icons/appel.webp",
+        "url":  "static/mages/appel/index.html",
+        "category":  "Adventure",
+        "categories": ["Adventure"]
+    },
+    {
+        "name":  "Sprunki",
+        "image":  "static/icons/sprunki.webp",
+        "url":  "static/mages/sprunki/index.html",
+        "category":  "Action",
+        "categories": ["Action"]
+    },
+    {
+        "name":  "Bad Ice Cream",
+        "image":  "static/icons/badicecream.webp",
+        "url":  "static/mages/badicecream/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Bad Ice Cream 2",
+        "image":  "static/icons/badicecream2.webp",
+        "url":  "static/mages/badicecream2/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Bad Ice Cream 3",
+        "image":  "static/icons/badicecream3.webp",
+        "url":  "static/mages/badicecream3/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Nitrome Must Die!",
+        "image":  "static/icons/nitromemustdie.webp",
+        "url":  "static/mages/nitromemustdie/index.html",
+        "category":  "Casual",
+        "categories": ["Flash", "Casual"]
+    },
+    {
+        "name":  "Glassworks",
+        "image":  "static/icons/glassworks.webp",
+        "url":  "static/mages/glassworks/index.html",
+        "category":  "Casual",
+        "categories": ["Flash", "Casual"]
+    },
+    {
+        "name":  "Headcase",
+        "image":  "static/icons/headcase.webp",
+        "url":  "static/mages/headcase/index.html",
+        "category":  "Casual",
+        "categories": ["Flash", "Casual"]
+    },
+    {
+        "name":  "Plunger",
+        "image":  "static/icons/plunger.webp",
+        "url":  "static/mages/plunger/index.html",
+        "category":  "Casual",
+        "categories": ["Flash", "Casual"]
+    },
+    {
+        "name":  "Gunbrick",
+        "image":  "static/icons/gunbrick.webp",
+        "url":  "static/mages/gunbrick/index.html",
+        "category":  "Action",
+        "categories": ["Flash", "Action"]
+    },
+    {
+        "name":  "Skywire VIP",
+        "image":  "static/icons/skywirevip.webp",
+        "url":  "static/mages/skywirevip/index.html",
+        "category":  "Casual",
+        "categories": ["Flash", "Casual"]
+    },
+    {
+        "name":  "WOP",
+        "image":  "static/icons/wop.webp",
+        "url":  "static/mages/wop/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Speed Stars",
+        "image":  "static/icons/speedstars.webp",
+        "url":  "static/mages/speedstars/index.html",
+        "category":  "Action",
+        "categories": ["Action"]
+    },
+    {
+        "name":  "Beach Club!",
+        "image":  "static/icons/beachclub.webp",
+        "url":  "static/mages/beachclub/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Pet Simulator",
+        "image":  "static/icons/petsimulator.webp",
+        "url":  "static/mages/petsimulator/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "OvO",
+        "image":  "static/icons/ovo.webp",
+        "url":  "static/mages/ovo/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "OvO 2",
+        "image":  "static/icons/ovo2.webp",
+        "url":  "static/mages/ovo2/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "OvO 3: Dimensional",
+        "image":  "static/icons/ovo3.webp",
+        "url":  "static/mages/ovo3/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Hungry Lamu",
+        "image":  "static/icons/hungrylamu.webp",
+        "url":  "static/mages/hungrylamu/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Tunnel Rush",
+        "image":  "static/icons/tunnelrush.webp",
+        "url":  "static/mages/tunnelrush/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "3 Lines",
+        "image":  "static/icons/3lines.webp",
+        "url":  "static/mages/3lines/index.html",
+        "category":  "Casual",
+        "categories": ["Flash", "Casual"]
+    },
+    {
+        "name":  "Elastic Man",
+        "image":  "static/icons/elasticman.webp",
+        "url":  "static/mages/elasticman/play.html",
+        "category":  "Strategy",
+        "categories": ["Strategy"]
+    },
+    {
+        "name":  "Deal Or No Deal",
+        "image":  "static/icons/dealornodeal.webp",
+        "url":  "static/mages/dealornodeal/index.html",
+        "category":  "Casual",
+        "categories": ["Flash", "Casual"]
+    },
+    {
+        "name":  "60 Seconds Burger Run",
+        "image":  "static/icons/60sburgerrun.webp",
+        "url":  "static/mages/60sburgerrun/index.html",
+        "category":  "Sports",
+        "categories": ["Sports"]
+    },
+    {
+        "name":  "60 Seconds Santa Run",
+        "image":  "static/icons/60ssantarun.webp",
+        "url":  "static/mages/60ssantarun/index.html",
+        "category":  "Sports",
+        "categories": ["Flash", "Sports"]
+    },
+    {
+        "name":  "Sausage Flip",
+        "image":  "static/icons/sausageflip.webp",
+        "url":  "static/mages/sausageflip/index.html",
+        "category":  "Sports",
+        "categories": ["Sports"]
+    },
+    {
+        "name":  "99 Night's In The Forest",
+        "image":  "static/icons/99nightsintheforest.webp",
+        "url":  "static/mages/99nightsintheforest/index.html",
+        "category":  "Horror"
+    },
+    {
+        "name":  "Grow A Garden",
+        "image":  "static/icons/growagarden.webp",
+        "url":  "static/mages/growagarden/index.html",
+        "category":  "Casual"
+    },
+    {
+        "name":  "Plants vs. Brainrots",
+        "image":  "static/icons/plantsvsbrainrots.webp",
+        "url":  "static/mages/plantsvsbrainrots/index.html",
+        "category":  "Casual"
+    },
+    {
+        "name":  "Growden.io (external)",
+        "image":  "static/icons/growdenio.webp",
+        "url":  "https://cdn-sienna-growdenio-n4jcyz1r8k5m3w9x2t7b0vd6q.vercel.app",
+        "category":  "Casual"
+    },
+    {
+        "name":  "Steal A Brain Rot RU",
+        "image":  "static/icons/sabr.webp",
+        "url":  "static/mages/sabr/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Steal A Brain Rot Online",
+        "image":  "static/icons/sabronline.webp",
+        "url":  "static/mages/stealabrainrotonline/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Italian Brainrot Parkour",
+        "image":  "static/icons/italianbrainrotparkour.webp",
+        "url":  "static/mages/italianbrainrotparkour/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Italian Brainrot Bike Rush",
+        "image":  "static/icons/brainrotbikerush.webp",
+        "url":  "static/mages/brainrotbikerush/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Italian Brainrot Clicker",
+        "image":  "static/icons/brainrotclicker.webp",
+        "url":  "static/mages/brainrotclicker/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Italian Baby Brainrot Clicker",
+        "image":  "static/icons/babybrainrotclicker.webp",
+        "url":  "static/mages/babybrainrotclicker/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Brainrot Merge",
+        "image":  "static/icons/brainrotmerge.webp",
+        "url":  "static/mages/brainrotmerge/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Only Up",
+        "image":  "static/icons/onlyup.webp",
+        "url":  "static/mages/onlyup/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "A Dance Of Fire And Ice",
+        "image":  "static/icons/adanceoffireandice.webp",
+        "url":  "static/mages/adanceoffireandice/index.html",
+        "category":  "Casual",
+        "categories": ["Rhythm", "Casual"]
+    },
+    {
+        "name":  "Adventure Capitalist",
+        "image":  "static/icons/adventurecapitalist.webp",
+        "url":  "static/mages/adventurecapitalist/index.html",
+        "category":  "Strategy",
+        "categories": ["Strategy"]
+    },
+    {
+        "name":  "Core Ball",
+        "image":  "static/icons/coreball.webp",
+        "url":  "static/mages/coreball/index.html",
+        "category":  "Sports",
+        "categories": ["Sports"]
+    },
+    {
+        "name":  "Knife Hit",
+        "image":  "static/icons/knifehit.webp",
+        "url":  "static/mages/knifehit/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Halloween Knife",
+        "image":  "static/icons/halloweenknife.webp",
+        "url":  "static/mages/halloweenknife/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Boba Simulator",
+        "image":  "static/icons/bobasimulator.webp",
+        "url":  "static/mages/bobasimulator/index.html",
+        "category":  "Strategy",
+        "categories": ["Strategy"]
+    },
+    {
+        "name":  "Happy Cat Tavern",
+        "image":  "static/icons/happycattavern.webp",
+        "url":  "static/mages/happycattavern/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Serenitrove",
+        "image":  "static/icons/serenitrove.webp",
+        "url":  "static/mages/serenitrove/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Bad Piggies",
+        "image":  "static/icons/badpiggies.webp",
+        "url":  "static/mages/badpiggies/index.html",
+        "category":  "Casual",
+        "categories": ["Flash", "Casual"]
+    },
+    {
+        "name":  "Minecraft Classic",
+        "image":  "static/icons/minecraftclassic.webp",
+        "url":  "static/mages/minecraft-classic/index.html",
+        "category":  "Adventure",
+        "categories": ["Adventure"]
+    },
+    {
+        "name":  "Minecraft Versions | Eaglercraft",
+        "image":  "static/icons/eaglercraft.webp",
+        "url":  "static/mages/eaglercraft/index.html",
+        "category":  "Adventure",
+        "categories": ["Adventure"]
+    },
+    {
+        "name":  "Burrito Bison",
+        "image":  "static/icons/burritobison.webp",
+        "url":  "static/mages/burritobison/index.html",
+        "category":  "Casual",
+        "categories": ["Flash", "Casual"]
+    },
+    {
+        "name":  "Burrito Bison Launcha Libre",
+        "image":  "static/icons/burritobisonll.webp",
+        "url":  "static/mages/burritobisonll/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Burrito Bison Revenge",
+        "image":  "static/icons/burritobisonr.webp",
+        "url":  "static/mages/burritobisonr/index.html",
+        "category":  "Casual",
+        "categories": ["Flash", "Casual"]
+    },
+    {
+        "name":  "Grimace\u0027s Birthday",
+        "image":  "static/icons/grimacebirthday.webp",
+        "url":  "static/mages/grimacebirthday/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Grumace",
+        "image":  "static/icons/grumace.webp",
+        "url":  "static/mages/grumace/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Mcdonald\u0027s Game",
+        "image":  "static/icons/mcdonalds.webp",
+        "url":  "static/mages/mcdonalds/index.html",
+        "category":  "Casual",
+        "categories": ["Flash", "Casual"]
+    },
+    {
+        "name":  "Fast Food Rush",
+        "image":  "static/icons/fastfoodrush.webp",
+        "url":  "static/mages/fastfoodrush/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Checkout Frenzy",
+        "image":  "static/icons/checkoutfrenzy.webp",
+        "url":  "static/mages/checkoutfrenzy/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Backrooms 2D",
+        "image":  "static/icons/backrooms2d.webp",
+        "url":  "static/mages/backrooms2d/index.html",
+        "category":  "Casual",
+        "categories": ["Horror", "Casual"]
+    },
+    {
+        "name":  "Backrooms",
+        "image":  "static/icons/backrooms.webp",
+        "url":  "static/mages/backrooms/index.html",
+        "category":  "Casual",
+        "categories": ["Horror", "Casual"]
+    },
+    {
+        "name":  "Phasma",
+        "image":  "static/icons/phasma.webp",
+        "url":  "static/mages/phasma/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "The Baby In Yellow",
+        "image":  "static/icons/thebabyinyellow.webp",
+        "url":  "static/mages/thebabyinyellow/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Karlson",
+        "image":  "static/icons/karlson.webp",
+        "url":  "static/mages/karlson/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Re:Run",
+        "image":  "static/icons/rerun.webp",
+        "url":  "static/mages/rerun/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Suika",
+        "image":  "static/icons/suika.webp",
+        "url":  "static/mages/suika/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Suika Demake",
+        "image":  "static/icons/suikademake.webp",
+        "url":  "static/mages/suikademake/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Labubu Merge",
+        "image":  "static/icons/labubumerge.webp",
+        "url":  "static/mages/labubumerge/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Deltarune",
+        "image":  "static/icons/deltarune.webp",
+        "url":  "static/mages/deltarune/index.html",
+        "category":  "Adventure",
+        "categories": ["Adventure"]
+    },
+    {
+        "name":  "Deltatraveler",
+        "image":  "static/icons/deltatraveler.webp",
+        "url":  "static/mages/deltatraveler/index.html",
+        "category":  "Adventure",
+        "categories": ["Adventure"]
+    },
+    {
+        "name":  "Undertale Yellow",
+        "image":  "static/icons/undertaleyellow.webp",
+        "url":  "static/mages/undertaleyellow/index.html",
+        "category":  "Adventure",
+        "categories": ["Adventure"]
+    },
+    {
+        "name":  "Undertale Rejuvenation",
+        "image":  "static/icons/undertalerejuvenation.webp",
+        "url":  "static/mages/undertalerejuvenation/index.html",
+        "category":  "Adventure",
+        "categories": ["Adventure"]
+    },
+    {
+        "name":  "Undertale Last Breath",
+        "image":  "static/icons/undertalelastbreath.webp",
+        "url":  "static/mages/undertalelastbreath/index.html",
+        "category":  "Adventure",
+        "categories": ["Adventure"]
+    },
+    {
+        "name":  "Bad Monday Simulator",
+        "image":  "static/icons/badmondaysim.webp",
+        "url":  "static/mages/badmondaysim/index.html",
+        "category":  "Strategy",
+        "categories": ["Strategy"]
+    },
+    {
+        "name":  "Bad Time Simulator",
+        "image":  "static/icons/badtimesimulator.webp",
+        "url":  "static/mages/badtimesimulator/index.html",
+        "category":  "Strategy",
+        "categories": ["Strategy"]
+    },
+    {
+        "name":  "San\u0027s Infinite HP Fight",
+        "image":  "static/icons/undertalesansinfinitehp.webp",
+        "url":  "static/mages/undertalesansinfinitehp/index.html",
+        "category":  "Adventure",
+        "categories": ["Adventure"]
+    },
+    {
+        "name":  "Unfair Dyne",
+        "image":  "static/icons/unfairdyne.webp",
+        "url":  "static/mages/unfairdyne/index.html",
+        "category":  "Strategy",
+        "categories": ["Strategy"]
+    },
+    {
+        "name":  "Asgore Fight",
+        "image":  "static/icons/undertaleasgorefight.webp",
+        "url":  "static/mages/undertaleasgorefight/index.html",
+        "category":  "Adventure",
+        "categories": ["Adventure"]
+    },
+    {
+        "name":  "Mettaton EX Fight",
+        "image":  "static/icons/undertalemettatonexfight.webp",
+        "url":  "static/mages/undertalemettatonexfight/index.html",
+        "category":  "Adventure",
+        "categories": ["Adventure"]
+    },
+    {
+        "name":  "Papyrus Fight",
+        "image":  "static/icons/undertalepapyrusfight.webp",
+        "url":  "static/mages/undertalepapyrusfight/index.html",
+        "category":  "Adventure",
+        "categories": ["Adventure"]
+    },
+    {
+        "name":  "A Date With Papyrus",
+        "image":  "static/icons/datewithpapyrus.webp",
+        "url":  "static/mages/datewithpapyrus/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Bergentruck 201x",
+        "image":  "static/icons/bergentruck.webp",
+        "url":  "static/mages/bergentruck/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Underwheels",
+        "image":  "static/icons/underwheels.webp",
+        "url":  "static/mages/underwheels/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Just One Boss",
+        "image":  "static/icons/justoneboss.webp",
+        "url":  "static/mages/justoneboss/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Slope",
+        "image":  "static/icons/slope.webp",
+        "url":  "static/mages/slope/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Slope 2",
+        "image":  "static/icons/slope2.webp",
+        "url":  "static/mages/slope2/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Slope 3",
+        "image":  "static/icons/slope3.webp",
+        "url":  "static/mages/slope3/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Slope Ball",
+        "image":  "static/icons/slopeball.webp",
+        "url":  "static/mages/slopeball/index.html",
+        "category":  "Sports",
+        "categories": ["Sports"]
+    },
+    {
+        "name":  "Slope City",
+        "image":  "static/icons/slopecity.webp",
+        "url":  "static/mages/slopecity/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Snow Battle IO",
+        "image":  "static/icons/snowbattleio.webp",
+        "url":  "static/mages/snowbattleio/index.html",
+        "category":  "Action",
+        "categories": ["Action"]
+    },
+    {
+        "name":  "Snow Rider 3D",
+        "image":  "static/icons/snowrider3d.webp",
+        "url":  "static/mages/snowrider3d/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Snow Rush 3D",
+        "image":  "static/icons/snowrush3d.webp",
+        "url":  "static/mages/snowrush3d/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Summer Rider 3D",
+        "image":  "static/icons/summerrider3d.webp",
+        "url":  "static/mages/summerrider3d/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Ballistic Chickens",
+        "image":  "static/icons/ballisticchickens.webp",
+        "url":  "static/mages/ballisticchickens/index.html",
+        "category":  "Sports",
+        "categories": ["Sports"]
+    },
+    {
+        "name":  "Balloon Run",
+        "image":  "static/icons/balloonrun.webp",
+        "url":  "static/mages/balloonrun/index.html",
+        "category":  "Sports",
+        "categories": ["Sports"]
+    },
+    {
+        "name":  "1 On 1 Soccer",
+        "image":  "static/icons/1on1soccer.webp",
+        "url":  "static/mages/1on1soccer/index.html",
+        "category":  "Sports",
+        "categories": ["Flash", "Sports"]
+    },
+    {
+        "name":  "Basketball Stars",
+        "image":  "static/icons/basketballstars.webp",
+        "url":  "static/mages/basketballstars/index.html",
+        "category":  "Sports",
+        "categories": ["Sports"]
+    },
+    {
+        "name":  "Basket Bros",
+        "image":  "static/icons/basketbros.webp",
+        "url":  "static/mages/basketbros/index.html",
+        "category":  "Sports",
+        "categories": ["Sports"]
+    },
+    {
+        "name":  "Basket Random",
+        "image":  "static/icons/basketrandom.webp",
+        "url":  "static/mages/basketrandom/index.html",
+        "category":  "Sports",
+        "categories": ["Sports"]
+    },
+    {
+        "name":  "Boxing Random",
+        "image":  "static/icons/boxingrandom.webp",
+        "url":  "static/mages/boxingrandom/index.html",
+        "category":  "Sports",
+        "categories": ["Sports"]
+    },
+    {
+        "name":  "Soccer Random",
+        "image":  "static/icons/soccerrandom.webp",
+        "url":  "static/mages/soccerrandom/index.html",
+        "category":  "Sports",
+        "categories": ["Sports"]
+    },
+    {
+        "name":  "Volley Random",
+        "image":  "static/icons/volleyrandom.webp",
+        "url":  "static/mages/volleyrandom/index.html",
+        "category":  "Sports",
+        "categories": ["Sports"]
+    },
+    {
+        "name":  "Bitlife",
+        "image":  "static/icons/bitlife.webp",
+        "url":  "static/mages/bitlife/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Block Zappers",
+        "image":  "static/icons/blockzappers.webp",
+        "url":  "static/mages/blockzappers/index.html",
+        "category":  "Strategy",
+        "categories": ["Flash", "Strategy"]
+    },
+    {
+        "name":  "Block Blast",
+        "image":  "static/icons/blockblast.webp",
+        "url":  "static/mages/blockblast/index.html",
+        "category":  "Strategy",
+        "categories": ["Strategy"]
+    },
+    {
+        "name":  "Blood Tournament",
+        "image":  "static/icons/bloodtournament.webp",
+        "url":  "static/mages/bloodtournament/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Bloons Tower Defense",
+        "image":  "static/icons/bloonstowerdefense.webp",
+        "url":  "static/mages/bloonstowerdefense/index.html",
+        "category":  "Strategy",
+        "categories": ["Flash", "Strategy"]
+    },
+    {
+        "name":  "Bloons Tower Defense 2",
+        "image":  "static/icons/bloonstowerdefense2.webp",
+        "url":  "static/mages/bloonstowerdefense2/index.html",
+        "category":  "Strategy",
+        "categories": ["Flash", "Strategy"]
+    },
+    {
+        "name":  "Bloons Tower Defense 3",
+        "image":  "static/icons/bloonstowerdefense3.webp",
+        "url":  "static/mages/bloonstowerdefense3/index.html",
+        "category":  "Strategy",
+        "categories": ["Flash", "Strategy"]
+    },
+    {
+        "name":  "Bloons Tower Defense 4",
+        "image":  "static/icons/bloonstowerdefense4.webp",
+        "url":  "static/mages/bloonstowerdefense4/index.html",
+        "category":  "Strategy",
+        "categories": ["Flash", "Strategy"]
+    },
+    {
+        "name":  "Bloons Tower Defense 5",
+        "image":  "static/icons/bloonstowerdefense5.webp",
+        "url":  "static/mages/bloonstowerdefense5/index.html",
+        "category":  "Strategy",
+        "categories": ["Flash", "Strategy"]
+    },
+    {
+        "name":  "Bloons Tower Defense 6",
+        "image":  "static/icons/bloonstowerdefense6.webp",
+        "url":  "static/mages/bloonstowerdefense6/index.html",
+        "category":  "Strategy",
+        "categories": ["Strategy"]
+    },
+    {
+        "name":  "Bob The Robber 2",
+        "image":  "static/icons/bobtherobber2.webp",
+        "url":  "static/mages/bobtherobber2/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Boxing Physics 2",
+        "image":  "static/icons/boxingphysics2.webp",
+        "url":  "static/mages/boxingphysics2/index.html",
+        "category":  "Sports",
+        "categories": ["Sports"]
+    },
+    {
+        "name":  "Bubble Shooter",
+        "image":  "static/icons/bubbleshooter.webp",
+        "url":  "static/mages/bubbleshooter/index.html",
+        "category":  "Action",
+        "categories": ["Flash", "Action"]
+    },
+    {
+        "name":  "Bullet Fury",
+        "image":  "static/icons/bulletfury.webp",
+        "url":  "static/mages/bulletfury/index.html",
+        "category":  "Action",
+        "categories": ["Flash", "Action"]
+    },
+    {
+        "name":  "Burger And Frights",
+        "image":  "static/icons/burgerandfrights.webp",
+        "url":  "static/mages/burgerandfrights/index.html",
+        "category":  "Casual",
+        "categories": ["Horror", "Casual"]
+    },
+    {
+        "name":  "Cell Machine",
+        "image":  "static/icons/cellmachine.webp",
+        "url":  "static/mages/cellmachine/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Google Baseball",
+        "image":  "static/icons/googlebaseball.webp",
+        "url":  "static/mages/googlebaseball/index.html",
+        "category":  "Adventure",
+        "categories": ["Adventure"]
+    },
+    {
+        "name":  "Google Snake",
+        "image":  "static/icons/snake.webp",
+        "url":  "static/mages/snake/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Champion Island",
+        "image":  "static/icons/championisland.webp",
+        "url":  "static/mages/championisland/index.html",
+        "category":  "Adventure",
+        "categories": ["Adventure"]
+    },
+    {
+        "name":  "Halloween 2016",
+        "image":  "static/icons/halloween2016.webp",
+        "url":  "static/mages/halloween2016/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Jake\u0027s Jingle Quest",
+        "image":  "static/icons/jakesjinglequest.webp",
+        "url":  "static/mages/jakesjinglequest/index.html",
+        "category":  "Adventure",
+        "categories": ["Adventure"]
+    },
+    {
+        "name":  "Dino",
+        "image":  "static/icons/dino.webp",
+        "url":  "static/mages/dino/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Nut Simulator",
+        "image":  "static/icons/nutsimulator.webp",
+        "url":  "static/mages/nutsimulator/index.html",
+        "category":  "Strategy",
+        "categories": ["Strategy"]
+    },
+    {
+        "name":  "Universal Paperclips",
+        "image":  "static/icons/universalpaperclips.webp",
+        "url":  "static/mages/universalpaperclips/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Cookie Clicker",
+        "image":  "static/icons/cookieclicker.webp",
+        "url":  "static/mages/cookieclicker/index.html",
+        "category":  "Strategy",
+        "categories": ["Strategy"]
+    },
+    {
+        "name":  "Spacebar Clicker",
+        "image":  "static/icons/spacebarclicker.webp",
+        "url":  "static/mages/spacebarclicker/index.html",
+        "category":  "Action",
+        "categories": ["Action"]
+    },
+    {
+        "name":  "Doge Miner",
+        "image":  "static/icons/dogeminer.webp",
+        "url":  "static/mages/dogeminer/index.html",
+        "category":  "Action",
+        "categories": ["Action"]
+    },
+    {
+        "name":  "Chibi Knight",
+        "image":  "static/icons/chibiknight.webp",
+        "url":  "static/mages/chibiknight/index.html",
+        "category":  "Casual",
+        "categories": ["Flash", "Casual"]
+    },
+    {
+        "name":  "Circloo",
+        "image":  "static/icons/circloo.webp",
+        "url":  "static/mages/circloo/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Clicker Heroes",
+        "image":  "static/icons/clickerheroes.webp",
+        "url":  "static/mages/clickerheroes/index.html",
+        "category":  "Strategy",
+        "categories": ["Strategy"]
+    },
+    {
+        "name":  "Cluster Rush",
+        "image":  "static/icons/clusterrush.webp",
+        "url":  "static/mages/clusterrush/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "HexGL",
+        "image":  "static/icons/hexgl.webp",
+        "url":  "static/mages/hexgl/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Color Switch",
+        "image":  "static/icons/colorswitch.webp",
+        "url":  "static/mages/colorswitch/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Commodore Clicker",
+        "image":  "static/icons/commodoreclicker.webp",
+        "url":  "static/mages/commodoreclicker/index.html",
+        "category":  "Strategy",
+        "categories": ["Strategy"]
+    },
+    {
+        "name":  "Connect 4",
+        "image":  "static/icons/connect4.webp",
+        "url":  "static/mages/connect4/index.html",
+        "category":  "Strategy",
+        "categories": ["Strategy"]
+    },
+    {
+        "name":  "Copter",
+        "image":  "static/icons/copter.webp",
+        "url":  "static/mages/copter/index.html",
+        "category":  "Casual",
+        "categories": ["Flash", "Casual"]
+    },
+    {
+        "name":  "Corporation Inc",
+        "image":  "static/icons/corporationinc.webp",
+        "url":  "static/mages/corporationinc/index.html",
+        "category":  "Strategy",
+        "categories": ["Flash", "Strategy"]
+    },
+    {
+        "name":  "Crazy Tunnel",
+        "image":  "static/icons/crazytunnel.webp",
+        "url":  "static/mages/crazytunnel/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Crazy Flasher 2",
+        "image":  "static/icons/crazyflasher2.webp",
+        "url":  "static/mages/crazyflasher2/index.html",
+        "category":  "Casual",
+        "categories": ["Flash", "Casual"]
+    },
+    {
+        "name":  "Crazy Flasher 3",
+        "image":  "static/icons/crazyflasher3.webp",
+        "url":  "static/mages/crazyflasher3/index.html",
+        "category":  "Casual",
+        "categories": ["Flash", "Casual"]
+    },
+    {
+        "name":  "Crazy Flasher 4",
+        "image":  "static/icons/crazyflasher4.webp",
+        "url":  "static/mages/crazyflasher4/index.html",
+        "category":  "Casual",
+        "categories": ["Flash", "Casual"]
+    },
+    {
+        "name":  "Crazy Flasher 5",
+        "image":  "static/icons/crazyflasher5.webp",
+        "url":  "static/mages/crazyflasher5/index.html",
+        "category":  "Casual",
+        "categories": ["Flash", "Casual"]
+    },
+    {
+        "name":  "Crazy Flasher 6",
+        "image":  "static/icons/crazyflasher6.webp",
+        "url":  "static/mages/crazyflasher6/index.html",
+        "category":  "Casual",
+        "categories": ["Flash", "Casual"]
+    },
+    {
+        "name":  "Yohoho.io",
+        "image":  "static/icons/yohohoio.webp",
+        "url":  "static/mages/yohohoio/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Crazy Taxi",
+        "image":  "static/icons/crazytaxi.webp",
+        "url":  "static/mages/crazytaxi/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Creep Craft 2",
+        "image":  "static/icons/creepcraft2.webp",
+        "url":  "static/mages/creepcraft2/index.html",
+        "category":  "Casual",
+        "categories": ["Flash", "Casual"]
+    },
+    {
+        "name":  "Crimson Fantasia",
+        "image":  "static/icons/crimsonfantasia.webp",
+        "url":  "static/mages/crimsonfantasia/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Crossy Road",
+        "image":  "static/icons/crossyroad.webp",
+        "url":  "static/mages/crossyroad/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "CSGO Clicker",
+        "image":  "static/icons/csgoclicker.webp",
+        "url":  "static/mages/csgoclicker/index.html",
+        "category":  "Strategy",
+        "categories": ["Strategy"]
+    },
+    {
+        "name":  "Cube Field",
+        "image":  "static/icons/cubefield.webp",
+        "url":  "static/mages/cubefield/index.html",
+        "category":  "Strategy",
+        "categories": ["Strategy"]
+    },
+    {
+        "name":  "Cut The Rope",
+        "image":  "static/icons/cuttherope.webp",
+        "url":  "static/mages/cuttherope/index.html",
+        "category":  "Strategy",
+        "categories": ["Strategy"]
+    },
+    {
+        "name":  "Cut The Rope Holiday",
+        "image":  "static/icons/cuttheropeholiday.webp",
+        "url":  "static/mages/cuttheropeholiday/index.html",
+        "category":  "Strategy",
+        "categories": ["Strategy"]
+    },
+    {
+        "name":  "Dadish",
+        "image":  "static/icons/dadish.webp",
+        "url":  "static/mages/dadish/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Dadish 2",
+        "image":  "static/icons/dadish2.webp",
+        "url":  "static/mages/dadish2/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Dadish 3",
+        "image":  "static/icons/dadish3.webp",
+        "url":  "static/mages/dadish3/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Death Run 3D",
+        "image":  "static/icons/deathrun3d.webp",
+        "url":  "static/mages/deathrun3d/index.html",
+        "category":  "Sports",
+        "categories": ["Sports"]
+    },
+    {
+        "name":  "Deepest Sword",
+        "image":  "static/icons/deepestsword.webp",
+        "url":  "static/mages/deepestsword/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Doodle Jump",
+        "image":  "static/icons/doodlejump.webp",
+        "url":  "static/mages/doodlejump/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Fortnite CN ig",
+        "image":  "static/icons/fortnitecn.webp",
+        "url":  "static/mages/fortnitecn/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Fall Boys",
+        "image":  "static/icons/fallboys.webp",
+        "url":  "static/mages/fallboys/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Fall Heroes Knockout",
+        "image":  "static/icons/fallheroesknockout.webp",
+        "url":  "static/mages/fallheroesknockout/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Doom",
+        "image":  "static/icons/doom.webp",
+        "url":  "static/mages/doom/index.html",
+        "category":  "Action",
+        "categories": ["Action"]
+    },
+    {
+        "name":  "Doom 64",
+        "image":  "static/icons/doom64.webp",
+        "url":  "static/mages/doom64/index.html",
+        "category":  "Action",
+        "categories": ["Action"]
+    },
+    {
+        "name":  "Doom WASM",
+        "image":  "static/icons/doomwasm.webp",
+        "url":  "static/mages/doomwasm/index.html",
+        "category":  "Action",
+        "categories": ["Flash", "Action"]
+    },
+    {
+        "name":  "Poom",
+        "image":  "static/icons/poom.webp",
+        "url":  "static/mages/poom/index.html",
+        "category":  "Casual",
+        "categories": ["Flash", "Horror", "Casual"]
+    },
+    {
+        "name":  "Gloom",
+        "image":  "static/icons/gloom.webp",
+        "url":  "static/mages/gloom/index.html",
+        "category":  "Casual",
+        "categories": ["Flash", "Casual"]
+    },
+    {
+        "name":  "Draw Climber",
+        "image":  "static/icons/drawclimber.webp",
+        "url":  "static/mages/drawclimber/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Survival Race",
+        "image":  "static/icons/survivalrace.webp",
+        "url":  "static/mages/survivalrace/index.html",
+        "category":  "Cars",
+        "categories": ["Cars"]
+    },
+    {
+        "name":  "Smash Karts",
+        "image":  "static/icons/smashkarts.webp",
+        "url":  "static/mages/smashkarts/index.html",
+        "category":  "Cars",
+        "categories": ["Cars"]
+    },
+    {
+        "name":  "Survival Karts",
+        "image":  "static/icons/survivalkarts.webp",
+        "url":  "static/mages/survivalkarts/index.html",
+        "category":  "Cars",
+        "categories": ["Cars"]
+    },
+    {
+        "name":  "Crazy Karts",
+        "image":  "static/icons/crazykarts.webp",
+        "url":  "static/mages/crazykarts/index.html",
+        "category":  "Cars",
+        "categories": ["Cars"]
+    },
+    {
+        "name":  "Moto X3M",
+        "image":  "static/icons/motox3m.webp",
+        "url":  "static/mages/motox3m/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Moto X3M Pool",
+        "image":  "static/icons/motox3mpool.webp",
+        "url":  "static/mages/motox3mpool/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Moto X3M Spooky",
+        "image":  "static/icons/motox3mspooky.webp",
+        "url":  "static/mages/motox3mspooky/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Moto X3M Winter",
+        "image":  "static/icons/motox3mwinter.webp",
+        "url":  "static/mages/motox3mwinter/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Bike Champ",
+        "image":  "static/icons/bikechamp.webp",
+        "url":  "static/mages/bikechamp/index.html",
+        "category":  "Casual",
+        "categories": ["Flash", "Casual"]
+    },
+    {
+        "name":  "Bike Champ 2",
+        "image":  "static/icons/bikechamp2.webp",
+        "url":  "static/mages/bikechamp2/index.html",
+        "category":  "Casual",
+        "categories": ["Flash", "Casual"]
+    },
+    {
+        "name":  "Funny Mad Racing",
+        "image":  "static/icons/funnymadracing.webp",
+        "url":  "static/mages/funnymadracing/index.html",
+        "category":  "Cars",
+        "categories": ["Cars"]
+    },
+    {
+        "name":  "Pyongyang Racer",
+        "image":  "static/icons/pyongyangracer.webp",
+        "url":  "static/mages/pyongyangracer/index.html",
+        "category":  "Cars",
+        "categories": ["Flash", "Cars"]
+    },
+    {
+        "name":  "Turbo Racing 3",
+        "image":  "static/icons/turboracing3.webp",
+        "url":  "static/mages/turboracing3/index.html",
+        "category":  "Cars",
+        "categories": ["Cars"]
+    },
+    {
+        "name":  "X Trial Racing",
+        "image":  "static/icons/xtrialracing.webp",
+        "url":  "static/mages/xtrialracing/index.html",
+        "category":  "Cars",
+        "categories": ["Cars"]
+    },
+    {
+        "name":  "Madalin Cars",
+        "image":  "static/icons/madalincars.webp",
+        "url":  "static/mages/madalincars/index.html",
+        "category":  "Cars",
+        "categories": ["Cars"]
+    },
+    {
+        "name":  "Madalin Stunt Cars 2",
+        "image":  "static/icons/madalinstuntcars2.webp",
+        "url":  "static/mages/madalinstuntcars2/index.html",
+        "category":  "Cars",
+        "categories": ["Cars"]
+    },
+    {
+        "name":  "Madalin Stunt Cars 3",
+        "image":  "static/icons/madalinstuntcars3.webp",
+        "url":  "static/mages/madalinstuntcars3/index.html",
+        "category":  "Cars",
+        "categories": ["Cars"]
+    },
+    {
+        "name":  "Drift Boss",
+        "image":  "static/icons/driftboss.webp",
+        "url":  "static/mages/driftboss/index.html",
+        "category":  "Cars",
+        "categories": ["Cars"]
+    },
+    {
+        "name":  "Drift Bus",
+        "image":  "static/icons/driftbus.webp",
+        "url":  "static/mages/driftbus/index.html",
+        "category":  "Cars",
+        "categories": ["Cars"]
+    },
+    {
+        "name":  "Drift Hunters",
+        "image":  "static/icons/drifthunters.webp",
+        "url":  "static/mages/drifthunters/index.html",
+        "category":  "Cars",
+        "categories": ["Cars"]
+    },
+    {
+        "name":  "Drift King",
+        "image":  "static/icons/driftking.webp",
+        "url":  "static/mages/driftking/index.html",
+        "category":  "Cars",
+        "categories": ["Cars"]
+    },
+    {
+        "name":  "Drift Mania",
+        "image":  "static/icons/driftmania.webp",
+        "url":  "static/mages/driftmania/index.html",
+        "category":  "Cars",
+        "categories": ["Cars"]
+    },
+    {
+        "name":  "Drive Mad",
+        "image":  "static/icons/drivemad.webp",
+        "url":  "static/mages/drivemad/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Monster Tracks",
+        "image":  "static/icons/monstertracks.webp",
+        "url":  "static/mages/monstertracks/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Driving Force 4",
+        "image":  "static/icons/drivingforce4.webp",
+        "url":  "static/mages/drivingforce4/index.html",
+        "category":  "Cars",
+        "categories": ["Flash", "Cars"]
+    },
+    {
+        "name":  "Duck Hunt JS",
+        "image":  "static/icons/duckhunt.webp",
+        "url":  "static/mages/duckhunt/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Duck Life 1",
+        "image":  "static/icons/ducklife1.webp",
+        "url":  "static/mages/ducklife1/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Duck Life 2",
+        "image":  "static/icons/ducklife2.webp",
+        "url":  "static/mages/ducklife2/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Duck Life 3",
+        "image":  "static/icons/ducklife3.webp",
+        "url":  "static/mages/ducklife3/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Duck Life 4",
+        "image":  "static/icons/ducklife4.webp",
+        "url":  "static/mages/ducklife4/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Duck Life 5",
+        "image":  "static/icons/ducklife5.webp",
+        "url":  "static/mages/ducklife5/index.html",
+        "category":  "Casual",
+        "categories": ["Flash", "Casual"]
+    },
+    {
+        "name":  "Duck Life 6",
+        "image":  "static/icons/ducklife6.webp",
+        "url":  "static/mages/ducklife6/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Eggy Car",
+        "image":  "static/icons/eggycar.webp",
+        "url":  "static/mages/eggycar/index.html",
+        "category":  "Cars",
+        "categories": ["Cars"]
+    },
+    {
+        "name":  "Escaping The Prison",
+        "image":  "static/icons/escapingtheprison.webp",
+        "url":  "static/mages/escapingtheprison/index.html",
+        "category":  "Casual",
+        "categories": ["Flash", "Casual"]
+    },
+    {
+        "name":  "Stealing The Diamond",
+        "image":  "static/icons/stealingthediamond.webp",
+        "url":  "static/mages/stealingthediamond/index.html",
+        "category":  "Casual",
+        "categories": ["Flash", "Casual"]
+    },
+    {
+        "name":  "Breaking The Bank",
+        "image":  "static/icons/breakingthebank.webp",
+        "url":  "static/mages/breakingthebank/index.html",
+        "category":  "Casual",
+        "categories": ["Flash", "Casual"]
+    },
+    {
+        "name":  "Infiltrating The Airship",
+        "image":  "static/icons/infiltratingtheairship.webp",
+        "url":  "static/mages/infiltratingtheairship/index.html",
+        "category":  "Action",
+        "categories": ["Flash", "Action"]
+    },
+    {
+        "name":  "Fleeing The Complex",
+        "image":  "static/icons/fleeingthecomplex.webp",
+        "url":  "static/mages/fleeingthecomplex/index.html",
+        "category":  "Casual",
+        "categories": ["Flash", "Casual"]
+    },
+    {
+        "name":  "Factory Balls",
+        "image":  "static/icons/factoryballs.webp",
+        "url":  "static/mages/factoryballs/index.html",
+        "category":  "Sports",
+        "categories": ["Flash", "Sports"]
+    },
+    {
+        "name":  "Factory Balls Forever",
+        "image":  "static/icons/factoryballsforever.webp",
+        "url":  "static/mages/factoryballsforever/index.html",
+        "category":  "Sports",
+        "categories": ["Sports"]
+    },
+    {
+        "name":  "Fancy Pants Adventures",
+        "image":  "static/icons/fancypantsadventures.webp",
+        "url":  "static/mages/fancypantsadventures/index.html",
+        "category":  "Adventure",
+        "categories": ["Flash", "Adventure"]
+    },
+    {
+        "name":  "Fancy Pants Adventures 2",
+        "image":  "static/icons/fancypantsadventures2.webp",
+        "url":  "static/mages/fancypantsadventures2/index.html",
+        "category":  "Adventure",
+        "categories": ["Flash", "Adventure"]
+    },
+    {
+        "name":  "Dante",
+        "image":  "static/icons/dante.webp",
+        "url":  "static/mages/dante/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Avalanche",
+        "image":  "static/icons/avalanche.webp",
+        "url":  "static/mages/avalanche/index.html",
+        "category":  "Casual",
+        "categories": ["Flash", "Casual"]
+    },
+    {
+        "name":  "Awesome Tanks",
+        "image":  "static/icons/awesometanks.webp",
+        "url":  "static/mages/awesometanks/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Achievement Unlocked",
+        "image":  "static/icons/achievementunlocked.webp",
+        "url":  "static/mages/achievementunlocked/index.html",
+        "category":  "Casual",
+        "categories": ["Flash", "Casual"]
+    },
+    {
+        "name":  "Achievement Unlocked 2",
+        "image":  "static/icons/achievementunlocked2.webp",
+        "url":  "static/mages/achievementunlocked2/index.html",
+        "category":  "Casual",
+        "categories": ["Flash", "Casual"]
+    },
+    {
+        "name":  "13 Days In Hell",
+        "image":  "static/icons/13daysinhell.webp",
+        "url":  "static/mages/13daysinhell/index.html",
+        "category":  "Casual",
+        "categories": ["Flash", "Casual"]
+    },
+    {
+        "name":  "Amidst The Sky",
+        "image":  "static/icons/amidstthesky.webp",
+        "url":  "static/mages/amidstthesky/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Final Ninja",
+        "image":  "static/icons/finalninja.webp",
+        "url":  "static/mages/finalninja/index.html",
+        "category":  "Casual",
+        "categories": ["Flash", "Casual"]
+    },
+    {
+        "name":  "Glass Bridge obby",
+        "image":  "static/icons/glassbridgeobby.webp",
+        "url":  "static/mages/glassbridgeobby/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Squid Race Simulator",
+        "image":  "static/icons/squidracesim.webp",
+        "url":  "static/mages/squidracesim/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Speed Each Click",
+        "image":  "static/icons/speedeachclick.webp",
+        "url":  "static/mages/speedeachclick/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Fireboy Watergirl",
+        "image":  "static/icons/fireboywatergirl.webp",
+        "url":  "static/mages/fireboywatergirl/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Fireboy Watergirl 2",
+        "image":  "static/icons/fireboywatergirl2.webp",
+        "url":  "static/mages/fireboywatergirl2/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Fireboy Watergirl 3",
+        "image":  "static/icons/fireboywatergirl3.webp",
+        "url":  "static/mages/fireboywatergirl3/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Fireboy Watergirl 4",
+        "image":  "static/icons/fireboywatergirl4.webp",
+        "url":  "static/mages/fireboywatergirl4/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Flappy 2048",
+        "image":  "static/icons/flappy2048.webp",
+        "url":  "static/mages/flappy2048/index.html",
+        "category":  "Strategy",
+        "categories": ["Strategy"]
+    },
+    {
+        "name":  "Flappy Bird",
+        "image":  "static/icons/flappybird.webp",
+        "url":  "static/mages/flappybird/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Flappy Bounce",
+        "image":  "static/icons/flappybirdbounce.webp",
+        "url":  "static/mages/flappybirdbounce/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Flappy Copter",
+        "image":  "static/icons/flappycopter.webp",
+        "url":  "static/mages/flappycopter/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Flappy Dino",
+        "image":  "static/icons/flappydino.webp",
+        "url":  "static/mages/flappydino/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Flappy Duck",
+        "image":  "static/icons/flappyduck.webp",
+        "url":  "static/mages/flappyduck/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Flappy Race",
+        "image":  "static/icons/flappyrace.webp",
+        "url":  "static/mages/flappyrace/index.html",
+        "category":  "Cars",
+        "categories": ["Cars"]
+    },
+    {
+        "name":  "Flash Flappy",
+        "image":  "static/icons/flashflappy.webp",
+        "url":  "static/mages/flashflappy/index.html",
+        "category":  "Casual",
+        "categories": ["Flash", "Casual"]
+    },
+    {
+        "name":  "Time Shooter 1",
+        "image":  "static/icons/timeshooter1.webp",
+        "url":  "static/mages/timeshooter1/index.html",
+        "category":  "Action",
+        "categories": ["Action"]
+    },
+    {
+        "name":  "Time Shooter 2",
+        "image":  "static/icons/timeshooter2.webp",
+        "url":  "static/mages/timeshooter2/index.html",
+        "category":  "Action",
+        "categories": ["Action"]
+    },
+    {
+        "name":  "Time Shooter 3",
+        "image":  "static/icons/timeshooter3.webp",
+        "url":  "static/mages/timeshooter3/index.html",
+        "category":  "Action",
+        "categories": ["Action"]
+    },
+    {
+        "name":  "Tiny Fishing",
+        "image":  "static/icons/tinyfishing.webp",
+        "url":  "static/mages/tinyfishing/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "A Bite At Freddy\u0027s",
+        "image":  "static/icons/abiteatfreddys.webp",
+        "url":  "static/mages/abiteatfreddys/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Five Night\u0027s At Winston\u0027s",
+        "image":  "static/icons/fivenightsatwinstons.webp",
+        "url":  "static/mages/fivenightsatwinstons/index.html",
+        "category":  "Casual",
+        "categories": ["Casual", "Horror"]
+    },
+    {
+        "name":  "Five Night\u0027s At Shrek\u0027s Hotel",
+        "image":  "static/icons/fnash.webp",
+        "url":  "static/mages/fnash/index.html",
+        "category":  "Casual",
+        "categories": ["Casual", "Horror"]
+    },
+    {
+        "name":  "Five Night\u0027s At Candy\u0027s",
+        "image":  "static/icons/fnac.webp",
+        "url":  "static/mages/fnac/index.html",
+        "category":  "Casual",
+        "categories": ["Casual", "Horror"]
+    },
+    {
+        "name":  "Five Night\u0027s At Candy\u0027s 2",
+        "image":  "static/icons/fnac2.webp",
+        "url":  "static/mages/fnac2/index.html",
+        "category":  "Casual",
+        "categories": ["Casual", "Horror"]
+    },
+    {
+        "name":  "Five Night\u0027s At Freddy\u0027s",
+        "image":  "static/icons/fnaf.gif",
+        "url":  "static/mages/fnaf/index.html",
+        "category":  "Action",
+        "categories": ["Action", "Horror"]
+    },
+    {
+        "name":  "Five Night\u0027s At Freddy\u0027s 2",
+        "image":  "static/icons/fnaf2.webp",
+        "url":  "static/mages/fnaf2/index.html",
+        "category":  "Action",
+        "categories": ["Action", "Horror"]
+    },
+    {
+        "name":  "Five Night\u0027s At Freddy\u0027s 3",
+        "image":  "static/icons/fnaf3.webp",
+        "url":  "static/mages/fnaf3/index.html",
+        "category":  "Action",
+        "categories": ["Action", "Horror"]
+    },
+    {
+        "name":  "Five Night\u0027s At Freddy\u0027s 4",
+        "image":  "static/icons/fnaf4.webp",
+        "url":  "static/mages/fnaf4/index.html",
+        "category":  "Action",
+        "categories": ["Action", "Horror"]
+    },
+    {
+        "name":  "Five Night\u0027s At Freddy\u0027s 4 Halloween Ed.",
+        "image":  "static/icons/fnaf4halloween.webp",
+        "url":  "static/mages/fnaf4halloween/index.html",
+        "category":  "Action",
+        "categories": ["Action", "Horror"]
+    },
+    {
+        "name":  "Five Night\u0027s At Freddy\u0027s Sister Location",
+        "image":  "static/icons/fnafsl.webp",
+        "url":  "static/mages/fnafsl/index.html",
+        "category":  "Action",
+        "categories": ["Action", "Horror"]
+    },
+    {
+        "name":  "Five Night\u0027s At Freddy\u0027s Pizza Simulator",
+        "image":  "static/icons/fnafpizzasim.webp",
+        "url":  "static/mages/fnafpizzasim/index.html",
+        "category":  "Action",
+        "categories": ["Action", "Horror"]
+    },
+    {
+        "name":  "FNAF World",
+        "image":  "static/icons/fnafworld.webp",
+        "url":  "static/mages/fnafworld/index.html",
+        "category":  "Casual",
+        "categories": ["Horror", "Casual"]
+    },
+    {
+        "name":  "FNAF UCN",
+        "image":  "static/icons/fnafucn.webp",
+        "url":  "static/mages/fnafucn/index.html",
+        "category":  "Casual",
+        "categories": ["Horror", "Casual"]
+    },
+    {
+        "name":  "Baldi\u0027s Basics",
+        "image":  "static/icons/baldisbasics.webp",
+        "url":  "static/mages/baldisbasics/index.html",
+        "category":  "Casual",
+        "categories": ["Horror"]
+    },
+    {
+        "name":  "Baldi\u0027s Basics Plus",
+        "image":  "static/icons/baldisbasicsplus.webp",
+        "url":  "static/mages/baldisbasicsplus/index.html",
+        "category":  "Casual",
+        "categories": ["Horror"]
+    },
+    {
+        "name":  "Baldi\u0027s Basics Classic Remastered",
+        "image":  "static/icons/baldisbasicsclassicremastered.webp",
+        "url":  "static/mages/baldisbasicsclassicremastered/index.html",
+        "category":  "Casual",
+        "categories": ["Horror"]
+    },
+    {
+        "name":  "Five Night\u0027s At Baldi\u0027s",
+        "image":  "static/icons/fnab.webp",
+        "url":  "static/mages/fnab/index.html",
+        "category":  "Casual",
+        "categories": ["Casual", "Horror"]
+    },
+    {
+        "name":  "Hobo",
+        "image":  "static/icons/hobo.webp",
+        "url":  "static/mages/hobo/index.html",
+        "category":  "Casual",
+        "categories": ["Flash", "Casual"]
+    },
+    {
+        "name":  "Hobo 2",
+        "image":  "static/icons/hobo2.webp",
+        "url":  "static/mages/hobo2/index.html",
+        "category":  "Casual",
+        "categories": ["Flash", "Casual"]
+    },
+    {
+        "name":  "Hobo 3",
+        "image":  "static/icons/hobo3.webp",
+        "url":  "static/mages/hobo3/index.html",
+        "category":  "Casual",
+        "categories": ["Flash", "Casual"]
+    },
+    {
+        "name":  "Hobo 4",
+        "image":  "static/icons/hobo4.webp",
+        "url":  "static/mages/hobo4/index.html",
+        "category":  "Casual",
+        "categories": ["Flash", "Casual"]
+    },
+    {
+        "name":  "Hobo 5",
+        "image":  "static/icons/hobo5.webp",
+        "url":  "static/mages/hobo5/index.html",
+        "category":  "Casual",
+        "categories": ["Flash", "Casual"]
+    },
+    {
+        "name":  "Hobo 6",
+        "image":  "static/icons/hobo6.webp",
+        "url":  "static/mages/hobo6/index.html",
+        "category":  "Casual",
+        "categories": ["Flash", "Casual"]
+    },
+    {
+        "name":  "Hobo 7",
+        "image":  "static/icons/hobo7.webp",
+        "url":  "static/mages/hobo7/index.html",
+        "category":  "Casual",
+        "categories": ["Flash", "Casual"]
+    },
+    {
+        "name":  "Subway Surfers New York",
+        "image":  "static/icons/subwaysurfersny.webp",
+        "url":  "static/mages/subwaysurfersny/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Subway Surfers San Francisco",
+        "image":  "static/icons/ssfra.webp",
+        "url":  "static/mages/ssfra/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Subway Surfers Barcelona",
+        "image":  "static/icons/ssbar.webp",
+        "url":  "static/mages/ssbar/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Subway Surfers Beijing",
+        "image":  "static/icons/ssbei.webp",
+        "url":  "static/mages/ssbei/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Subway Surfers Berlin",
+        "image":  "static/icons/ssber.webp",
+        "url":  "static/mages/ssber/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Subway Surfers Buenos Aires",
+        "image":  "static/icons/ssbue.webp",
+        "url":  "static/mages/ssbue/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Subway Surfers Havana",
+        "image":  "static/icons/sshav.webp",
+        "url":  "static/mages/sshav/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Subway Surfers Houston",
+        "image":  "static/icons/sshou.webp",
+        "url":  "static/mages/sshou/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Subway Surfers Iceland",
+        "image":  "static/icons/ssice.webp",
+        "url":  "static/mages/ssice/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Subway Surfers London",
+        "image":  "static/icons/sslon.webp",
+        "url":  "static/mages/sslon/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Subway Surfers Mexico",
+        "image":  "static/icons/ssmex.webp",
+        "url":  "static/mages/ssmex/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Subway Surfers Miami",
+        "image":  "static/icons/ssmia.webp",
+        "url":  "static/mages/ssmia/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Subway Surfers Monaco",
+        "image":  "static/icons/ssmon.webp",
+        "url":  "static/mages/ssmon/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Subway Surfers New Orleans",
+        "image":  "static/icons/ssno.webp",
+        "url":  "static/mages/ssno/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Subway Surfers Saint Petersburg",
+        "image":  "static/icons/ssstp.webp",
+        "url":  "static/mages/ssstp/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Subway Surfers Winter Wonderland",
+        "image":  "static/icons/sswh.webp",
+        "url":  "static/mages/sswh/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Subway Surfers Zurich",
+        "image":  "static/icons/sszur.webp",
+        "url":  "static/mages/sszur/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Bus And Subway Runner",
+        "image":  "static/icons/busandsubwayrunner.webp",
+        "url":  "static/mages/busandsubwayrunner/index.html",
+        "category":  "Sports",
+        "categories": ["Sports"]
+    },
+    {
+        "name":  "Train Surfers",
+        "image":  "static/icons/trainsurfers.webp",
+        "url":  "static/mages/trainsurfers/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Osu Scratch",
+        "image":  "static/icons/osuscratch.webp",
+        "url":  "static/mages/osuscratch/index.html",
+        "category":  "Casual",
+        "categories": ["Rhythm", "Casual"]
+    },
+    {
+        "name":  "Osu Mania",
+        "image":  "static/icons/osumania.webp",
+        "url":  "static/mages/osumania/index.html",
+        "category":  "Casual",
+        "categories": ["Rhythm", "Casual"]
+    },
+    {
+        "name":  "Friday Night Funkin",
+        "image":  "static/icons/fnf.webp",
+        "url":  "static/mages/fridaynightfunkin/index.html",
+        "category":  "Action",
+        "categories": ["Rhythm", "Action"]
+    },
+    {
+        "name":  "Friday Night Funkin\u0027 Mid Fight",
+        "image":  "static/icons/fridaynightfunkinmidfight.webp",
+        "url":  "static/mages/fridaynightfunkinmidfight/index.html",
+        "category":  "Action",
+        "categories": ["Rhythm", "Action"]
+    },
+    {
+        "name":  "Friday Night Funkin\u0027 Indie Cross",
+        "image":  "static/icons/fnfindiecross.webp",
+        "url":  "static/mages/fnfindiecross/index.html",
+        "category":  "Action",
+        "categories": ["Rhythm", "Action"]
+    },
+    {
+        "name":  "Friday Night Funkin\u0027 Soft",
+        "image":  "static/icons/fnfsoft.webp",
+        "url":  "static/mages/fnfsoft/index.html",
+        "category":  "Action",
+        "categories": ["Rhythm", "Action"]
+    },
+    {
+        "name":  "Friday Night Funkin\u0027 Neo",
+        "image":  "static/icons/fnfneo.webp",
+        "url":  "static/mages/fnfneo/index.html",
+        "category":  "Action",
+        "categories": ["Rhythm", "Action"]
+    },
+    {
+        "name":  "Friday Night Funkin\u0027 Hit Single Real",
+        "image":  "static/icons/fnfhsr.webp",
+        "url":  "static/mages/fnfhsr/index.html",
+        "category":  "Action",
+        "categories": ["Rhythm", "Action"]
+    },
+    {
+        "name":  "Friday Night Funkin\u0027 B-Sides",
+        "image":  "static/icons/fnfbside.webp",
+        "url":  "static/mages/fnfbside/index.html",
+        "category":  "Action",
+        "categories": ["Rhythm", "Action"]
+    },
+    {
+        "name":  "Friday Night Funkin\u0027 vs. Tricky",
+        "image":  "static/icons/fnftricky.webp",
+        "url":  "static/mages/fnftricky/index.html",
+        "category":  "Action",
+        "categories": ["Rhythm", "Action"]
+    },
+    {
+        "name":  "Friday Night Funkin\u0027 vs. Whitty",
+        "image":  "static/icons/fnfwhitty.webp",
+        "url":  "static/mages/fnfwhitty/index.html",
+        "category":  "Action",
+        "categories": ["Rhythm", "Action"]
+    },
+    {
+        "name":  "Friday Night Funkin\u0027 vs. Sonic.EXE",
+        "image":  "static/icons/fnfsonicexe.webp",
+        "url":  "static/mages/fnfsonicexe/index.html",
+        "category":  "Action",
+        "categories": ["Rhythm", "Action"]
+    },
+    {
+        "name":  "Friday Night Funkin\u0027 vs. Sky",
+        "image":  "static/icons/fnfsky.webp",
+        "url":  "static/mages/fnfsky/index.html",
+        "category":  "Action",
+        "categories": ["Rhythm", "Action"]
+    },
+    {
+        "name":  "Friday Night Funkin\u0027 vs. KAPI",
+        "image":  "static/icons/fnfkapi.webp",
+        "url":  "static/mages/fnfkapi/index.html",
+        "category":  "Action",
+        "categories": ["Rhythm", "Action"]
+    },
+    {
+        "name":  "Friday Night Funkin\u0027 vs. Hex",
+        "image":  "static/icons/fnfhex.webp",
+        "url":  "static/mages/fnfhex/index.html",
+        "category":  "Action",
+        "categories": ["Rhythm", "Action"]
+    },
+    {
+        "name":  "Friday Night Funkin\u0027 vs. Hatsune Miku",
+        "image":  "static/icons/fnfmiku.webp",
+        "url":  "static/mages/fnfmiku/index.html",
+        "category":  "Action",
+        "categories": ["Rhythm", "Action"]
+    },
+    {
+        "name":  "Friday Night Funkin\u0027 vs. Mario\u0027s Madness",
+        "image":  "static/icons/fnfmm.webp",
+        "url":  "static/mages/fnfmm/index.html",
+        "category":  "Action",
+        "categories": ["Rhythm", "Action"]
+    },
+    {
+        "name":  "Friday Night Funkin\u0027 vs. Shaggy",
+        "image":  "static/icons/fnfshaggy.webp",
+        "url":  "static/mages/fnfshaggy/index.html",
+        "category":  "Action",
+        "categories": ["Rhythm", "Action"]
+    },
+    {
+        "name":  "Friday Night Funkin\u0027 vs. Garcello",
+        "image":  "static/icons/fnfgarcello.webp",
+        "url":  "static/mages/fnfgarcello/index.html",
+        "category":  "Action",
+        "categories": ["Rhythm", "Action"]
+    },
+    {
+        "name":  "Friday Night Funkin\u0027 vs. Cyber Sensation",
+        "image":  "static/icons/fnfcs.webp",
+        "url":  "static/mages/fnfcs/index.html",
+        "category":  "Action",
+        "categories": ["Rhythm", "Action"]
+    },
+    {
+        "name":  "Friday Night Funkin\u0027 vs. Hypno Lullaby",
+        "image":  "static/icons/fnfhl.webp",
+        "url":  "static/mages/fnfhl/index.html",
+        "category":  "Action",
+        "categories": ["Rhythm", "Action"]
+    },
+    {
+        "name":  "Friday Night Funkin\u0027 vs. QT",
+        "image":  "static/icons/fnfqt.webp",
+        "url":  "static/mages/fnfqt/index.html",
+        "category":  "Action",
+        "categories": ["Rhythm", "Action"]
+    },
+    {
+        "name":  "Friday Night Funkin\u0027 vs. BOPCITY",
+        "image":  "static/icons/fnfbc.webp",
+        "url":  "static/mages/fnfbc/index.html",
+        "category":  "Action",
+        "categories": ["Rhythm", "Action"]
+    },
+    {
+        "name":  "Friday Night Funkin\u0027 vs. TWIDDLEFINGER",
+        "image":  "static/icons/fnftf.webp",
+        "url":  "static/mages/fnftf/index.html",
+        "category":  "Action",
+        "categories": ["Rhythm", "Action"]
+    },
+    {
+        "name":  "Friday Night Funkin\u0027: Pibby: Apocalypse",
+        "image":  "static/icons/fnfpb.webp",
+        "url":  "static/mages/fnfpb/index.html",
+        "category":  "Action",
+        "categories": ["Rhythm", "Action"]
+    },
+    {
+        "name":  "Friday Night Funkin\u0027: Mistful Crimson Morning Reboot",
+        "image":  "static/icons/fnfmcmr.webp",
+        "url":  "static/mages/fnfmcmr/index.html",
+        "category":  "Action",
+        "categories": ["Rhythm", "Action"]
+    },
+    {
+        "name":  "Friday Night Funkin\u0027: Jeffy\u0027s Endless Aethos",
+        "image":  "static/icons/fnfjea.webp",
+        "url":  "static/mages/fnfjea/index.html",
+        "category":  "Action",
+        "categories": ["Rhythm", "Action"]
+    },
+    {
+        "name":  "Friday Night Funkin\u0027: FIRE IN THE HOLE: Lobotomy Dash Funkin\u0027",
+        "image":  "static/icons/fnfldf.webp",
+        "url":  "static/mages/fnfldf/index.html",
+        "category":  "Action",
+        "categories": ["Rhythm", "Action"]
+    },
+    {
+        "name":  "Friday Night Funkin\u0027: Darkness Takeover",
+        "image":  "static/icons/fnfdt.webp",
+        "url":  "static/mages/fnfdt/index.html",
+        "category":  "Action",
+        "categories": ["Rhythm", "Action"]
+    },
+    {
+        "name":  "Friday Night Funkin\u0027: Creepypasta JP",
+        "image":  "static/icons/fnfcjp.webp",
+        "url":  "static/mages/fnfcjp/index.html",
+        "category":  "Action",
+        "categories": ["Rhythm", "Action"]
+    },
+    {
+        "name":  "Friday Night Funkin\u0027: 17 Bucks: Floor 1",
+        "image":  "static/icons/fnf.webp",
+        "url":  "static/mages/fnf/index.html",
+        "category":  "Action",
+        "categories": ["Rhythm", "Action"]
+    },
+    {
+        "name":  "Evolution",
+        "image":  "static/icons/evolution.webp",
+        "url":  "static/mages/evolution/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Evil Glitch",
+        "image":  "static/icons/evilglitch.webp",
+        "url":  "static/mages/evilglitch/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Earn To Die",
+        "image":  "static/icons/earntodie.webp",
+        "url":  "static/mages/earntodie/index.html",
+        "category":  "Casual",
+        "categories": ["Flash", "Casual"]
+    },
+    {
+        "name":  "Fort",
+        "image":  "static/icons/fort.webp",
+        "url":  "static/mages/fort/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Fruit Cuts 3D",
+        "image":  "static/icons/fruitcuts3d.webp",
+        "url":  "static/mages/fruitcuts3d/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Fruit Ninja",
+        "image":  "static/icons/fruitninja.webp",
+        "url":  "static/mages/fruitninja/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Funny Shooter",
+        "image":  "static/icons/funnyshooter.webp",
+        "url":  "static/mages/funnyshooter/index.html",
+        "category":  "Action",
+        "categories": ["Action"]
+    },
+    {
+        "name":  "Funny Shooter 2",
+        "image":  "static/icons/funnyshooter2.webp",
+        "url":  "static/mages/funnyshooter2/index.html",
+        "category":  "Action",
+        "categories": ["Action"]
+    },
+    {
+        "name":  "Exo",
+        "image":  "static/icons/exo.webp",
+        "url":  "static/mages/exo/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Geometry Dash",
+        "image":  "static/icons/geometrydash.webp",
+        "url":  "static/mages/geometrydash/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Geometry Dash Lite",
+        "image":  "static/icons/geometrydashlite.webp",
+        "url":  "static/mages/geometrydashlite/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Geometry Dash Wave",
+        "image":  "static/icons/gdashwave.webp",
+        "url":  "static/mages/gdashwave/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Geometry Rash",
+        "image":  "static/icons/geometryrash.webp",
+        "url":  "static/mages/geometryrash/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Geometry Jump",
+        "image":  "static/icons/geometryjump.webp",
+        "url":  "static/mages/geometryjump/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Geometry Melt",
+        "image":  "static/icons/geometrymelt.webp",
+        "url":  "static/mages/geometrymelt/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Papa\u0027s Bakeria",
+        "image":  "static/icons/papasbakeria.webp",
+        "url":  "static/mages/papasbakeria/index.html",
+        "category":  "Casual",
+        "categories": ["Flash", "Casual"]
+    },
+    {
+        "name":  "Papa\u0027s Burgeria",
+        "image":  "static/icons/papasburgeria.webp",
+        "url":  "static/mages/papasburgeria/index.html",
+        "category":  "Casual",
+        "categories": ["Flash", "Casual"]
+    },
+    {
+        "name":  "Papa\u0027s Cheeseria",
+        "image":  "static/icons/papascheeseria.webp",
+        "url":  "static/mages/papascheeseria/index.html",
+        "category":  "Casual",
+        "categories": ["Flash", "Casual"]
+    },
+    {
+        "name":  "Papa\u0027s Donuteria",
+        "image":  "static/icons/papasdonuteria.webp",
+        "url":  "static/mages/papasdonuteria/index.html",
+        "category":  "Casual",
+        "categories": ["Flash", "Casual"]
+    },
+    {
+        "name":  "Papa\u0027s Freezeria",
+        "image":  "static/icons/papasfreezeria.webp",
+        "url":  "static/mages/papasfreezeria/index.html",
+        "category":  "Casual",
+        "categories": ["Flash", "Casual"]
+    },
+    {
+        "name":  "Papa\u0027s Pancakeria",
+        "image":  "static/icons/papaspancakeria.webp",
+        "url":  "static/mages/papaspancakeria/index.html",
+        "category":  "Casual",
+        "categories": ["Flash", "Casual"]
+    },
+    {
+        "name":  "Papa\u0027s Pastaria",
+        "image":  "static/icons/papaspastaria.webp",
+        "url":  "static/mages/papaspastaria/index.html",
+        "category":  "Casual",
+        "categories": ["Flash", "Casual"]
+    },
+    {
+        "name":  "Papa\u0027s Scooperia",
+        "image":  "static/icons/papasscooperia.webp",
+        "url":  "static/mages/papasscooperia/index.html",
+        "category":  "Casual",
+        "categories": ["Flash", "Casual"]
+    },
+    {
+        "name":  "Papa\u0027s Sushiria",
+        "image":  "static/icons/papassushiria.webp",
+        "url":  "static/mages/papassushiria/index.html",
+        "category":  "Casual",
+        "categories": ["Flash", "Casual"]
+    },
+    {
+        "name":  "Papa\u0027s Taco Mia!",
+        "image":  "static/icons/papastacomia.webp",
+        "url":  "static/mages/papastacomia/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Papa\u0027s Wingeria",
+        "image":  "static/icons/papaswingeria.webp",
+        "url":  "static/mages/papaswingeria/index.html",
+        "category":  "Casual",
+        "categories": ["Flash", "Casual"]
+    },
+    {
+        "name":  "Papa Louie: When Pizza\u0027s Attack!",
+        "image":  "static/icons/papalouie.webp",
+        "url":  "static/mages/papalouie/index.html",
+        "category":  "Casual",
+        "categories": ["Flash", "Casual"]
+    },
+    {
+        "name":  "Papa Louie 2: When Burger\u0027s Attack!",
+        "image":  "static/icons/papalouie2.webp",
+        "url":  "static/mages/papalouie2/index.html",
+        "category":  "Casual",
+        "categories": ["Flash", "Casual"]
+    },
+    {
+        "name":  "Papa Louie: When Sundae\u0027s Attack!",
+        "image":  "static/icons/papalouie3.webp",
+        "url":  "static/mages/papalouie3/index.html",
+        "category":  "Casual",
+        "categories": ["Flash", "Casual"]
+    },
+    {
+        "name":  "Getaway Shooter",
+        "image":  "static/icons/getawayshooter.webp",
+        "url":  "static/mages/getawayshooter/index.html",
+        "category":  "Action",
+        "categories": ["Action"]
+    },
+    {
+        "name":  "Gladihoppers",
+        "image":  "static/icons/gladihoppers.webp",
+        "url":  "static/mages/gladihoppers/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Gold Digger FRVR",
+        "image":  "static/icons/golddiggerfrvr.webp",
+        "url":  "static/mages/golddiggerfrvr/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Goldeneye",
+        "image":  "static/icons/goldeneye.webp",
+        "url":  "static/mages/goldeneye/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Defend The Tank",
+        "image":  "static/icons/defendthetank.webp",
+        "url":  "static/mages/defendthetank/index.html",
+        "category":  "Strategy",
+        "categories": ["Strategy"]
+    },
+    {
+        "name":  "Alien Hominid",
+        "image":  "static/icons/alienhominid.webp",
+        "url":  "static/mages/alienhominid/index.html",
+        "category":  "Casual",
+        "categories": ["Flash", "Casual"]
+    },
+    {
+        "name":  "Advance GTA",
+        "image":  "static/icons/advancegta.webp",
+        "url":  "static/mages/advancegta/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Amazing Rope Police",
+        "image":  "static/icons/amazingropepolice.webp",
+        "url":  "static/mages/amazingropepolice/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Grand Shift Auto",
+        "image":  "static/icons/grandshiftauto.webp",
+        "url":  "static/mages/grandshiftauto/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Grand Theft Auto",
+        "image":  "static/icons/grandtheftauto.webp",
+        "url":  "static/mages/grandtheftauto/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Grand Theft Auto 2",
+        "image":  "static/icons/grandtheftauto2.webp",
+        "url":  "static/mages/grandtheftauto2/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Grand Theft Auto 3",
+        "image":  "static/icons/grandtheftauto3.webp",
+        "url":  "static/mages/grandtheftauto3/index.html",
+        "category":  "Casual",
+        "categories": ["Flash", "Casual"]
+    },
+    {
+        "name":  "Grand Theft Grotto",
+        "image":  "static/icons/grandtheftgrotto.webp",
+        "url":  "static/mages/grandtheftgrotto/index.html",
+        "category":  "Casual",
+        "categories": ["Flash", "Casual"]
+    },
+    {
+        "name":  "Grand Truckismo",
+        "image":  "static/icons/grandtruckismo.webp",
+        "url":  "static/mages/grandtruckismo/index.html",
+        "category":  "Cars",
+        "categories": ["Flash", "Cars"]
+    },
+    {
+        "name":  "Guilty Gear X",
+        "image":  "static/icons/guiltygearx.webp",
+        "url":  "static/mages/guiltygearx/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Among Us",
+        "image":  "static/icons/amongus.webp",
+        "url":  "static/mages/amongus/index.html",
+        "category":  "Adventure",
+        "categories": ["Adventure"]
+    },
+    {
+        "name":  "Solar Smash",
+        "image":  "static/icons/solarsmash.webp",
+        "url":  "static/mages/solarsmash/index.html",
+        "category":  "Adventure",
+        "categories": ["Adventure"]
+    },
+    {
+        "name":  "Gummibar",
+        "image":  "static/icons/gummibar.webp",
+        "url":  "static/mages/gummibar/index.html",
+        "category":  "Casual",
+        "categories": ["Flash", "Casual"]
+    },
+    {
+        "name":  "Gunfest",
+        "image":  "static/icons/gunfest.webp",
+        "url":  "static/mages/gunfest/index.html",
+        "category":  "Action",
+        "categories": ["Action"]
+    },
+    {
+        "name":  "Gunknight",
+        "image":  "static/icons/gunknight.webp",
+        "url":  "static/mages/gunknight/index.html",
+        "category":  "Action",
+        "categories": ["Action"]
+    },
+    {
+        "name":  "Gun Mayhem",
+        "image":  "static/icons/gunmayhem.webp",
+        "url":  "static/mages/gunmayhem/index.html",
+        "category":  "Action",
+        "categories": ["Flash", "Action"]
+    },
+    {
+        "name":  "Gun Mayhem 2",
+        "image":  "static/icons/gunmayhem2.webp",
+        "url":  "static/mages/gunmayhem2/index.html",
+        "category":  "Action",
+        "categories": ["Flash", "Action"]
+    },
+    {
+        "name":  "Gun Mayhem Redux",
+        "image":  "static/icons/gunmayhemredux.webp",
+        "url":  "static/mages/gunmayhemredux/index.html",
+        "category":  "Action",
+        "categories": ["Flash", "Action"]
+    },
+    {
+        "name":  "Half Life 2",
+        "image":  "static/icons/halflife2.webp",
+        "url":  "static/mages/halflife2/index.html",
+        "category":  "Casual",
+        "categories": ["Flash", "Casual"]
+    },
+    {
+        "name":  "Happy Wheels",
+        "image":  "static/icons/happywheels.webp",
+        "url":  "static/mages/happywheels/index.html",
+        "category":  "Casual",
+        "categories": ["Flash", "Casual"]
+    },
+    {
+        "name":  "Heist",
+        "image":  "static/icons/heist.webp",
+        "url":  "static/mages/heist/index.html",
+        "category":  "Casual",
+        "categories": ["Flash", "Casual"]
+    },
+    {
+        "name":  "Helix Jump",
+        "image":  "static/icons/helixjump.webp",
+        "url":  "static/mages/helixjump/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Stack Bounce",
+        "image":  "static/icons/stackbounce.webp",
+        "url":  "static/mages/stackbounce/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Stacker",
+        "image":  "static/icons/stacker.webp",
+        "url":  "static/mages/stacker/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Love Tester",
+        "image":  "static/icons/lovetester.webp",
+        "url":  "static/mages/lovetester/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Hextris",
+        "image":  "static/icons/hextris.webp",
+        "url":  "static/mages/hextris/index.html",
+        "category":  "Strategy",
+        "categories": ["Strategy"]
+    },
+    {
+        "name":  "Hill Climb Racing",
+        "image":  "static/icons/hillclimbracing.webp",
+        "url":  "static/mages/hillclimbracing/index.html",
+        "category":  "Cars",
+        "categories": ["Cars"]
+    },
+    {
+        "name":  "Hole IO",
+        "image":  "static/icons/holeio.webp",
+        "url":  "static/mages/holeio/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "House Of Hazards",
+        "image":  "static/icons/houseofhazards.webp",
+        "url":  "static/mages/houseofhazards/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Idle Breakout",
+        "image":  "static/icons/idlebreakout.webp",
+        "url":  "static/mages/idlebreakout/index.html",
+        "category":  "Strategy",
+        "categories": ["Strategy"]
+    },
+    {
+        "name":  "Idle Research",
+        "image":  "static/icons/idleresearch.webp",
+        "url":  "static/mages/idleresearch/index.html",
+        "category":  "Strategy",
+        "categories": ["Strategy"]
+    },
+    {
+        "name":  "Idle Shark",
+        "image":  "static/icons/idleshark.webp",
+        "url":  "static/mages/idleshark/index.html",
+        "category":  "Strategy",
+        "categories": ["Strategy"]
+    },
+    {
+        "name":  "I Wanna Be The Creator",
+        "image":  "static/icons/iwbtc.webp",
+        "url":  "static/mages/iwbtc/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Jetpack Joyride",
+        "image":  "static/icons/jetpackjoyride.webp",
+        "url":  "static/mages/jetpackjoyride/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Jewel",
+        "image":  "static/icons/jewel.webp",
+        "url":  "static/mages/jewel/index.html",
+        "category":  "Strategy",
+        "categories": ["Flash", "Strategy"]
+    },
+    {
+        "name":  "Kick That Buddy",
+        "image":  "static/icons/kickthatbuddy.webp",
+        "url":  "static/mages/kickthatbuddy/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Last Horizon",
+        "image":  "static/icons/lasthorizon.webp",
+        "url":  "static/mages/lasthorizon/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Lazy Jump 3D",
+        "image":  "static/icons/lazyjump3d.webp",
+        "url":  "static/mages/lazyjump3d/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Learn To Fly",
+        "image":  "static/icons/learntofly.webp",
+        "url":  "static/mages/learntofly/index.html",
+        "category":  "Casual",
+        "categories": ["Flash", "Casual"]
+    },
+    {
+        "name":  "Learn To Fly 2",
+        "image":  "static/icons/learntofly2.webp",
+        "url":  "static/mages/learntofly2/index.html",
+        "category":  "Casual",
+        "categories": ["Flash", "Casual"]
+    },
+    {
+        "name":  "Learn To Fly 3",
+        "image":  "static/icons/learntofly3.webp",
+        "url":  "static/mages/learntofly3/index.html",
+        "category":  "Casual",
+        "categories": ["Flash", "Casual"]
+    },
+    {
+        "name":  "Learn To Fly Idle",
+        "image":  "static/icons/learntoflyidle.webp",
+        "url":  "static/mages/learntoflyidle/index.html",
+        "category":  "Strategy",
+        "categories": ["Flash", "Strategy"]
+    },
+    {
+        "name":  "Linerider",
+        "image":  "static/icons/linerider.webp",
+        "url":  "static/mages/linerider/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Little Alchemy",
+        "image":  "static/icons/littlealchemy.webp",
+        "url":  "static/mages/littlealchemy/index.html",
+        "category":  "Strategy",
+        "categories": ["Strategy"]
+    },
+    {
+        "name":  "Little Alchemy 2",
+        "image":  "static/icons/littlealchemy2.webp",
+        "url":  "static/mages/littlealchemy2/index.html",
+        "category":  "Strategy",
+        "categories": ["Strategy"]
+    },
+    {
+        "name":  "Low\u0027s Adventures 2",
+        "image":  "static/icons/lowsadventures2.webp",
+        "url":  "static/mages/lowsadventures2/index.html",
+        "category":  "Adventure",
+        "categories": ["Adventure"]
+    },
+    {
+        "name":  "Mario",
+        "image":  "static/icons/mario.webp",
+        "url":  "static/mages/mario/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "NSMB Mario Vs Luigi",
+        "image":  "static/icons/mariovsluigi.webp",
+        "url":  "static/mages/mariovsluigi/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Mario Paint",
+        "image":  "static/icons/mp.webp",
+        "url":  "static/mages/mariopaint/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Mario 63",
+        "image":  "static/icons/mario63.webp",
+        "url":  "static/mages/mario63/index.html",
+        "category":  "Casual",
+        "categories": ["Flash", "Casual"]
+    },
+    {
+        "name":  "Super Mario 64",
+        "image":  "static/icons/supermario64.webp",
+        "url":  "static/mages/supermario64/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Super Mario 64 DS",
+        "image":  "static/icons/supermario64ds.webp",
+        "url":  "static/mages/supermario64ds/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Mario Kart DS",
+        "image":  "static/icons/mariokartds.webp",
+        "url":  "static/mages/mariokartds/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Mario Party",
+        "image":  "static/icons/marioparty.webp",
+        "url":  "static/mages/marioparty/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Mario Party 2",
+        "image":  "static/icons/marioparty2.webp",
+        "url":  "static/mages/marioparty2/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Mario Party 3",
+        "image":  "static/icons/marioparty3.webp",
+        "url":  "static/mages/marioparty3/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Mario Party DS",
+        "image":  "static/icons/mariopartyds.webp",
+        "url":  "static/mages/mariopartyds/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Paper Mario",
+        "image":  "static/icons/papermario.webp",
+        "url":  "static/mages/papermario/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Unfair Mario",
+        "image":  "static/icons/unfairmario.webp",
+        "url":  "static/mages/unfairmario/index.html",
+        "category":  "Casual",
+        "categories": ["Flash", "Casual"]
+    },
+    {
+        "name":  "Yoshi Fabrication Studio",
+        "image":  "static/icons/yoshifabrication.webp",
+        "url":  "static/mages/yoshifabrication/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Super Mario Construct",
+        "image":  "static/icons/supermarioconstruct.webp",
+        "url":  "static/mages/supermarioconstruct/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Donkey Kong",
+        "image":  "static/icons/donkeykong.webp",
+        "url":  "static/mages/donkeykong/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Frogger",
+        "image":  "static/icons/frogger.webp",
+        "url":  "static/mages/frogger/index.html",
+        "category":  "Casual",
+        "categories": ["Flash", "Casual"]
+    },
+    {
+        "name":  "Meteor Run",
+        "image":  "static/icons/meteorrun.webp",
+        "url":  "static/mages/meteorrun/index.html",
+        "category":  "Sports",
+        "categories": ["Sports"]
+    },
+    {
+        "name":  "Metroid Zero Mission",
+        "image":  "static/icons/metroidzeromission.webp",
+        "url":  "static/mages/metroidzeromission/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Mindustry",
+        "image":  "static/icons/mindustry.webp",
+        "url":  "static/mages/mindustry/index.html",
+        "category":  "Casual",
+        "categories": ["Flash", "Casual"]
+    },
+    {
+        "name":  "Monkey Mart",
+        "image":  "static/icons/monkeymart.webp",
+        "url":  "static/mages/monkeymart/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Farmer Craft",
+        "image":  "static/icons/farmercraft.webp",
+        "url":  "static/mages/farmercraft/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Mutiny",
+        "image":  "static/icons/mutiny.webp",
+        "url":  "static/mages/mutiny/index.html",
+        "category":  "Casual",
+        "categories": ["Flash", "Casual"]
+    },
+    {
+        "name":  "Nintendogs",
+        "image":  "static/icons/nintendogs.webp",
+        "url":  "static/mages/nintendogs/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Animal Crossing Wild World",
+        "image":  "static/icons/animalcrossingwildworld.webp",
+        "url":  "static/mages/animalcrossingwildworld/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Ocarina Of Time",
+        "image":  "static/icons/ocarinaoftime.webp",
+        "url":  "static/mages/ocarinaoftime/index.html",
+        "category":  "Cars",
+        "categories": ["Cars"]
+    },
+    {
+        "name":  "Majora\u0027s Mask",
+        "image":  "static/icons/majorasmask.webp",
+        "url":  "static/mages/majorasmask/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Offline Paradise",
+        "image":  "static/icons/offlineparadise.webp",
+        "url":  "static/mages/offlineparadise/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Offroad",
+        "image":  "static/icons/offroad.webp",
+        "url":  "static/mages/offroad/index.html",
+        "category":  "Casual",
+        "categories": ["Flash", "Casual"]
+    },
+    {
+        "name":  "Pacman",
+        "image":  "static/icons/pacman.webp",
+        "url":  "static/mages/pacman/index.html",
+        "category":  "Casual",
+        "categories": ["Flash", "Casual"]
+    },
+    {
+        "name":  "Pako Highway",
+        "image":  "static/icons/pakohighway.webp",
+        "url":  "static/mages/pakohighway/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Pandemic",
+        "image":  "static/icons/pandemic.webp",
+        "url":  "static/mages/pandemic/index.html",
+        "category":  "Casual",
+        "categories": ["Flash", "Casual"]
+    },
+    {
+        "name":  "Pandemic 2",
+        "image":  "static/icons/pandemic2.webp",
+        "url":  "static/mages/pandemic2/index.html",
+        "category":  "Casual",
+        "categories": ["Flash", "Casual"]
+    },
+    {
+        "name":  "Paper.io",
+        "image":  "static/icons/paperio.webp",
+        "url":  "static/mages/paperio/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Age Of War",
+        "image":  "static/icons/ageofwar.webp",
+        "url":  "static/mages/ageofwar/index.html",
+        "category":  "Casual",
+        "categories": ["Flash", "Casual"]
+    },
+    {
+        "name":  "Age Of War 2",
+        "image":  "static/icons/ageofwar2.webp",
+        "url":  "static/mages/ageofwar2/index.html",
+        "category":  "Casual",
+        "categories": ["Flash", "Casual"]
+    },
+    {
+        "name":  "Hover Bot Arena",
+        "image":  "static/icons/hoverbotarena.webp",
+        "url":  "static/mages/hoverbotarena/index.html",
+        "category":  "Casual",
+        "categories": ["Flash", "Casual"]
+    },
+    {
+        "name":  "Happy Hop",
+        "image":  "static/icons/happyhop.webp",
+        "url":  "static/mages/happyhop/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Handshakes",
+        "image":  "static/icons/handshakes.webp",
+        "url":  "static/mages/handshakes/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Hacker Typer",
+        "image":  "static/icons/hackertype.webp",
+        "url":  "static/mages/hackertype/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Google Feud",
+        "image":  "static/icons/googlefeud.webp",
+        "url":  "static/mages/googlefeud/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Glass City",
+        "image":  "static/icons/glasscity.webp",
+        "url":  "static/mages/glasscity/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Gimme The Airpod",
+        "image":  "static/icons/gimmetheairpod.webp",
+        "url":  "static/mages/gimmetheairpod/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Froggy\u0027s Battle",
+        "image":  "static/icons/froggysbattle.webp",
+        "url":  "static/mages/froggysbattle/index.html",
+        "category":  "Action",
+        "categories": ["Action"]
+    },
+    {
+        "name":  "Frying Nemo",
+        "image":  "static/icons/fryingnemo.webp",
+        "url":  "static/mages/fryingnemo/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Hardware Tycoon",
+        "image":  "static/icons/hardwaretycoon.webp",
+        "url":  "static/mages/hardwaretycoon/index.html",
+        "category":  "Strategy",
+        "categories": ["Strategy"]
+    },
+    {
+        "name":  "Pickcrafter",
+        "image":  "static/icons/pickcrafter.webp",
+        "url":  "static/mages/pickcrafter/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Grindcraft",
+        "image":  "static/icons/grindcraft.webp",
+        "url":  "static/mages/grindcraft/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Pinball",
+        "image":  "static/icons/pinball.webp",
+        "url":  "static/mages/pinball/index.html",
+        "category":  "Sports",
+        "categories": ["Sports"]
+    },
+    {
+        "name":  "Pizza Tower",
+        "image":  "static/icons/pizzatower.webp",
+        "url":  "static/mages/pizzatower/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Plants Vs Zombies",
+        "image":  "static/icons/plantsvszombies.webp",
+        "url":  "static/mages/plantsvszombies/index.html",
+        "category":  "Action",
+        "categories": ["Flash", "Action"]
+    },
+    {
+        "name":  "Pokemon",
+        "image":  "static/icons/pokemon.webp",
+        "url":  "static/mages/pokemon/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Polytrack",
+        "image":  "static/icons/polytrack.webp",
+        "url":  "static/mages/polytrack/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Pool",
+        "image":  "static/icons/pool.webp",
+        "url":  "static/mages/pool/index.html",
+        "category":  "Casual",
+        "categories": ["Flash", "Casual"]
+    },
+    {
+        "name":  "Putin On The Ritz",
+        "image":  "static/icons/putinonritz.webp",
+        "url":  "static/mages/putinonritz/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "You Are Bezos",
+        "image":  "static/icons/youarebezos.webp",
+        "url":  "static/mages/youarebezos/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Quake 3",
+        "image":  "static/icons/quake3.webp",
+        "url":  "static/mages/quake3/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Rabbit Rescue",
+        "image":  "static/icons/rabbitrescue.webp",
+        "url":  "static/mages/rabbitrescue/index.html",
+        "category":  "Casual",
+        "categories": ["Flash", "Casual"]
+    },
+    {
+        "name":  "Racer",
+        "image":  "static/icons/racer.webp",
+        "url":  "static/mages/racer/index.html",
+        "category":  "Cars",
+        "categories": ["Cars"]
+    },
+    {
+        "name":  "Real Flying Truck",
+        "image":  "static/icons/realflyingtruck.webp",
+        "url":  "static/mages/realflyingtruck/index.html",
+        "category":  "Cars",
+        "categories": ["Cars"]
+    },
+    {
+        "name":  "Recoil",
+        "image":  "static/icons/recoil.webp",
+        "url":  "static/mages/recoil/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Red Ball",
+        "image":  "static/icons/redball.webp",
+        "url":  "static/mages/redball/index.html",
+        "category":  "Sports",
+        "categories": ["Flash", "Sports"]
+    },
+    {
+        "name":  "Red Ball 3",
+        "image":  "static/icons/redball3.webp",
+        "url":  "static/mages/redball3/index.html",
+        "category":  "Sports",
+        "categories": ["Flash", "Sports"]
+    },
+    {
+        "name":  "Red Ball 4",
+        "image":  "static/icons/redball4.webp",
+        "url":  "static/mages/redball4/index.html",
+        "category":  "Sports",
+        "categories": ["Flash", "Sports"]
+    },
+    {
+        "name":  "Red Ball 4 V2",
+        "image":  "static/icons/redball4v2.webp",
+        "url":  "static/mages/redball4v2/index.html",
+        "category":  "Sports",
+        "categories": ["Flash", "Sports"]
+    },
+    {
+        "name":  "Red Ball 4 V3",
+        "image":  "static/icons/redball4v3.webp",
+        "url":  "static/mages/redball4v3/index.html",
+        "category":  "Sports",
+        "categories": ["Flash", "Sports"]
+    },
+    {
+        "name":  "Retro Bowl",
+        "image":  "static/icons/retrobowl.webp",
+        "url":  "static/mages/retrobowl/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Retro Bowl College",
+        "image":  "static/icons/retrobowlcollege.webp",
+        "url":  "static/mages/retrobowlcollege/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Riddle School",
+        "image":  "static/icons/riddleschool.webp",
+        "url":  "static/mages/riddleschool/index.html",
+        "category":  "Casual",
+        "categories": ["Flash", "Casual"]
+    },
+    {
+        "name":  "Riddle School 2",
+        "image":  "static/icons/riddleschool2.webp",
+        "url":  "static/mages/riddleschool2/index.html",
+        "category":  "Casual",
+        "categories": ["Flash", "Casual"]
+    },
+    {
+        "name":  "Riddle School 3",
+        "image":  "static/icons/riddleschool3.webp",
+        "url":  "static/mages/riddleschool3/index.html",
+        "category":  "Casual",
+        "categories": ["Flash", "Casual"]
+    },
+    {
+        "name":  "Riddle School 4",
+        "image":  "static/icons/riddleschool4.webp",
+        "url":  "static/mages/riddleschool4/index.html",
+        "category":  "Casual",
+        "categories": ["Flash", "Casual"]
+    },
+    {
+        "name":  "Riddle School 5",
+        "image":  "static/icons/riddleschool5.webp",
+        "url":  "static/mages/riddleschool5/index.html",
+        "category":  "Casual",
+        "categories": ["Flash", "Casual"]
+    },
+    {
+        "name":  "Riddle School Transfer",
+        "image":  "static/icons/riddleschooltransfer.webp",
+        "url":  "static/mages/riddleschooltransfer/index.html",
+        "category":  "Casual",
+        "categories": ["Flash", "Casual"]
+    },
+    {
+        "name":  "Riddle School Transfer 2",
+        "image":  "static/icons/riddleschooltransfer2.webp",
+        "url":  "static/mages/riddleschooltransfer2/index.html",
+        "category":  "Casual",
+        "categories": ["Flash", "Casual"]
+    },
+    {
+        "name":  "Rise Higher",
+        "image":  "static/icons/risehigher.webp",
+        "url":  "static/mages/risehigher/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Rocket Bot Royale",
+        "image":  "static/icons/rocketbotroyale.webp",
+        "url":  "static/mages/rocketbotroyale/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Rocket League",
+        "image":  "static/icons/rocketleague.webp",
+        "url":  "static/mages/rocketleague/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Rocket League 2D",
+        "image":  "static/icons/rocketleague2d.webp",
+        "url":  "static/mages/rocketleague2d/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Rooftop Snipers",
+        "image":  "static/icons/rooftopsnipers.webp",
+        "url":  "static/mages/rooftopsnipers/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Rooftop Snipers 2",
+        "image":  "static/icons/rooftopsnipers2.webp",
+        "url":  "static/mages/rooftopsnipers2/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Rough Dino",
+        "image":  "static/icons/roughdino.webp",
+        "url":  "static/mages/roughdino/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Run",
+        "image":  "static/icons/run.webp",
+        "url":  "static/mages/run/index.html",
+        "category":  "Sports",
+        "categories": ["Flash", "Sports"]
+    },
+    {
+        "name":  "Run 2",
+        "image":  "static/icons/run2.webp",
+        "url":  "static/mages/run2/index.html",
+        "category":  "Sports",
+        "categories": ["Flash", "Sports"]
+    },
+    {
+        "name":  "Run 3",
+        "image":  "static/icons/run3.webp",
+        "url":  "static/mages/run3/index.html",
+        "category":  "Sports",
+        "categories": ["Flash", "Sports"]
+    },
+    {
+        "name":  "Electron Dash",
+        "image":  "static/icons/electrondash.webp",
+        "url":  "static/mages/electrondash/index.html",
+        "category":  "Sports",
+        "categories": ["Sports"]
+    },
+    {
+        "name":  "Run 3 Editor",
+        "image":  "static/icons/run3editor.webp",
+        "url":  "static/mages/run3editor/index.html",
+        "category":  "Sports",
+        "categories": ["Sports"]
+    },
+    {
+        "name":  "Russian Car Driver",
+        "image":  "static/icons/russiancardriver.webp",
+        "url":  "static/mages/russiancardriver/index.html",
+        "category":  "Cars",
+        "categories": ["Cars"]
+    },
+    {
+        "name":  "Sandboxels",
+        "image":  "static/icons/sandboxels.webp",
+        "url":  "static/mages/sandboxels/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Sand Game",
+        "image":  "static/icons/sandgame.webp",
+        "url":  "static/mages/sandgame/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Shapes Shipper",
+        "image":  "static/icons/shapesshipper.webp",
+        "url":  "static/mages/shapesshipper/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Shapes",
+        "image":  "static/icons/shapes.webp",
+        "url":  "static/mages/shapes/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Simcity",
+        "image":  "static/icons/simcity.webp",
+        "url":  "static/mages/simcity/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Simcity 2000",
+        "image":  "static/icons/simcity2000.webp",
+        "url":  "static/mages/simcity2000/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Simon",
+        "image":  "static/icons/simon.webp",
+        "url":  "static/mages/simon/index.html",
+        "category":  "Casual",
+        "categories": ["Flash", "Casual"]
+    },
+    {
+        "name":  "Skate",
+        "image":  "static/icons/skate.webp",
+        "url":  "static/mages/skate/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Skibidi Toilet 1v100",
+        "image":  "static/icons/skibiditoilet1v100.webp",
+        "url":  "static/mages/skibiditoilet1v100/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Skibidi Toilet Attack",
+        "image":  "static/icons/skibiditoiletattack.webp",
+        "url":  "static/mages/skibiditoiletattack/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Snot Out",
+        "image":  "static/icons/snotout.webp",
+        "url":  "static/mages/snotout/index.html",
+        "category":  "Casual",
+        "categories": ["Flash", "Casual"]
+    },
+    {
+        "name":  "Sonic",
+        "image":  "static/icons/sonic.webp",
+        "url":  "static/mages/sonic/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Sonic 2",
+        "image":  "static/icons/sonic2.webp",
+        "url":  "static/mages/sonic2/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Sonic 3",
+        "image":  "static/icons/sonic3.webp",
+        "url":  "static/mages/sonic3/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Sonic Advance",
+        "image":  "static/icons/sonicadvance.webp",
+        "url":  "static/mages/sonicadvance/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Sonic Advance 2",
+        "image":  "static/icons/sonicadvance2.webp",
+        "url":  "static/mages/sonicadvance2/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Sonic Advance 3",
+        "image":  "static/icons/sonicadvance3.webp",
+        "url":  "static/mages/sonicadvance3/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Sonic And Knuckles",
+        "image":  "static/icons/sonicandknuckles.webp",
+        "url":  "static/mages/sonicandknuckles/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Sonic Blox",
+        "image":  "static/icons/sonicblox.webp",
+        "url":  "static/mages/sonicblox/index.html",
+        "category":  "Casual",
+        "categories": ["Flash", "Casual"]
+    },
+    {
+        "name":  "Soundboard",
+        "image":  "static/icons/soundboard.webp",
+        "url":  "static/mages/soundboard/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Soundboard 2",
+        "image":  "static/icons/soundboard2.webp",
+        "url":  "static/mages/soundboard2/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Spank The Monkey",
+        "image":  "static/icons/spankthemonkey.webp",
+        "url":  "static/mages/spankthemonkey/index.html",
+        "category":  "Casual",
+        "categories": ["Flash", "Casual"]
+    },
+    {
+        "name":  "Splash And Dash",
+        "image":  "static/icons/splashanddash.webp",
+        "url":  "static/mages/splashanddash/index.html",
+        "category":  "Casual",
+        "categories": ["Flash", "Casual"]
+    },
+    {
+        "name":  "Spongebob Snowpants",
+        "image":  "static/icons/spongebobsnowpants.webp",
+        "url":  "static/mages/spongebobsnowpants/index.html",
+        "category":  "Casual",
+        "categories": ["Flash", "Casual"]
+    },
+    {
+        "name":  "Sprinter",
+        "image":  "static/icons/sprinter.webp",
+        "url":  "static/mages/sprinter/index.html",
+        "category":  "Casual",
+        "categories": ["Flash", "Casual"]
+    },
+    {
+        "name":  "Star Clicker",
+        "image":  "static/icons/starclicker.webp",
+        "url":  "static/mages/starclicker/index.html",
+        "category":  "Strategy",
+        "categories": ["Strategy"]
+    },
+    {
+        "name":  "Starfox 64",
+        "image":  "static/icons/starfox64.webp",
+        "url":  "static/mages/starfox64/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "State.io",
+        "image":  "static/icons/stateio.webp",
+        "url":  "static/mages/stateio/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Stickman Boost",
+        "image":  "static/icons/stickmanboost.webp",
+        "url":  "static/mages/stickmanboost/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Stickman Climb",
+        "image":  "static/icons/stickmanclimb.webp",
+        "url":  "static/mages/stickmanclimb/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Stickman Golf",
+        "image":  "static/icons/stickmangolf.webp",
+        "url":  "static/mages/stickmangolf/index.html",
+        "category":  "Sports",
+        "categories": ["Sports"]
+    },
+    {
+        "name":  "Stickman Hook",
+        "image":  "static/icons/stickmanhook.webp",
+        "url":  "static/mages/stickmanhook/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Duke Nukem 2",
+        "image":  "static/icons/dukenukem2.webp",
+        "url":  "static/mages/dukenukem2/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Sudoku",
+        "image":  "static/icons/sudoku.webp",
+        "url":  "static/mages/sudoku/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Super Auto Pets",
+        "image":  "static/icons/superautopets.webp",
+        "url":  "static/mages/superautopets/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Superhero",
+        "image":  "static/icons/superhero.webp",
+        "url":  "static/mages/superhero/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Superhot",
+        "image":  "static/icons/superhot.webp",
+        "url":  "static/mages/superhot/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Super Meat Boy",
+        "image":  "static/icons/supermeatboy.webp",
+        "url":  "static/mages/supermeatboy/index.html",
+        "category":  "Casual",
+        "categories": ["Flash", "Casual"]
+    },
+    {
+        "name":  "Super Smash Bros",
+        "image":  "static/icons/supersmashbros.webp",
+        "url":  "static/mages/supersmashbros/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Super Smash Flash",
+        "image":  "static/icons/supersmashflash.webp",
+        "url":  "static/mages/supersmashflash/index.html",
+        "category":  "Casual",
+        "categories": ["Flash", "Casual"]
+    },
+    {
+        "name":  "Tabs",
+        "image":  "static/icons/tabs.webp",
+        "url":  "static/mages/tabs/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Talking Tom 2",
+        "image":  "static/icons/talkingtom2.webp",
+        "url":  "static/mages/talkingtom2/index.html",
+        "category":  "Casual",
+        "categories": ["Flash", "Casual"]
+    },
+    {
+        "name":  "Tappy Plane",
+        "image":  "static/icons/tappyplane.webp",
+        "url":  "static/mages/tappyplane/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Temple",
+        "image":  "static/icons/temple.webp",
+        "url":  "static/mages/temple/index.html",
+        "category":  "Casual",
+        "categories": ["Flash", "Casual"]
+    },
+    {
+        "name":  "Temple Run 2",
+        "image":  "static/icons/templerun2.webp",
+        "url":  "static/mages/templerun2/index.html",
+        "category":  "Sports",
+        "categories": ["Sports"]
+    },
+    {
+        "name":  "Terrifried",
+        "image":  "static/icons/terrifried.webp",
+        "url":  "static/mages/terrifried/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Territorial IO",
+        "image":  "static/icons/territorialio.webp",
+        "url":  "static/mages/territorialio/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Tetris",
+        "image":  "static/icons/tetris.webp",
+        "url":  "static/mages/tetris/index.html",
+        "category":  "Casual",
+        "categories": ["Flash", "Casual"]
+    },
+    {
+        "name":  "Sandtrix",
+        "image":  "static/icons/sandtrix.webp",
+        "url":  "static/mages/sandtrix/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "The Binding Of Isaac",
+        "image":  "static/icons/thebindingofisaac.webp",
+        "url":  "static/mages/thebindingofisaac/index.html",
+        "category":  "Casual",
+        "categories": ["Flash", "Casual"]
+    },
+    {
+        "name":  "The Black Man",
+        "image":  "static/icons/theblackman.webp",
+        "url":  "static/mages/theblackman/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Big Red Button",
+        "image":  "static/icons/bigredbutton.webp",
+        "url":  "static/mages/bigredbutton/index.html",
+        "category":  "Casual",
+        "categories": ["Flash", "Casual"]
+    },
+    {
+        "name":  "Cat that makes bongo noises",
+        "image":  "static/icons/cat.webp",
+        "url":  "static/mages/cat/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "1",
+        "image":  "static/icons/1.webp",
+        "url":  "static/mages/1/index.html",
+        "category":  "Strategy",
+        "categories": ["Strategy"]
+    },
+    {
+        "name":  "2048",
+        "image":  "static/icons/2048.webp",
+        "url":  "static/mages/2048/index.html",
+        "category":  "Strategy",
+        "categories": ["Strategy"]
+    },
+    {
+        "name":  "9007199254740992",
+        "image":  "static/icons/9007199254740992.webp",
+        "url":  "static/mages/9007199254740992/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Cupcake 2048",
+        "image":  "static/icons/cupcake2048.webp",
+        "url":  "static/mages/cupcake2048/index.html",
+        "category":  "Strategy",
+        "categories": ["Strategy"]
+    },
+    {
+        "name":  "Doge 2048",
+        "image":  "static/icons/doge2048.webp",
+        "url":  "static/mages/doge2048/index.html",
+        "category":  "Strategy",
+        "categories": ["Strategy"]
+    },
+    {
+        "name":  "Cat 2048",
+        "image":  "static/icons/cat2048.webp",
+        "url":  "static/mages/cat2048/index.html",
+        "category":  "Strategy",
+        "categories": ["Strategy"]
+    },
+    {
+        "name":  "Meme 2048",
+        "image":  "static/icons/meme2048.webp",
+        "url":  "static/mages/meme2048/index.html",
+        "category":  "Strategy",
+        "categories": ["Strategy"]
+    },
+    {
+        "name":  "The Enchanted Cave",
+        "image":  "static/icons/theenchantedcave.webp",
+        "url":  "static/mages/theenchantedcave/index.html",
+        "category":  "Casual",
+        "categories": ["Flash", "Casual"]
+    },
+    {
+        "name":  "The Enchanted Cave 2",
+        "image":  "static/icons/theenchantedcave2.webp",
+        "url":  "static/mages/theenchantedcave2/index.html",
+        "category":  "Casual",
+        "categories": ["Flash", "Casual"]
+    },
+    {
+        "name":  "The Final Earth 2",
+        "image":  "static/icons/thefinalearth2.webp",
+        "url":  "static/mages/thefinalearth2/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Theme Hotel",
+        "image":  "static/icons/themehotel.webp",
+        "url":  "static/mages/themehotel/index.html",
+        "category":  "Casual",
+        "categories": ["Flash", "Casual"]
+    },
+    {
+        "name":  "The Heist",
+        "image":  "static/icons/theheist.webp",
+        "url":  "static/mages/theheist/index.html",
+        "category":  "Casual",
+        "categories": ["Flash", "Casual"]
+    },
+    {
+        "name":  "The Battle",
+        "image":  "static/icons/thebattle.webp",
+        "url":  "static/mages/thebattle/index.html",
+        "category":  "Action",
+        "categories": ["Flash", "Action"]
+    },
+    {
+        "name":  "The Hotel",
+        "image":  "static/icons/thehotel.webp",
+        "url":  "static/mages/thehotel/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "A Dark Room",
+        "image":  "static/icons/adarkroom.webp",
+        "url":  "static/mages/adarkroom/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Throw Rocks",
+        "image":  "static/icons/throwrocks.webp",
+        "url":  "static/mages/throwrocks/index.html",
+        "category":  "Casual",
+        "categories": ["Flash", "Casual"]
+    },
+    {
+        "name":  "The Oregon Trail",
+        "image":  "static/icons/theoregontrail.webp",
+        "url":  "static/mages/oregontrail/index.html",
+        "category":  "Casual",
+        "categories": ["Flash", "Casual"]
+    },
+    {
+        "name":  "The Oregon Trail (Jamesfriend)",
+        "image":  "static/icons/totjamesfriend.webp",
+        "url":  "static/mages/theoregontrail/oregon-trail.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "The Sims Busting Out",
+        "image":  "static/icons/thesimsbustingout.webp",
+        "url":  "static/mages/thesimsbustingout/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "The Impossible Game",
+        "image":  "static/icons/theimpossiblegame.webp",
+        "url":  "static/mages/theimpossiblegame/index.html",
+        "category":  "Casual",
+        "categories": ["Flash", "Casual"]
+    },
+    {
+        "name":  "The Impossible Quiz",
+        "image":  "static/icons/theimpossiblequiz.webp",
+        "url":  "static/mages/theimpossiblequiz/index.html",
+        "category":  "Casual",
+        "categories": ["Flash", "Casual"]
+    },
+    {
+        "name":  "There Is No Game",
+        "image":  "static/icons/thereisnogame.webp",
+        "url":  "static/mages/thereisnogame/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "This Is The Only Level",
+        "image":  "static/icons/thisistheonlylevel.webp",
+        "url":  "static/mages/thisistheonlylevel/index.html",
+        "category":  "Casual",
+        "categories": ["Flash", "Casual"]
+    },
+    {
+        "name":  "This Is The Only Level 2",
+        "image":  "static/icons/thisistheonlylevel2.webp",
+        "url":  "static/mages/thisistheonlylevel2/index.html",
+        "category":  "Casual",
+        "categories": ["Flash", "Casual"]
+    },
+    {
+        "name":  "Thumb Fighter",
+        "image":  "static/icons/thumbfighter.webp",
+        "url":  "static/mages/thumbfighter/index.html",
+        "category":  "Action",
+        "categories": ["Action"]
+    },
+    {
+        "name":  "Tiny Islands",
+        "image":  "static/icons/tinyislands.webp",
+        "url":  "static/mages/tinyislands/index.html",
+        "category":  "Adventure",
+        "categories": ["Adventure"]
+    },
+    {
+        "name":  "Toss The Turtle",
+        "image":  "static/icons/tosstheturtle.webp",
+        "url":  "static/mages/tosstheturtle/index.html",
+        "category":  "Casual",
+        "categories": ["Flash", "Casual"]
+    },
+    {
+        "name":  "Win The White House",
+        "image":  "static/icons/winthewhitehouse.webp",
+        "url":  "static/mages/winthewhitehouse/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Wolfenstein 3D",
+        "image":  "static/icons/wolf3d.webp",
+        "url":  "static/mages/wolf3d/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Flippy Fish",
+        "image":  "static/icons/flippyfish.webp",
+        "url":  "static/mages/flippyfish/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Swerve",
+        "image":  "static/icons/swerve.webp",
+        "url":  "static/mages/swerve/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Sushi Unroll",
+        "image":  "static/icons/sushiunroll.webp",
+        "url":  "static/mages/sushiunroll/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Surviv.io",
+        "image":  "static/icons/survivio.webp",
+        "url":  "static/mages/survivio/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Tomb Of The Mask",
+        "image":  "static/icons/tombofthemask.webp",
+        "url":  "static/mages/tombofthemask/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Townscaper",
+        "image":  "static/icons/townscaper.webp",
+        "url":  "static/mages/townscaper/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Tron",
+        "image":  "static/icons/tron.webp",
+        "url":  "static/mages/tron/index.html",
+        "category":  "Casual",
+        "categories": ["Flash", "Casual"]
+    },
+    {
+        "name":  "Tu 46",
+        "image":  "static/icons/tu46.webp",
+        "url":  "static/mages/tu46/index.html",
+        "category":  "Casual",
+        "categories": ["Flash", "Casual"]
+    },
+    {
+        "name":  "Tu 95",
+        "image":  "static/icons/tu95.webp",
+        "url":  "static/mages/tu95/index.html",
+        "category":  "Casual",
+        "categories": ["Flash", "Casual"]
+    },
+    {
+        "name":  "Bitplanes",
+        "image":  "static/icons/bitplanes.webp",
+        "url":  "static/mages/bitplanes/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Tube Jumpers",
+        "image":  "static/icons/tubejumpers.webp",
+        "url":  "static/mages/tubejumpers/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Ultimate Sonic Flash",
+        "image":  "static/icons/ultimatesonicflash.webp",
+        "url":  "static/mages/ultimatesonicflash/index.html",
+        "category":  "Casual",
+        "categories": ["Flash", "Casual"]
+    },
+    {
+        "name":  "Vex",
+        "image":  "static/icons/vex.webp",
+        "url":  "static/mages/vex/index.html",
+        "category":  "Casual",
+        "categories": ["Flash", "Casual"]
+    },
+    {
+        "name":  "Vex 2",
+        "image":  "static/icons/vex2.webp",
+        "url":  "static/mages/vex2/index.html",
+        "category":  "Casual",
+        "categories": ["Flash", "Casual"]
+    },
+    {
+        "name":  "Vex 3",
+        "image":  "static/icons/vex3.webp",
+        "url":  "static/mages/vex3/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Vex 4",
+        "image":  "static/icons/vex4.webp",
+        "url":  "static/mages/vex4/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Vex 5",
+        "image":  "static/icons/vex5.webp",
+        "url":  "static/mages/vex5/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Vex 6",
+        "image":  "static/icons/vex6.webp",
+        "url":  "static/mages/vex6/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Vex 7",
+        "image":  "static/icons/vex7.webp",
+        "url":  "static/mages/vex7/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Wall Smash",
+        "image":  "static/icons/wallsmash.webp",
+        "url":  "static/mages/wallsmash/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "We Become What We Behold",
+        "image":  "static/icons/webecomewhatwebehold.webp",
+        "url":  "static/mages/webecomewhatwebehold/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Find Me",
+        "image":  "static/icons/findme.webp",
+        "url":  "static/mages/findme/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Weave Silk",
+        "image":  "static/icons/weavesilk.webp",
+        "url":  "static/mages/weavesilk/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "WebGL Fluid Sim",
+        "image":  "static/icons/webglfluidsim.webp",
+        "url":  "static/mages/webglfluidsim/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Kitten Cannon",
+        "image":  "static/icons/kittencannon.webp",
+        "url":  "static/mages/kittencannon/index.html",
+        "category":  "Casual",
+        "categories": ["Flash", "Casual"]
+    },
+    {
+        "name":  "Wheely",
+        "image":  "static/icons/wheely.webp",
+        "url":  "static/mages/wheely/index.html",
+        "category":  "Casual",
+        "categories": ["Flash", "Casual"]
+    },
+    {
+        "name":  "Wheely 2",
+        "image":  "static/icons/wheely2.webp",
+        "url":  "static/mages/wheely2/index.html",
+        "category":  "Casual",
+        "categories": ["Flash", "Casual"]
+    },
+    {
+        "name":  "Wheely 3",
+        "image":  "static/icons/wheely3.webp",
+        "url":  "static/mages/wheely3/index.html",
+        "category":  "Casual",
+        "categories": ["Flash", "Casual"]
+    },
+    {
+        "name":  "Wheely 4",
+        "image":  "static/icons/wheely4.webp",
+        "url":  "static/mages/wheely4/index.html",
+        "category":  "Casual",
+        "categories": ["Flash", "Casual"]
+    },
+    {
+        "name":  "Bacon May Die",
+        "image":  "static/icons/baconmaydie.webp",
+        "url":  "static/mages/baconmaydie/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Wordle",
+        "image":  "static/icons/wordle.webp",
+        "url":  "static/mages/wordle/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Speedle",
+        "image":  "static/icons/speedle.webp",
+        "url":  "static/mages/speedle/index.html",
+        "category":  "Casual",
+        "categories": ["Flash", "Casual"]
+    },
+    {
+        "name":  "Wordle Bot",
+        "image":  "static/icons/wordlebot.webp",
+        "url":  "static/mages/wordlebot/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "World\u0027s Hardest Game",
+        "image":  "static/icons/worldshardestgame.webp",
+        "url":  "static/mages/worldshardestgame/index.html",
+        "category":  "Casual",
+        "categories": ["Flash", "Casual"]
+    },
+    {
+        "name":  "World Hardest Game 2",
+        "image":  "static/icons/worldhardestgame2.webp",
+        "url":  "static/mages/worldhardestgame2/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Wubz",
+        "image":  "static/icons/wubz.webp",
+        "url":  "static/mages/wubz/index.html",
+        "category":  "Casual",
+        "categories": ["Flash", "Casual"]
+    },
+    {
+        "name":  "xx142-b2.exe",
+        "image":  "static/icons/xx142b2exe.webp",
+        "url":  "static/mages/xx142b2exe/index.html",
+        "category":  "Casual",
+        "categories": ["Casual"]
+    },
+    {
+        "name":  "Zombocalypse",
+        "image":  "static/icons/zombocalypse.webp",
+        "url":  "static/mages/zombocalypse/index.html",
+        "category":  "Casual",
+        "categories": ["Flash", "Casual"]
+    },
+    {
+        "name":  "Raft Wars",
+        "image":  "static/icons/raftwars.webp",
+        "url":  "static/mages/raftwars/index.html",
+        "category":  "Casual",
+        "categories": ["Flash", "Casual"]
+    }
+]

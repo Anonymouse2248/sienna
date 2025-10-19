@@ -558,6 +558,7 @@ toggleFullscreen() {
         this.iframeContainer = document.getElementById('iframe-container');
         this.emptyState = document.getElementById('empty-state');
         this.loadingSpinner = document.getElementById('loading-spinner');
+        this.loadingOverlay = document.getElementById('modal-loading-overlay');
         this.exitMessage = document.getElementById('exit-message');
         this.gameSelectionScreen = document.getElementById('game-selection-screen');
         this.gameSelectionGrid = document.getElementById('game-selection-grid');
@@ -692,6 +693,15 @@ toggleFullscreen() {
         this.modal?.classList.add('active');
         document.body.style.overflow = 'hidden';
 
+        // Enter performance mode: pause background particles and CSS animations
+        try {
+          window.gameModalOpen = true;
+          if (window.particleBg && typeof window.particleBg.pause === 'function') {
+            window.particleBg.pause();
+          }
+          document.body.classList.add('performance-mode');
+        } catch (e) {}
+
         // Position helper below modal when the modal opens
         this.updateModalHelperPosition(true);
 
@@ -724,6 +734,15 @@ toggleFullscreen() {
       closeModal() {
         this.modal?.classList.remove('active');
         document.body.style.overflow = 'auto';
+
+        // Exit performance mode: resume background particles and animations
+        try {
+          window.gameModalOpen = false;
+          document.body.classList.remove('performance-mode');
+          if (window.particleBg && typeof window.particleBg.resume === 'function') {
+            window.particleBg.resume();
+          }
+        } catch (e) {}
 
         // Restore helper to bottom-center when modal closes
         this.updateModalHelperPosition(false);
@@ -1410,6 +1429,10 @@ toggleFullscreen() {
         if (this.loadingSpinner) {
           this.loadingSpinner.style.display = 'block';
         }
+        if (this.loadingOverlay) {
+          this.loadingOverlay.style.display = 'flex';
+          this.loadingOverlay.setAttribute('aria-hidden', 'false');
+        }
 
         // Modal progress animation (simulated). Advances to ~90% while loading.
         if (this.modalProgress && this.modalProgressBar) {
@@ -1430,6 +1453,10 @@ toggleFullscreen() {
       hideLoading() {
         if (this.loadingSpinner) {
           this.loadingSpinner.style.display = 'none';
+        }
+        if (this.loadingOverlay) {
+          this.loadingOverlay.style.display = 'none';
+          this.loadingOverlay.setAttribute('aria-hidden', 'true');
         }
 
         // Finish modal progress
