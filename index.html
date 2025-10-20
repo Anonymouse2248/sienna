@@ -36,14 +36,6 @@
   <script src="static/js/sidebar.js"></script>
   <script src="static/js/theme.js"></script>
   <script>
-    // Update active button state
-    const originalSetTheme = window.setTheme;
-    window.setTheme = function(themeName) {
-      originalSetTheme(themeName);
-      document.querySelectorAll('.theme-btn').forEach(btn => btn.classList.remove('active'));
-      event.target.classList.add('active');
-    };
-  
      // Clock logic
     function updateClock() {
       const now = new Date();

@@ -2,6 +2,38 @@ let games = [];
 // Favorites stored as array of game names (unique)
 let favorites = [];
 let selectedCategory = 'All';
+// Alias index: maps normalized alias/acronym -> array of game names
+let aliasIndex = new Map();
+
+// -------------------------------
+// Shared fuzzy-search utilities
+// -------------------------------
+function normalizeText(str) {
+  return (str || '')
+    .toString()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '') // remove diacritics
+    .toLowerCase()
+    .replace(/[^a-z0-9]/g, ''); // remove punctuation/spaces
+}
+
+function isSubsequence(text, query) {
+  if (!query) return true;
+  let i = 0, j = 0;
+  while (i < text.length && j < query.length) {
+    if (text[i] === query[j]) j++;
+    i++;
+  }
+  return j === query.length;
+}
+
+function fuzzyMatch(titleRaw, queryRaw) {
+  const title = normalizeText(titleRaw);
+  const query = normalizeText(queryRaw);
+  if (!query) return true;
+  if (title.includes(query)) return true;
+  return isSubsequence(title, query);
+}
 
 function getCategories() {
   const set = new Set();
@@ -240,6 +272,9 @@ fetch('static/js/games.json')
       // In some environments `window` may not be available; ignore silently
     }
 
+    // Build alias index once games are available
+    try { buildAliasIndex(); } catch (e) { console.warn('Alias index build failed', e); }
+
     loadGames();
 
     // If the page has a hash for opening a game, try to handle it now
@@ -251,6 +286,35 @@ fetch('static/js/games.json')
     }
   })
   .catch(error => console.error('Error loading games:', error));
+
+// Build alias index from game titles and optional aliases field
+function buildAliasIndex() {
+  aliasIndex = new Map();
+  const record = (alias, name) => {
+    const key = normalizeText(alias);
+    if (!key) return;
+    if (!aliasIndex.has(key)) aliasIndex.set(key, new Set());
+    aliasIndex.get(key).add(name);
+  };
+
+  (Array.isArray(games) ? games : []).forEach(g => {
+    if (!g || !g.name) return;
+    // From name acronym (first letters)
+    const words = (g.name || '').split(/\s+/).map(w => normalizeText(w)).filter(Boolean);
+    if (words.length) {
+      const acronym = words.map(w => w[0]).join('');
+      record(acronym, g.name);
+    }
+    // Optional aliases property (array of strings)
+    if (Array.isArray(g.aliases)) {
+      g.aliases.forEach(a => record(a, g.name));
+    }
+  });
+  // Convert all Sets to arrays for safe iteration later
+  for (const [k, v] of aliasIndex.entries()) {
+    aliasIndex.set(k, Array.from(v));
+  }
+}
 
 // ===============================
 // Display Games Function
@@ -368,6 +432,8 @@ function loadGames() {
     } else {
       // Update favorites UI after building the games list
       renderFavorites();
+      // Re-apply any active search filter now that cards are present
+      try { if (window.__applyGameSearch) window.__applyGameSearch(); } catch (e) {}
     }
   };
 
@@ -381,22 +447,39 @@ function loadGames() {
 
 // Search Func
     document.addEventListener('DOMContentLoaded', function() {
-      const searchInput = document.getElementById('searchInput');
       const gamesContainer = document.getElementById('games-container');
-      let noResultsDiv = null;
+      // Support either id="searchInput" (primary) or fallback to id="search-input"
+      const searchInput = document.getElementById('searchInput') || document.getElementById('search-input');
+      if (!gamesContainer || !searchInput) return;
 
-      function updateSearch() {
-        const searchTerm = searchInput.value.toLowerCase().trim();
+      // Clear any persisted value on hard/soft refresh and prevent browser autocomplete
+      try {
+        searchInput.value = '';
+        searchInput.setAttribute('autocomplete', 'off');
+        searchInput.setAttribute('autocapitalize', 'off');
+        searchInput.setAttribute('spellcheck', 'false');
+      } catch (e) {}
+
+  let noResultsDiv = null;
+  let didYouMeanDiv = null;
+      let debounceTimer = null;
+
+      // Use shared fuzzy helpers defined at the top of this file
+
+      function applyFilter() {
+        const searchTerm = searchInput.value.trim();
         const allCards = gamesContainer.querySelectorAll('.game-card');
 
         let visibleCount = 0;
         allCards.forEach(function(card) {
           const titleElement = card.querySelector('.game-card-title');
           if (titleElement) {
-            const titleText = titleElement.textContent.toLowerCase();
-            if (searchTerm === '' || titleText.includes(searchTerm)) {
+            const titleText = titleElement.textContent || '';
+            const isSuggestCard = normalizeText(titleText) === 'suggestagame';
+            if (isSuggestCard || fuzzyMatch(titleText, searchTerm)) {
               card.classList.remove('hidden');
-              visibleCount++;
+              // Do not count the Suggest card toward visible matches
+              if (!isSuggestCard) visibleCount++;
             } else {
               card.classList.add('hidden');
             }
@@ -405,29 +488,55 @@ function loadGames() {
           }
         });
 
+        // Handle "no results" message and Did You Mean
         if (searchTerm !== '' && visibleCount === 0) {
-
           if (!noResultsDiv) {
             noResultsDiv = document.createElement('div');
             noResultsDiv.className = 'no-results';
-            noResultsDiv.innerHTML = '<div class="no-results-text">No Games Found</div><div>Maybe you misspelled it?</div>';
+            noResultsDiv.style.gridColumn = '1 / -1';
+            noResultsDiv.style.display = 'inline-flex';
+            noResultsDiv.style.alignItems = 'center';
+            noResultsDiv.style.gap = '10px';
+            noResultsDiv.innerHTML = '<div class="no-results-text">No Games Found</div>';
             gamesContainer.appendChild(noResultsDiv);
           }
-
-          if (gamesContainer.querySelector('.games-grid')) {
-            gamesContainer.querySelector('.games-grid').style.display = 'none';
+          // Did you mean suggestion via alias/acronym lookup
+          const qNorm = normalizeText(searchTerm);
+          let suggestions = [];
+          if (qNorm && aliasIndex && aliasIndex.has(qNorm)) {
+            suggestions = aliasIndex.get(qNorm) || [];
           }
+          if (suggestions.length > 0) {
+            if (!didYouMeanDiv) {
+              didYouMeanDiv = document.createElement('div');
+              didYouMeanDiv.className = 'did-you-mean';
+              didYouMeanDiv.style.gridColumn = '1 / -1';
+              didYouMeanDiv.style.display = 'inline-flex';
+              didYouMeanDiv.style.alignItems = 'center';
+              didYouMeanDiv.style.gap = '8px';
+              gamesContainer.appendChild(didYouMeanDiv);
+            }
+            const first = suggestions[0];
+            // Make it clickable to autofill search; render alongside the No Games Found in the same grid area
+            didYouMeanDiv.innerHTML = `Did you mean <button class="did-you-mean-btn" style="cursor:pointer;background:transparent;border:1px solid #666;padding:2px 8px;border-radius:6px;color:inherit" aria-label="Use suggested game">${first}</button>?`;
+            const btn = didYouMeanDiv.querySelector('.did-you-mean-btn');
+            if (btn) {
+              btn.addEventListener('click', () => {
+                try {
+                  searchInput.value = first;
+                  applyFilter();
+                } catch (e) {}
+              });
+            }
+          } else if (didYouMeanDiv) {
+            didYouMeanDiv.remove();
+            didYouMeanDiv = null;
+          }
+
           gamesContainer.classList.remove('loading', 'empty-state');
         } else {
-
-          if (noResultsDiv) {
-            noResultsDiv.remove();
-            noResultsDiv = null;
-          }
-          if (gamesContainer.querySelector('.games-grid')) {
-            gamesContainer.querySelector('.games-grid').style.display = 'grid';
-          }
-
+          if (noResultsDiv) { noResultsDiv.remove(); noResultsDiv = null; }
+          if (didYouMeanDiv) { didYouMeanDiv.remove(); didYouMeanDiv = null; }
           if (searchTerm === '' && allCards.length === 0) {
             gamesContainer.classList.add('loading');
           }
@@ -437,21 +546,20 @@ function loadGames() {
         const favoritesGrid = document.getElementById('favorites-grid');
         if (favoritesGrid) {
           const favCards = favoritesGrid.querySelectorAll('.game-card');
-          // If there are no favorite cards (maybe placeholder present), leave the placeholder alone
           if (favCards.length > 0) {
             let favVisible = 0;
             favCards.forEach(card => {
               const titleElement = card.querySelector('.game-card-title') || card.querySelector('.fav-title') || card.querySelector('h3');
-              const titleText = titleElement ? titleElement.textContent.toLowerCase() : '';
-              if (searchTerm === '' || titleText.includes(searchTerm)) {
+              const titleText = titleElement ? (titleElement.textContent || '') : '';
+              const isSuggestCard = normalizeText(titleText) === 'suggestagame';
+              if (isSuggestCard || fuzzyMatch(titleText, searchTerm)) {
                 card.classList.remove('hidden');
-                favVisible++;
+                if (!isSuggestCard) favVisible++;
               } else {
                 card.classList.add('hidden');
               }
             });
 
-            // show temporary message when no favorites match the search
             let favNoResults = favoritesGrid.querySelector('#favorites-no-results');
             if (searchTerm !== '' && favVisible === 0) {
               if (!favNoResults) {
@@ -461,16 +569,25 @@ function loadGames() {
                 favNoResults.textContent = 'No favorites match';
                 favoritesGrid.appendChild(favNoResults);
               }
-            } else {
-              if (favNoResults) favNoResults.remove();
+            } else if (favNoResults) {
+              favNoResults.remove();
             }
           }
         }
       }
 
+      function updateSearch() {
+        // Debounce to keep typing smooth
+        if (debounceTimer) clearTimeout(debounceTimer);
+        debounceTimer = setTimeout(applyFilter, 100);
+      }
+
       searchInput.addEventListener('input', updateSearch);
 
-      updateSearch();
+      // Initial apply with cleared input
+      applyFilter();
+      // Expose to window so other parts (e.g., after re-render) can reapply
+      try { window.__applyGameSearch = applyFilter; } catch (e) {}
     });
 
    // Global variables for Firefox footer (keeping your original structure)
@@ -713,6 +830,16 @@ toggleFullscreen() {
         if (window.topbarControl) {
           window.topbarControl.disableTopbar();
         }
+
+        // Clear selection search when opening modal
+        try {
+          if (this.gameSelectionSearch) {
+            this.gameSelectionSearch.value = '';
+            this.gameSelectionSearch.setAttribute('autocomplete', 'off');
+            this.gameSelectionSearch.setAttribute('autocapitalize', 'off');
+            this.gameSelectionSearch.setAttribute('spellcheck', 'false');
+          }
+        } catch (e) {}
 
         // If no tabs exist, create the first one
         if (this.tabs.size === 0) {
@@ -1137,10 +1264,17 @@ toggleFullscreen() {
 
       filterGameSelection(searchQuery) {
         if (typeof gamesData === 'undefined') return;
-
-        const filteredGames = gamesData.filter(game => 
-          game.name.toLowerCase().includes(searchQuery.toLowerCase())
-        );
+        // Reuse fuzzyMatch if available in scope
+        const match = (title, q) => {
+          try { return fuzzyMatch(title, q); } catch (e) {
+            // Fallback: simple includes
+            return (title || '').toLowerCase().includes((q || '').toLowerCase());
+          }
+        };
+        const filteredGames = gamesData.filter(game => {
+          const isSuggest = normalizeText(game.name) === 'suggestagame';
+          return isSuggest || match(game.name, searchQuery);
+        });
         this.renderGameSelection(filteredGames);
       }
 
@@ -1765,11 +1899,20 @@ toggleFullscreen() {
     // Instant search functionality (keeping your original logic)
     const searchInput = document.getElementById('search-input');
     if (searchInput) {
+      try {
+        searchInput.value = '';
+        searchInput.setAttribute('autocomplete', 'off');
+        searchInput.setAttribute('autocapitalize', 'off');
+        searchInput.setAttribute('spellcheck', 'false');
+      } catch (e) {}
       searchInput.addEventListener('input', () => {
-        const searchQuery = searchInput.value.toLowerCase();
+        const searchQuery = searchInput.value || '';
         if (typeof gamesData !== 'undefined' && typeof renderGames === 'function') {
-          const filteredGames = gamesData.filter(game => game.name.toLowerCase().includes(searchQuery));
+          const filteredGames = gamesData.filter(game => fuzzyMatch(game.name, searchQuery));
           renderGames(filteredGames);
+        } else if (window.__applyGameSearch) {
+          // Fall back to the main grid filtering if available
+          window.__applyGameSearch();
         }
       });
     }

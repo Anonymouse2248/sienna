@@ -25,6 +25,63 @@
     />
     <link rel="icon" href="/favicon.ico" type="image/x-icon" />
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    
+    <style>
+        /* DevTools overlay/editor */
+
+    /* Popup overlay container - click-through background (uses display: contents so child window stays interactive) */
+    .devtools-overlay { position: fixed; inset: 0; display: none; z-index: 2600; pointer-events: none; }
+    .devtools-overlay.active { display: contents; }
+    .devtools-overlay::before { display: none; }
+
+        /* Devtools window (black/grey with rainbow animated border) */
+    .devtools-window { position: fixed; z-index: 2601; width: min(520px, 92vw); height: auto; max-height: min(78vh, 720px); background: #0e1114; border-radius: 14px; box-shadow: 0 18px 40px rgba(0,0,0,0.55), 0 6px 14px rgba(0,0,0,0.35); overflow: hidden; opacity: 0; transform: translateY(10px) scale(0.98); transition: opacity 220ms ease, transform 220ms ease; pointer-events: auto; display: flex; flex-direction: column; }
+    .devtools-window * { pointer-events: auto; }
+    .devtools-window::before { content:""; position:absolute; inset:0; padding:2px; border-radius: inherit; background: conic-gradient(from var(--a,0deg), #ff005e, #ff8a00, #ffd300, #00ff85, #00c8ff, #7a5cff, #ff00e0, #ff005e); -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor; mask-composite: exclude; animation: spin 6s linear infinite; pointer-events: none; z-index: 0; }
+        .devtools-overlay.active .devtools-window { opacity: 1; transform: translateY(0) scale(1); }
+        @keyframes spin { to { --a: 360deg; } }
+
+    .devtools-header { cursor: move; display: flex; align-items: center; justify-content: space-between; padding: 10px 12px; background: linear-gradient(180deg, #161a1f, #0f1216); color: #e7e9ec; user-select: none; position: relative; z-index: 1; }
+        .devtools-title { font-weight: 800; letter-spacing: 0.3px; }
+        .devtools-actions { display:flex; align-items:center; gap:8px; }
+        .devtools-close, .devtools-back { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); color: #e7e9ec; border-radius: 8px; padding: 6px 10px; cursor: pointer; transition: background 160ms ease; }
+        .devtools-close:hover, .devtools-back:hover { background: rgba(255,255,255,0.12); }
+
+    .devtools-body { padding: 12px; overflow: hidden; color: #cdd1d5; position: relative; z-index: 1; flex: 1 1 auto; min-height: 0; display: flex; flex-direction: column; }
+    .devtools-footer { display: flex; align-items: center; justify-content: flex-end; gap: 10px; padding: 10px 12px; background: #0e1114; border-top: 1px solid rgba(255,255,255,0.08); position: relative; z-index: 1; }
+        .btn { border-radius: 10px; padding: 10px 16px; border: 1px solid rgba(255,255,255,0.12); background: #151a1f; color: #e7e9ec; cursor: pointer; font-weight: 600; }
+        .btn:hover { background: #1b2127; }
+        .btn.save { border-color: rgba(255,255,255,0.2); background: #0f1419; }
+
+        /* Menu grid */
+        .devtools-menu { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; }
+        .menu-card { position: relative; border: 1px solid rgba(255,255,255,0.08); background: #0f1418; color:#e7e9ec; border-radius: 12px; padding: 16px; cursor: pointer; text-align: left; font-weight: 700; }
+        .menu-card:hover { background:#131920; }
+    .menu-card::before { content:""; position:absolute; inset:0; padding:2px; border-radius: inherit; background: conic-gradient(from var(--a,0deg), #ff005e, #ff8a00, #ffd300, #00ff85, #00c8ff, #7a5cff, #ff00e0, #ff005e); -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor; mask-composite: exclude; animation: spin 6s linear infinite; opacity: 0.6; pointer-events: none; z-index: 0; }
+
+        /* Rainbow bordered box wrapper */
+        .rainbow-box { position: relative; border-radius: 12px; }
+    .rainbow-box::before { content:""; position:absolute; inset:0; padding:2px; border-radius: inherit; background: conic-gradient(from var(--a,0deg), #ff005e, #ff8a00, #ffd300, #00ff85, #00c8ff, #7a5cff, #ff00e0, #ff005e); -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor; mask-composite: exclude; animation: spin 6s linear infinite; pointer-events: none; z-index: 0; }
+        .rb-content { position: relative; border-radius: inherit; background: #0b0f13; z-index: 1; }
+        .rb-content { position: relative; border-radius: inherit; background: #0b0f13; }
+
+    /* Views */
+    .view { display: none; }
+    .view.active { display: flex; flex-direction: column; min-height: 0; }
+    #console-output { flex: 1 1 auto; overflow: auto; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 12px; padding: 10px; color: #e7e9ec; }
+        .console-toolbar { display:flex; justify-content:flex-end; margin-bottom:8px; }
+    /* Resizer handle */
+    .devtools-resizer { position: absolute; width: 14px; height: 14px; right: 6px; bottom: 6px; cursor: se-resize; z-index: 2; opacity: 0.8; }
+    .devtools-resizer::before { content:""; position:absolute; right:2px; bottom:2px; width: 10px; height: 10px; border-right: 2px solid rgba(255,255,255,0.35); border-bottom: 2px solid rgba(255,255,255,0.35); }
+    .devtools-window.resizing, .devtools-window.resizing * { user-select: none !important; }
+        .log-line { white-space: pre-wrap; padding: 4px 2px; border-bottom: 1px dashed rgba(255,255,255,0.06); }
+        .log-info { color: #c9e1ff; }
+        .log-warn { color: #ffe08a; }
+        .log-error { color: #ff9aa2; }
+        .log-debug { color: #b1f7d0; }
+
+        .firefox-footer { position: relative; }
+    </style>
 </head>
 
 <body>
@@ -93,6 +150,11 @@
             </div>
 
             <div class="firefox-footer">
+                <!-- DevTools button placed to the far left -->
+                <button id="devtools-btn" class="nav-button" title="Sienna DevTools">
+                    <i class="fas fa-wrench" aria-hidden="true"></i>
+                </button>
+
                 <button id="back-btn" class="nav-button" title="Go back" disabled>
                     <i class="fas fa-arrow-left"></i>
                 </button>
@@ -193,6 +255,65 @@
         game. <a href="contact.html">Report error</a>
     </p>
 
+    <!-- DevTools overlay and window -->
+    <div id="devtools-overlay" class="devtools-overlay" aria-hidden="true">
+        <div id="devtools-window" class="devtools-window" role="dialog" aria-modal="true" aria-labelledby="devtools-title">
+            <div id="devtools-header" class="devtools-header">
+                <div style="display:flex; align-items:center; gap:10px;">
+                    <div id="devtools-title" class="devtools-title">Sienna Devtools</div>
+                    <select id="devtools-tool-select" class="btn" style="padding:6px 10px; font-weight:600;">
+                        <option value="menu">Select a tool…</option>
+                        <option value="cache">Cache Editor</option>
+                        <option value="console">Console</option>
+                    </select>
+                </div>
+                <div class="devtools-actions">
+                    <button id="devtools-close" class="devtools-close" title="Close">✕</button>
+                </div>
+            </div>
+            <div class="devtools-body">
+                <!-- Resize handle -->
+                <div id="devtools-resizer" class="devtools-resizer" aria-hidden="true"></div>
+                <!-- Menu View -->
+                <div id="view-menu" class="view active">
+                    <div class="devtools-menu">
+                        <div id="menu-cache" class="menu-card">🧩 Cache Editor</div>
+                        <div id="menu-console" class="menu-card">🖥️ Console</div>
+                    </div>
+                </div>
+
+                <!-- Cache Editor View -->
+                <div id="view-cache" class="view">
+                    <div class="rainbow-box" style="margin-bottom:8px;">
+                        <div class="rb-content" style="padding:10px; color:#cdd1d5;">Edit a consolidated JSON view for localStorage and sessionStorage of the current game iframe. Cache listing is read-only. Use "Clear All Caches" to delete named caches.</div>
+                    </div>
+                    <textarea id="devtools-editor" style="width:100%;height:calc(min(78vh,720px) - 48px - 120px);background:#0b0f13;color:#e7e9ec;border:1px solid rgba(255,255,255,0.1);border-radius:10px;padding:10px;font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; line-height:1.4; resize: none;" spellcheck="false"></textarea>
+                </div>
+
+                <!-- Console View -->
+                <div id="view-console" class="view">
+                    <div class="console-toolbar">
+                        <button id="console-clear" class="btn">Clear</button>
+                    </div>
+                    <div class="rainbow-box">
+                        <div id="console-output" class="rb-content"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="devtools-footer">
+                <div style="margin-right:auto; display:flex; gap:8px;"></div>
+                <div id="cache-actions" style="display:none;">
+                    <button id="devtools-cancel" class="btn">Cancel</button>
+                    <button id="devtools-clear-caches" class="btn" title="Delete all named caches for this origin">Clear All Caches</button>
+                    <button id="devtools-save" class="btn save">Save</button>
+                </div>
+                <div id="console-actions" style="display:none;">
+                    <!-- Placeholder for future console inputs -->
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div id="exit-message" class="exit-message">
         Click outside to exit
     </div>
@@ -200,5 +321,337 @@
     <script src="static/js/games.js"></script>
     <script src="static/js/theme.js"></script>
     <script src="static/js/cloak.js"></script>
+        <script>
+        // Sienna Devtools v1 - inline script
+        // This script adds a DevTools dropdown and a draggable popup that allows editing
+        // the storage of the currently active game iframe in the modal.
+        (function() {
+            // Get the active game iframe from the tab manager
+            function getActiveIframe() {
+                // Prefer the GameTabManager if available
+                try {
+                    if (typeof gameTabManager !== 'undefined' && gameTabManager.activeTabId) {
+                        const tab = gameTabManager.tabs.get(gameTabManager.activeTabId);
+                        if (tab && tab.iframe) return tab.iframe;
+                    }
+                } catch (e) { /* ignore */ }
+                // Fallback: try to find a visible game iframe in the container
+                try {
+                    const iframes = document.querySelectorAll('#iframe-container iframe.game-iframe');
+                    for (const el of iframes) {
+                        const style = window.getComputedStyle(el);
+                        if (style.display !== 'none' && el.src) return el;
+                    }
+                } catch (e) { /* ignore */ }
+                return null;
+            }
+
+            // Elements
+            const devBtn = document.getElementById('devtools-btn');
+            const overlay = document.getElementById('devtools-overlay');
+            const winEl = document.getElementById('devtools-window');
+            const closeBtn = document.getElementById('devtools-close');
+            const cancelBtn = document.getElementById('devtools-cancel');
+            const saveBtn = document.getElementById('devtools-save');
+            const clearCachesBtn = document.getElementById('devtools-clear-caches');
+            const headerEl = document.getElementById('devtools-header');
+            const resizerEl = document.getElementById('devtools-resizer');
+            const toolSelect = document.getElementById('devtools-tool-select');
+            // Views and routing
+            const viewMenu = document.getElementById('view-menu');
+            const viewCache = document.getElementById('view-cache');
+            const viewConsole = document.getElementById('view-console');
+            const btnMenuCache = document.getElementById('menu-cache');
+            const btnMenuConsole = document.getElementById('menu-console');
+            const cacheActions = document.getElementById('cache-actions');
+            const consoleActions = document.getElementById('console-actions');
+            const consoleOutput = document.getElementById('console-output');
+            const consoleClear = document.getElementById('console-clear');
+
+            // Keep track of original keys so we only delete what user explicitly removed
+            let originalLocalKeys = new Set();
+            let originalSessionKeys = new Set();
+            let targetIframe = null;
+
+            // Open popup directly on button click (no dropdown)
+            devBtn?.addEventListener('click', () => { openPopup(); });
+
+            // Build a KV row
+            // No KV rows; we use a single JSON textarea
+
+            // Populate the popup from iframe storage and caches
+            async function populateDevtools() {
+                const iframe = targetIframe || getActiveIframe();
+                const editor = document.getElementById('devtools-editor');
+                originalLocalKeys = new Set();
+                originalSessionKeys = new Set();
+
+                if (!iframe) {
+                    editor.value = 'No active game iframe found.';
+                    return;
+                }
+
+                let ls = null, ss = null, cachesObj = null;
+                try { ls = iframe.contentWindow.localStorage; } catch (e) {}
+                try { ss = iframe.contentWindow.sessionStorage; } catch (e) {}
+                try { cachesObj = iframe.contentWindow.caches; } catch (e) {}
+
+                const data = { localStorage: {}, sessionStorage: {}, _meta: { note: 'Edit localStorage/sessionStorage. Cache storage not editable here.' } };
+                if (ls) {
+                    try {
+                        for (let i = 0; i < ls.length; i++) { const k = ls.key(i); if (k != null) { originalLocalKeys.add(k); data.localStorage[k] = ls.getItem(k); } }
+                    } catch (e) { data.localStorage = { _error: 'Failed to read localStorage' }; }
+                } else {
+                    data.localStorage = { _unavailable: 'localStorage unavailable (likely cross-origin).' };
+                }
+                if (ss) {
+                    try {
+                        for (let i = 0; i < ss.length; i++) { const k = ss.key(i); if (k != null) { originalSessionKeys.add(k); data.sessionStorage[k] = ss.getItem(k); } }
+                    } catch (e) { data.sessionStorage = { _error: 'Failed to read sessionStorage' }; }
+                } else {
+                    data.sessionStorage = { _unavailable: 'sessionStorage unavailable (likely cross-origin).' };
+                }
+                // Attempt to include full cache listing (cacheName -> array of URLs)
+                if (cachesObj && cachesObj.keys) {
+                    try {
+                        const names = await cachesObj.keys();
+                        data.caches = {};
+                        for (const name of names) {
+                            try {
+                                const cache = await cachesObj.open(name);
+                                const reqs = await cache.keys();
+                                // List URLs; cap to 500 entries per cache to avoid huge payloads
+                                const urls = [];
+                                for (let i = 0; i < reqs.length && i < 500; i++) {
+                                    const r = reqs[i]; urls.push(r && (r.url || String(r)));
+                                }
+                                data.caches[name] = urls;
+                            } catch (e) {
+                                data.caches[name] = ['<Failed to read cache>'];
+                            }
+                        }
+                    } catch (e) {
+                        data.caches = { error: 'Could not enumerate caches' };
+                    }
+                } else {
+                    data.caches = { info: 'Cache Storage unavailable' };
+                }
+                try { editor.value = JSON.stringify(data, null, 2); } catch (e) { editor.value = 'Failed to build view.'; }
+            }
+
+            // Apply changes back to iframe storage and refresh
+            async function applyAndReload() {
+                const iframe = targetIframe || getActiveIframe(); if (!iframe) return;
+                const editor = document.getElementById('devtools-editor');
+                let parsed;
+                try { parsed = JSON.parse(editor.value || '{}'); }
+                catch (e) { alert('Invalid JSON. Please fix before saving.'); return; }
+
+                try {
+                    try {
+                        const ls = iframe.contentWindow.localStorage; const obj = parsed.localStorage || {};
+                        originalLocalKeys.forEach(k => { if (!(k in obj)) ls.removeItem(k); });
+                        Object.keys(obj).forEach(k => ls.setItem(k, String(obj[k])));
+                    } catch (e) {}
+                    try {
+                        const ss = iframe.contentWindow.sessionStorage; const obj = parsed.sessionStorage || {};
+                        originalSessionKeys.forEach(k => { if (!(k in obj)) ss.removeItem(k); });
+                        Object.keys(obj).forEach(k => ss.setItem(k, String(obj[k])));
+                    } catch (e) {}
+                } catch (e) { console.warn('[DevTools] Failed to apply some storage changes', e); }
+
+                        try {
+                            const t = targetIframe || iframe;
+                            const currentSrc = t?.src;
+                            if (currentSrc) {
+                                t.src = '';
+                                setTimeout(() => { t.src = currentSrc; }, 80);
+                            } else {
+                                t?.contentWindow?.location?.reload();
+                            }
+                        } catch (e) {}
+            }
+
+            function centerWindow() {
+                const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
+                const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0);
+                const rect = winEl.getBoundingClientRect();
+                const left = (vw - rect.width) / 2; const top = (vh - rect.height) / 2;
+                winEl.style.left = Math.max(12, left) + 'px'; winEl.style.top = Math.max(12, top) + 'px';
+            }
+            function openPopup() { targetIframe = getActiveIframe(); overlay.classList.add('active'); overlay.setAttribute('aria-hidden', 'false'); restoreWindowSize(); setTimeout(centerWindow, 0); showView('menu'); setupConsoleCapture(); }
+            function closePopup() { teardownConsoleCapture(); overlay.classList.remove('active'); overlay.setAttribute('aria-hidden', 'true'); targetIframe = null; }
+
+            closeBtn?.addEventListener('click', closePopup);
+            cancelBtn?.addEventListener('click', closePopup);
+            saveBtn?.addEventListener('click', async () => { await applyAndReload(); closePopup(); });
+            clearCachesBtn?.addEventListener('click', async () => {
+                const iframe = targetIframe || getActiveIframe(); if (!iframe) return;
+                let cachesObj = null; try { cachesObj = iframe.contentWindow.caches; } catch (e) {}
+                if (!cachesObj || !cachesObj.keys) { alert('Cache Storage unavailable.'); return; }
+                if (!confirm('Delete all named caches for this origin?')) return;
+                try {
+                    const names = await cachesObj.keys();
+                    for (const name of names) { try { await cachesObj.delete(name); } catch (e) {} }
+                    alert('All caches deleted.');
+                } catch (e) { alert('Failed to clear caches: ' + e); }
+            });
+
+            // View routing
+            function showView(which) {
+                // Reset
+                [viewMenu, viewCache, viewConsole].forEach(v => v.classList.remove('active'));
+                cacheActions.style.display = 'none';
+                consoleActions.style.display = 'none';
+                // Sync the select without triggering loops
+                if (toolSelect) {
+                    const value = (which === 'menu') ? 'menu' : which;
+                    if (toolSelect.value !== value) toolSelect.value = value;
+                }
+                if (which === 'menu') {
+                    viewMenu.classList.add('active');
+                } else if (which === 'cache') {
+                    viewCache.classList.add('active');
+                    cacheActions.style.display = '';
+                    // Populate editor when entering cache view
+                    populateDevtools();
+                } else if (which === 'console') {
+                    viewConsole.classList.add('active');
+                    consoleActions.style.display = '';
+                }
+            }
+            btnMenuCache?.addEventListener('click', () => showView('cache'));
+            btnMenuConsole?.addEventListener('click', () => showView('console'));
+            toolSelect?.addEventListener('change', (e) => {
+                const v = e.target.value;
+                if (v === 'menu' || v === 'cache' || v === 'console') showView(v);
+            });
+
+            // Resizing logic
+            function restoreWindowSize() {
+                try {
+                    const json = localStorage.getItem('sienna.devtools.size');
+                    if (json) {
+                        const { w, h } = JSON.parse(json);
+                        if (w) winEl.style.width = Math.min(w, window.innerWidth - 24) + 'px';
+                        if (h) winEl.style.height = Math.min(h, window.innerHeight - 24) + 'px';
+                    } else {
+                        winEl.style.width = '520px';
+                        winEl.style.height = '420px';
+                    }
+                } catch {}
+            }
+            function persistWindowSize() {
+                try {
+                    const rect = winEl.getBoundingClientRect();
+                    localStorage.setItem('sienna.devtools.size', JSON.stringify({ w: Math.round(rect.width), h: Math.round(rect.height) }));
+                } catch {}
+            }
+            (function makeResizable(handle, target) {
+                if (!handle) return;
+                let resizing = false; let startX=0, startY=0, startW=0, startH=0;
+                function onDown(e) {
+                    resizing = true; target.classList.add('resizing');
+                    const pt = e.touches ? e.touches[0] : e; startX = pt.clientX; startY = pt.clientY;
+                    const rect = target.getBoundingClientRect(); startW = rect.width; startH = rect.height;
+                    document.addEventListener('mousemove', onMove);
+                    document.addEventListener('touchmove', onMove, { passive:false });
+                    document.addEventListener('mouseup', onUp, { once:true });
+                    document.addEventListener('touchend', onUp, { once:true });
+                    e.preventDefault();
+                }
+                function onMove(e) {
+                    if (!resizing) return; const pt = e.touches ? (e.touches[0] || e.changedTouches[0]) : e;
+                    const dx = pt.clientX - startX; const dy = pt.clientY - startY;
+                    const minW = 360, minH = 280; const maxW = Math.min(980, window.innerWidth - 24); const maxH = Math.min(820, window.innerHeight - 24);
+                    const newW = Math.max(minW, Math.min(maxW, startW + dx));
+                    const newH = Math.max(minH, Math.min(maxH, startH + dy));
+                    target.style.width = newW + 'px'; target.style.height = newH + 'px';
+                    persistWindowSize();
+                }
+                function onUp() {
+                    resizing = false; target.classList.remove('resizing');
+                    document.removeEventListener('mousemove', onMove);
+                    document.removeEventListener('touchmove', onMove);
+                }
+                handle.addEventListener('mousedown', onDown);
+                handle.addEventListener('touchstart', onDown, { passive:false });
+            })(resizerEl, winEl);
+
+            // Console capture: try to hook the iframe's console to mirror messages here (same-origin only)
+            function setupConsoleCapture() {
+                consoleOutput.innerHTML = '';
+                const iframe = targetIframe || getActiveIframe();
+                if (!iframe) return;
+                let cw;
+                try { cw = iframe.contentWindow; } catch (e) { cw = null; }
+                if (!cw) { appendLog('Console not available (cross-origin).', 'warn'); return; }
+                // Guard: don't double-wrap
+                if (cw.__siennaConsolePatched) return;
+                const levels = ['log','info','warn','error','debug'];
+                cw.__siennaConsolePatched = true;
+                cw.__siennaConsoleUnpatch = [];
+                levels.forEach(lvl => {
+                    try {
+                        const original = cw.console[lvl].bind(cw.console);
+                        cw.__siennaConsoleUnpatch.push(() => { cw.console[lvl] = original; });
+                        cw.console[lvl] = function(...args) {
+                            try { appendLog(formatArgs(args), lvl); } catch (e) {}
+                            return original(...args);
+                        };
+                    } catch (e) {}
+                });
+            }
+            function teardownConsoleCapture() {
+                const iframe = targetIframe || getActiveIframe();
+                if (!iframe) return;
+                let cw; try { cw = iframe.contentWindow; } catch (e) { cw = null; }
+                if (cw && cw.__siennaConsoleUnpatch) {
+                    try { cw.__siennaConsoleUnpatch.forEach(fn => { try { fn(); } catch (e) {} }); } catch (e) {}
+                    cw.__siennaConsoleUnpatch = null;
+                    cw.__siennaConsolePatched = false;
+                }
+            }
+            function formatArgs(args) {
+                return args.map(a => {
+                    try {
+                        if (typeof a === 'string') return a;
+                        return JSON.stringify(a);
+                    } catch (e) { return String(a); }
+                }).join(' ');
+            }
+            function appendLog(text, level) {
+                const line = document.createElement('div');
+                line.className = 'log-line log-' + (level || 'log');
+                line.textContent = '[' + (level || 'log').toUpperCase() + '] ' + text;
+                consoleOutput.appendChild(line);
+                consoleOutput.scrollTop = consoleOutput.scrollHeight;
+            }
+            consoleClear?.addEventListener('click', () => { consoleOutput.innerHTML = ''; });
+
+            // Dragging
+            (function makeDraggable(handle, target) {
+                let dragging = false, startX = 0, startY = 0, startLeft = 0, startTop = 0;
+                function onDown(e) {
+                    // Don't start dragging when clicking interactive controls inside header
+                    const tag = (e.target && e.target.tagName) ? e.target.tagName.toLowerCase() : '';
+                    if (e.target.closest('button')) return;
+                    dragging = true; const isTouch = e.type.startsWith('touch'); const pt = isTouch ? e.touches[0] : e;
+                    startX = pt.clientX; startY = pt.clientY; const rect = target.getBoundingClientRect(); startLeft = rect.left; startTop = rect.top;
+                    document.addEventListener(isTouch ? 'touchmove' : 'mousemove', onMove);
+                    document.addEventListener(isTouch ? 'touchend' : 'mouseup', onUp, { once: true }); e.preventDefault();
+                }
+                function onMove(e) {
+                    if (!dragging) return; const isTouch = e.type.startsWith('touch'); const pt = isTouch ? (e.touches[0] || e.changedTouches[0]) : e;
+                    const dx = pt.clientX - startX; const dy = pt.clientY - startY; target.style.left = Math.max(6, startLeft + dx) + 'px'; target.style.top = Math.max(6, startTop + dy) + 'px';
+                }
+                function onUp() { dragging = false; document.removeEventListener('mousemove', onMove); document.removeEventListener('touchmove', onMove); }
+                handle.addEventListener('mousedown', onDown); handle.addEventListener('touchstart', onDown, { passive: false });
+            })(headerEl, winEl);
+
+            // Do not close on overlay click; only via X or Cancel
+            document.addEventListener('keydown', (e) => { if (overlay.classList.contains('active') && e.key === 'Escape') closePopup(); });
+        })();
+        </script>
 </body>
 </html>

@@ -1,9 +1,8 @@
 [
 {
-    "name": "Request A Game!",
+    "name": "Suggest A Game!",
     "image": "static/icons/link.webp",
-    "url": "contact.html",
-    "categories": []
+    "url": "contact.html"
   },
 {
     "name": "1v1.lol",
@@ -118,6 +117,12 @@
     "url": "static/mages/dokidokiliteratureclub/index.html",
     "categories": ["Strategy"],
     "//": "genizy+ugs external"
+  },
+{
+    "name": "I Hate My Waifu Streamer",
+    "image": "static/icons/ihatemywaifustreamer.webp",
+    "url": "static/mages/ihatemywaifustreamer/index.html",
+    "categories": ["Casual"]
   },
 {
     "name": "Class of '09",
@@ -271,6 +276,12 @@
     "//": "genizy external"
   },
 {
+    "name": "Capybara Village",
+    "image": "static/icons/capybaravillage.webp",
+    "url": "static/mages/capybaravillage/index.html",
+    "categories": ["Casual"]
+  },
+{
     "name": "Bad Ice Cream",
     "image": "static/icons/badicecream.webp",
     "url": "static/mages/badicecream/index.html",
@@ -295,39 +306,39 @@
     "categories": ["Flash", "Casual"]
   },
 {
-    "name": "Glassworks",
-    "image": "static/icons/glassworks.webp",
-    "url": "static/mages/glassworks/index.html",
-    "categories": ["Flash", "Casual"]
+    "name": "Glass Bridge obby",
+    "image": "static/icons/glassbridgeobby.webp",
+    "url": "static/mages/glassbridgeobby/index.html",
+    "categories": ["Casual"]
   },
 {
-    "name": "Headcase",
-    "image": "static/icons/headcase.webp",
-    "url": "static/mages/headcase/index.html",
-    "categories": ["Flash", "Casual"]
+    "name": "Squid Race Simulator",
+    "image": "static/icons/squidracesim.webp",
+    "url": "static/mages/squidracesim/index.html",
+    "categories": ["Casual"]
   },
 {
-    "name": "Plunger",
-    "image": "static/icons/plunger.webp",
-    "url": "static/mages/plunger/index.html",
-    "categories": ["Flash", "Casual"]
+    "name": "Squid Games 2: Mini Games 🇷🇺",
+    "image": "static/icons/squidgame2minigames.webp",
+    "url": "static/mages/squidgame2minigames/index.html",
+    "categories": ["Casual"]
   },
 {
-    "name": "Gunbrick",
-    "image": "static/icons/gunbrick.webp",
-    "url": "static/mages/gunbrick/index.html",
-    "categories": ["Flash", "Action"]
-  },
-{
-    "name": "Skywire VIP",
-    "image": "static/icons/skywirevip.webp",
-    "url": "static/mages/skywirevip/index.html",
-    "categories": ["Flash", "Casual"]
+    "name": "Speed Each Click",
+    "image": "static/icons/speedeachclick.webp",
+    "url": "static/mages/speedeachclick/index.html",
+    "categories": ["Casual"]
   },
 {
     "name": "WOP",
     "image": "static/icons/wop.webp",
     "url": "static/mages/wop/index.html",
+    "categories": ["Casual"]
+  },
+{
+    "name": "Tomb Of The Mask",
+    "image": "static/icons/tombofthemask.webp",
+    "url": "static/mages/tombofthemask/index.html",
     "categories": ["Casual"]
   },
 {
@@ -380,12 +391,6 @@
     "categories": ["Casual"]
   },
 {
-    "name": "3 Lines",
-    "image": "static/icons/3lines.webp",
-    "url": "static/mages/3lines/index.html",
-    "categories": ["Flash", "Casual"]
-  },
-{
     "name": "Elastic Man",
     "image": "static/icons/elasticman.webp",
     "url": "static/mages/elasticman/play.html",
@@ -417,31 +422,40 @@
     "categories": ["Sports"]
   },
 {
+    "name": "Rainbow Friend's Return",
+    "image": "static/icons/rainbowfriendsreturn.webp",
+    "url": "static/mages/rainbowfriendsreturn/index.html",
+    "categories": ["Horror"]
+  },
+{
     "name": "99 Night's In The Forest",
     "image": "static/icons/99nightsintheforest.webp",
-    "url": "static/mages/99nightsintheforest/index.html"
+    "url": "static/mages/99nightsintheforest/index.html",
+    "categories": ["Horror", "Adventure"]
   },
 {
     "name": "Grow A Garden",
     "image": "static/icons/growagarden.webp",
-    "url": "static/mages/growagarden/index.html"
+    "url": "static/mages/growagarden/index.html",
+    "categories": ["Casual"]
   },
 {
     "name": "Plants vs. Brainrots",
     "image": "static/icons/plantsvsbrainrots.webp",
-    "url": "static/mages/plantsvsbrainrots/index.html"
+    "url": "static/mages/plantsvsbrainrots/index.html",
+    "categories": ["Casual", "Strategy"]
   },
 {
     "name": "Growden.io (external)",
     "image": "static/icons/growdenio.webp",
-    "url": "https://cdn-sienna-growdenio-n4jcyz1r8k5m3w9x2t7b0vd6q.vercel.app"
+    "url": "https://cdn-sienna-growdenio-n4jcyz1r8k5m3w9x2t7b0vd6q.vercel.app",
+    "categories": ["Casual"]
   },
 {
-    "name": "Steal A Brain Rot RU",
+    "name": "Steal A Brain Rot 🇷🇺",
     "image": "static/icons/sabr.webp",
     "url": "static/mages/sabr/index.html",
-    "categories": ["Casual"],
-    "//": "ugs external"
+    "categories": ["Casual"]
   },
 {
     "name": "Steal A Brain Rot Online",
@@ -502,7 +516,7 @@
 {
     "name": "Core Ball",
     "image": "static/icons/coreball.webp",
-    "url": "static/mages/coreball/index.html",
+    "url": "static/mages/coreball/games/index.html",
     "categories": ["Sports"],
     "//": "ugs external"
   },
@@ -513,7 +527,7 @@
     "categories": ["Casual"]
   },
 {
-    "name": "Halloween Knife",
+    "name": "Halloween Knife Hit",
     "image": "static/icons/halloweenknife.webp",
     "url": "static/mages/halloweenknife/index.html",
     "categories": ["Casual"]
@@ -552,6 +566,24 @@
     "name": "Minecraft Versions | Eaglercraft",
     "image": "static/icons/eaglercraft.webp",
     "url": "static/mages/eaglercraft/index.html",
+    "categories": ["Adventure"]
+  },
+{
+    "name": "Paper Minecraft",
+    "image": "static/icons/paperminecraft.webp",
+    "url": "static/mages/paperminecraft/index.html",
+    "categories": ["Adventure"]
+  },
+{
+    "name": "Craftmine",
+    "image": "static/icons/craftmine.webp",
+    "url": "static/mages/craftmine/index.html",
+    "categories": ["Adventure"]
+  },
+{
+    "name": "Getting Over It",
+    "image": "static/icons/gettingoverit.webp",
+    "url": "static/mages/gettingoverit/index.html",
     "categories": ["Adventure"]
   },
 {
@@ -681,6 +713,12 @@
     "//": "genizy external"
   },
 {
+    "name": "Undertale",
+    "image": "static/icons/undertale.webp",
+    "url": "static/mages/undertale/index.html",
+    "categories": ["Adventure"]
+  },
+{
     "name": "Undertale Rejuvenation",
     "image": "static/icons/undertalerejuvenation.webp",
     "url": "static/mages/undertalerejuvenation/index.html",
@@ -709,6 +747,12 @@
     "name": "San's Infinite HP Fight",
     "image": "static/icons/undertalesansinfinitehp.webp",
     "url": "static/mages/undertalesansinfinitehp/index.html",
+    "categories": ["Adventure"]
+  },
+{
+    "name": "Ultra Sans",
+    "image": "static/icons/undertaleultrasans.webp",
+    "url": "static/mages/undertaleultrasans/index.html",
     "categories": ["Adventure"]
   },
 {
@@ -779,12 +823,6 @@
     "url": "static/mages/slope3/index.html",
     "categories": ["Casual"],
     "//": "ugs external"
-  },
-{
-    "name": "Slope Ball",
-    "image": "static/icons/slopeball.webp",
-    "url": "static/mages/slopeball/index.html",
-    "categories": ["Sports"]
   },
 {
     "name": "Slope City",
@@ -1034,16 +1072,10 @@
     "categories": ["Action"]
   },
 {
-    "name": "Chibi Knight",
-    "image": "static/icons/chibiknight.webp",
-    "url": "static/mages/chibiknight/index.html",
-    "categories": ["Flash", "Casual"]
-  },
-{
-    "name": "Circloo",
-    "image": "static/icons/circloo.webp",
-    "url": "static/mages/circloo/index.html",
-    "categories": ["Casual"]
+    "name": "Bitcoin Clicker",
+    "image": "static/icons/bitcoinclicker.webp",
+    "url": "static/mages/bitcoinclicker/index.html",
+    "categories": ["Action"]
   },
 {
     "name": "Clicker Heroes",
@@ -1080,12 +1112,6 @@
     "image": "static/icons/connect4.webp",
     "url": "static/mages/connect4/index.html",
     "categories": ["Strategy"]
-  },
-{
-    "name": "Copter",
-    "image": "static/icons/copter.webp",
-    "url": "static/mages/copter/index.html",
-    "categories": ["Flash", "Casual"]
   },
 {
     "name": "Corporation Inc",
@@ -1528,72 +1554,6 @@
     "categories": ["Flash", "Adventure"]
   },
 {
-    "name": "Dante",
-    "image": "static/icons/dante.webp",
-    "url": "static/mages/dante/index.html",
-    "categories": ["Casual"]
-  },
-{
-    "name": "Avalanche",
-    "image": "static/icons/avalanche.webp",
-    "url": "static/mages/avalanche/index.html",
-    "categories": ["Flash", "Casual"]
-  },
-{
-    "name": "Awesome Tanks",
-    "image": "static/icons/awesometanks.webp",
-    "url": "static/mages/awesometanks/index.html",
-    "categories": ["Casual"]
-  },
-{
-    "name": "Achievement Unlocked",
-    "image": "static/icons/achievementunlocked.webp",
-    "url": "static/mages/achievementunlocked/index.html",
-    "categories": ["Flash", "Casual"]
-  },
-{
-    "name": "Achievement Unlocked 2",
-    "image": "static/icons/achievementunlocked2.webp",
-    "url": "static/mages/achievementunlocked2/index.html",
-    "categories": ["Flash", "Casual"]
-  },
-{
-    "name": "13 Days In Hell",
-    "image": "static/icons/13daysinhell.webp",
-    "url": "static/mages/13daysinhell/index.html",
-    "categories": ["Flash", "Casual"]
-  },
-{
-    "name": "Amidst The Sky",
-    "image": "static/icons/amidstthesky.webp",
-    "url": "static/mages/amidstthesky/index.html",
-    "categories": ["Casual"]
-  },
-{
-    "name": "Final Ninja",
-    "image": "static/icons/finalninja.webp",
-    "url": "static/mages/finalninja/index.html",
-    "categories": ["Flash", "Casual"]
-  },
-{
-    "name": "Glass Bridge obby",
-    "image": "static/icons/glassbridgeobby.webp",
-    "url": "static/mages/glassbridgeobby/index.html",
-    "categories": ["Casual"]
-  },
-{
-    "name": "Squid Race Simulator",
-    "image": "static/icons/squidracesim.webp",
-    "url": "static/mages/squidracesim/index.html",
-    "categories": ["Casual"]
-  },
-{
-    "name": "Speed Each Click",
-    "image": "static/icons/speedeachclick.webp",
-    "url": "static/mages/speedeachclick/index.html",
-    "categories": ["Casual"]
-  },
-{
     "name": "Fireboy Watergirl",
     "image": "static/icons/fireboywatergirl.webp",
     "url": "static/mages/fireboywatergirl/index.html",
@@ -1778,6 +1738,12 @@
     "url": "static/mages/fnafucn/index.html",
     "categories": ["Horror", "Casual"],
     "//": "genizy external"
+  },
+{
+    "name": "Five Night's At Freddy's GameBoy",
+    "image": "static/icons/fnafgb.gif",
+    "url": "static/mages/fnafgb/index.html",
+    "categories": ["Horror", "Casual"]
   },
 {
     "name": "Baldi's Basics",
@@ -2744,6 +2710,36 @@
     "categories": ["Casual"]
   },
 {
+    "name": "Glassworks",
+    "image": "static/icons/glassworks.webp",
+    "url": "static/mages/glassworks/index.html",
+    "categories": ["Flash", "Casual"]
+  },
+{
+    "name": "Headcase",
+    "image": "static/icons/headcase.webp",
+    "url": "static/mages/headcase/index.html",
+    "categories": ["Flash", "Casual"]
+  },
+{
+    "name": "Plunger",
+    "image": "static/icons/plunger.webp",
+    "url": "static/mages/plunger/index.html",
+    "categories": ["Flash", "Casual"]
+  },
+{
+    "name": "Gunbrick",
+    "image": "static/icons/gunbrick.webp",
+    "url": "static/mages/gunbrick/index.html",
+    "categories": ["Flash", "Action"]
+  },
+{
+    "name": "Skywire VIP",
+    "image": "static/icons/skywirevip.webp",
+    "url": "static/mages/skywirevip/index.html",
+    "categories": ["Flash", "Casual"]
+  },
+{
     "name": "Donkey Kong",
     "image": "static/icons/donkeykong.webp",
     "url": "static/mages/donkeykong/index.html",
@@ -3399,12 +3395,6 @@
     "categories": ["Casual"]
   },
 {
-    "name": "Superhot",
-    "image": "static/icons/superhot.webp",
-    "url": "static/mages/superhot/index.html",
-    "categories": ["Casual"]
-  },
-{
     "name": "Super Meat Boy",
     "image": "static/icons/supermeatboy.webp",
     "url": "static/mages/supermeatboy/index.html",
@@ -3429,16 +3419,16 @@
     "categories": ["Casual"]
   },
 {
+    "name": "Superhot",
+    "image": "static/icons/superhot.webp",
+    "url": "static/mages/superhot/index.html",
+    "categories": ["Casual"]
+  },
+{
     "name": "Talking Tom 2",
     "image": "static/icons/talkingtom2.webp",
     "url": "static/mages/talkingtom2/index.html",
     "categories": ["Flash", "Casual"]
-  },
-{
-    "name": "Tappy Plane",
-    "image": "static/icons/tappyplane.webp",
-    "url": "static/mages/tappyplane/index.html",
-    "categories": ["Casual"]
   },
 {
     "name": "Temple",
@@ -3463,12 +3453,6 @@
     "image": "static/icons/territorialio.webp",
     "url": "static/mages/territorialio/index.html",
     "categories": ["Casual"]
-  },
-{
-    "name": "Tetris",
-    "image": "static/icons/tetris.webp",
-    "url": "static/mages/tetris/index.html",
-    "categories": ["Flash", "Casual"]
   },
 {
     "name": "Sandtrix",
@@ -3699,12 +3683,6 @@
     "categories": ["Casual"]
   },
 {
-    "name": "Tomb Of The Mask",
-    "image": "static/icons/tombofthemask.webp",
-    "url": "static/mages/tombofthemask/index.html",
-    "categories": ["Casual"]
-  },
-{
     "name": "Townscaper",
     "image": "static/icons/townscaper.webp",
     "url": "static/mages/townscaper/index.html",
@@ -3744,6 +3722,72 @@
     "name": "Ultimate Sonic Flash",
     "image": "static/icons/ultimatesonicflash.webp",
     "url": "static/mages/ultimatesonicflash/index.html",
+    "categories": ["Flash", "Casual"]
+  },
+{
+    "name": "Dante",
+    "image": "static/icons/dante.webp",
+    "url": "static/mages/dante/index.html",
+    "categories": ["Casual"]
+  },
+{
+    "name": "Avalanche",
+    "image": "static/icons/avalanche.webp",
+    "url": "static/mages/avalanche/index.html",
+    "categories": ["Flash", "Casual"]
+  },
+{
+    "name": "Awesome Tanks",
+    "image": "static/icons/awesometanks.webp",
+    "url": "static/mages/awesometanks/index.html",
+    "categories": ["Casual"]
+  },
+{
+    "name": "Achievement Unlocked",
+    "image": "static/icons/achievementunlocked.webp",
+    "url": "static/mages/achievementunlocked/index.html",
+    "categories": ["Flash", "Casual"]
+  },
+{
+    "name": "Achievement Unlocked 2",
+    "image": "static/icons/achievementunlocked2.webp",
+    "url": "static/mages/achievementunlocked2/index.html",
+    "categories": ["Flash", "Casual"]
+  },
+{
+    "name": "13 Days In Hell",
+    "image": "static/icons/13daysinhell.webp",
+    "url": "static/mages/13daysinhell/index.html",
+    "categories": ["Flash", "Casual"]
+  },
+{
+    "name": "Amidst The Sky",
+    "image": "static/icons/amidstthesky.webp",
+    "url": "static/mages/amidstthesky/index.html",
+    "categories": ["Casual"]
+  },
+{
+    "name": "3 Lines",
+    "image": "static/icons/3lines.webp",
+    "url": "static/mages/3lines/index.html",
+    "categories": ["Flash", "Casual"]
+  },
+{
+    "name": "Chibi Knight",
+    "image": "static/icons/chibiknight.webp",
+    "url": "static/mages/chibiknight/index.html",
+    "categories": ["Flash", "Casual"]
+  },
+{
+    "name": "Circloo",
+    "image": "static/icons/circloo.webp",
+    "url": "static/mages/circloo/index.html",
+    "categories": ["Casual"]
+  },
+{
+    "name": "Final Ninja",
+    "image": "static/icons/finalninja.webp",
+    "url": "static/mages/finalninja/index.html",
     "categories": ["Flash", "Casual"]
   },
 {
