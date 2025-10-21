@@ -963,12 +963,6 @@
     "categories": ["Flash", "Strategy"]
   },
 {
-    "name": "Bloons Tower Defense 6",
-    "image": "static/icons/bloonstowerdefense6.webp",
-    "url": "static/mages/bloonstowerdefense6/index.html",
-    "categories": ["Strategy"]
-  },
-{
     "name": "Bob The Robber 2",
     "image": "static/icons/bobtherobber2.webp",
     "url": "static/mages/bobtherobber2/index.html",
@@ -1950,9 +1944,11 @@
 {
     "name": "Friday Night Funkin",
     "image": "static/icons/fnf.webp",
-    "url": "static/mages/fridaynightfunkin/index.html",
-    "categories": ["Rhythm", "Action"]
+    "url": "static/mages/fnf/index.html",
+    "categories": ["Rhythm", "Action"],
+    "//": "ugs external"
   },
+
 {
     "name": "Friday Night Funkin' Mid Fight",
     "image": "static/icons/fridaynightfunkinmidfight.webp",
