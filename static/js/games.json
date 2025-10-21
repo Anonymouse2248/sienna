@@ -471,21 +471,9 @@
     "categories": ["Casual"]
   },
 {
-    "name": "Italian Brainrot Bike Rush",
-    "image": "static/icons/brainrotbikerush.webp",
-    "url": "static/mages/brainrotbikerush/index.html",
-    "categories": ["Casual"]
-  },
-{
     "name": "Italian Brainrot Clicker",
     "image": "static/icons/brainrotclicker.webp",
     "url": "static/mages/brainrotclicker/index.html",
-    "categories": ["Casual"]
-  },
-{
-    "name": "Italian Baby Brainrot Clicker",
-    "image": "static/icons/babybrainrotclicker.webp",
-    "url": "static/mages/babybrainrotclicker/index.html",
     "categories": ["Casual"]
   },
 {
@@ -686,17 +674,17 @@
     "categories": ["Casual"]
   },
 {
-    "name": "Labubu Merge",
-    "image": "static/icons/labubumerge.webp",
-    "url": "static/mages/labubumerge/index.html",
-    "categories": ["Casual"]
-  },
-{
     "name": "Deltarune",
     "image": "static/icons/deltarune.webp",
     "url": "static/mages/deltarune/index.html",
     "categories": ["Adventure"],
     "//": "genizy external"
+  },
+{
+    "name": "Deltarune Bossrush",
+    "image": "static/icons/deltarunebossrush.webp",
+    "url": "static/mages/deltarunebossrush/index.html",
+    "categories": ["Adventure"]
   },
 {
     "name": "Deltatraveler",
@@ -1282,12 +1270,6 @@
     "categories": ["Flash", "Horror", "Casual"]
   },
 {
-    "name": "Gloom",
-    "image": "static/icons/gloom.webp",
-    "url": "static/mages/gloom/index.html",
-    "categories": ["Flash", "Casual"]
-  },
-{
     "name": "Draw Climber",
     "image": "static/icons/drawclimber.webp",
     "url": "static/mages/drawclimber/index.html",
@@ -1379,7 +1361,7 @@
     "categories": ["Cars"]
   },
 {
-    "name": "Madalin Cars",
+    "name": "Madalin Stunt Cars",
     "image": "static/icons/madalincars.webp",
     "url": "static/mages/madalincars/index.html",
     "categories": ["Cars"]
@@ -2994,12 +2976,6 @@
     "categories": ["Flash", "Casual"]
   },
 {
-    "name": "Racer",
-    "image": "static/icons/racer.webp",
-    "url": "static/mages/racer/index.html",
-    "categories": ["Cars"]
-  },
-{
     "name": "Real Flying Truck",
     "image": "static/icons/realflyingtruck.webp",
     "url": "static/mages/realflyingtruck/index.html",
@@ -3156,12 +3132,6 @@
     "categories": ["Flash", "Sports"]
   },
 {
-    "name": "Electron Dash",
-    "image": "static/icons/electrondash.webp",
-    "url": "static/mages/electrondash/index.html",
-    "categories": ["Sports"]
-  },
-{
     "name": "Run 3 Editor",
     "image": "static/icons/run3editor.webp",
     "url": "static/mages/run3editor/index.html",
@@ -3192,12 +3162,6 @@
     "categories": ["Casual"]
   },
 {
-    "name": "Shapes",
-    "image": "static/icons/shapes.webp",
-    "url": "static/mages/shapes/index.html",
-    "categories": ["Casual"]
-  },
-{
     "name": "Simcity",
     "image": "static/icons/simcity.webp",
     "url": "static/mages/simcity/index.html",
@@ -3216,12 +3180,6 @@
     "categories": ["Flash", "Casual"]
   },
 {
-    "name": "Skate",
-    "image": "static/icons/skate.webp",
-    "url": "static/mages/skate/index.html",
-    "categories": ["Casual"]
-  },
-{
     "name": "Skibidi Toilet 1v100",
     "image": "static/icons/skibiditoilet1v100.webp",
     "url": "static/mages/skibiditoilet1v100/index.html",
@@ -3234,7 +3192,7 @@
     "categories": ["Casual"]
   },
 {
-    "name": "Snot Out",
+    "name": "Super Snot Put",
     "image": "static/icons/snotout.webp",
     "url": "static/mages/snotout/index.html",
     "categories": ["Flash", "Casual"]
