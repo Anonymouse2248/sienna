@@ -1,243 +1,275 @@
-<!-- Ultimate Game Stash file--> 
+<!-- Ultimate Game Stash file-->
 <!-- For the regularly updating doc go to https://docs.google.com/document/d/1_FmH3BlSBQI7FGgAQL59-ZPe8eCxs35wel6JUyVaG8Q/ -->
 
 <!doctype html>
-    <html lang=en-us>
+<html lang="en-us">
+<head>
+  <base href="https://cdn.jsdelivr.net/gh/genizy/web-port@main/class-of-09/">
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Class of '09</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="icon" href="icons/icon.png" sizes="72x72" type="image/png">
+  <meta name="theme-color" content="#000">
 
-    <head>
-        <base href="https://cdn.jsdelivr.net/gh/genizy/web-port@main/class-of-09/">
-        <meta charset=utf-8>
-        <meta content="text/html; charset=utf-8" http-equiv=Content-Type>
-        <title>Class of '09</title>
-        <meta content="width=device-width,initial-scale=1" name=viewport>
-        <link href=icons/icon.png rel=icon sizes=72x72 type=image/png>
-        <meta content=#000 name=theme-color>
-        <style>
-            html {
-                background: #444;
-                font-family: sans-serif
-            }
+  <style>
+    html, body {
+      margin: 0;
+      height: 100%;
+      overflow: hidden;
+      background: #000;
+      font-family: sans-serif;
+    }
 
-            #canvas {
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                background: #000;
-                border: 0 none
-            }
+    #canvas {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #000;
+      border: none;
+    }
 
-            .visible {
-                visibility: visible;
-                opacity: 1;
-                transition: opacity .1s linear
-            }
+    #overlayDiv {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+    }
 
-            .hidden {
-                visibility: hidden;
-                opacity: 0;
-                transition: visibility 0s .25s, opacity .25s linear
-            }
+    .visible {
+      visibility: visible;
+      opacity: 1;
+      transition: opacity .1s linear;
+    }
 
-            #inputDiv,
-            #statusDiv {
-                background: rgba(0, 0, 0, .75);
-                width: 50%;
-                margin: auto;
-                min-width: 340px;
-                padding: 10px;
-                position: absolute;
-                top: 0;
-                left: 0;
-                right: 0;
-                border-radius: 0 0 5px 5px
-            }
+    .hidden {
+      visibility: hidden;
+      opacity: 0;
+      transition: visibility 0s .25s, opacity .25s linear;
+    }
 
-            #statusTextDiv {
-                overflow: auto;
-                max-height: 40vh;
-                color: #ccc;
-                font-size: 14px
-            }
+    #inputDiv,
+    #statusDiv {
+      background: rgba(0, 0, 0, .75);
+      width: 50%;
+      margin: auto;
+      min-width: 340px;
+      padding: 10px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      border-radius: 0 0 5px 5px;
+    }
 
-            #statusProgress {
-                display: none;
-                width: 100%
-            }
+    #statusTextDiv {
+      overflow: auto;
+      max-height: 40vh;
+      color: #ccc;
+      font-size: 14px;
+    }
 
-            #inputDiv {
-                width: 65%;
-                padding-left: 10px;
-                padding-right: 20px
-            }
+    #statusProgress {
+      display: none;
+      width: 100%;
+    }
 
-            #inputPrompt {
-                color: #eee;
-                font-size: 150%;
-                margin-bottom: 1em;
-                margin-top: 1em
-            }
+    #inputDiv {
+      width: 65%;
+      padding-left: 10px;
+      padding-right: 20px;
+    }
 
-            #inputText {
-                width: 100%;
-                font-size: 175%;
-                padding: 5px;
-                background: inherit;
-                color: #eee
-            }
+    #inputPrompt {
+      color: #eee;
+      font-size: 150%;
+      margin-bottom: 1em;
+      margin-top: 1em;
+    }
 
-            #inputText:focus {
-                color: #fff
-            }
+    #inputText {
+      width: 100%;
+      font-size: 175%;
+      padding: 5px;
+      background: inherit;
+      color: #eee;
+    }
 
-            #ContextContainer {
-                position: absolute;
-                left: 0;
-                top: 0;
-                color: #fff
-            }
+    #inputText:focus {
+      color: #fff;
+    }
 
-            #ContextContainer.shown {
-                background: rgba(0, 0, 0, .5);
-                border-radius: 0 0 5px 0
-            }
+    #ContextContainer {
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: #fff;
+    }
 
-            #ContextButton {
-                text-decoration: none;
-                color: #d3d3d3;
-                font-size: xx-large;
-                cursor: pointer;
-                user-select: none;
-                -moz-user-select: none;
-                padding: 10px 10px;
-                opacity: .75
-            }
+    #ContextContainer.shown {
+      background: rgba(0, 0, 0, .5);
+      border-radius: 0 0 5px 0;
+    }
 
-            #ContextButton:focus {
-                outline: 0;
-                color: #fff;
-                opacity: 1
-            }
+    #ContextButton {
+      text-decoration: none;
+      color: #d3d3d3;
+      font-size: xx-large;
+      cursor: pointer;
+      user-select: none;
+      -moz-user-select: none;
+      padding: 10px 10px;
+      opacity: .75;
+    }
 
-            #ContextMenu a {
-                text-decoration: none;
-                color: #d3d3d3;
-                background: #444;
-                height: 48px;
-                width: 250px;
-                border-radius: 5px;
-                border: 1px solid #d3d3d3;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                margin: 5px 5px;
-                opacity: 1
-            }
+    #ContextButton:focus {
+      outline: 0;
+      color: #fff;
+      opacity: 1;
+    }
 
-            #ContextMenu a:hover {
-                text-decoration: none;
-                background: #666;
-                color: #fff
-            }
+    #ContextMenu a {
+      text-decoration: none;
+      color: #d3d3d3;
+      background: #444;
+      height: 48px;
+      width: 250px;
+      border-radius: 5px;
+      border: 1px solid #d3d3d3;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 5px 5px;
+      opacity: 1;
+    }
 
-            #presplash {
-                position: absolute;
-                top: 0;
-                left: 0;
-                display: block;
-                margin: auto;
-                width: 100%;
-                height: 100%;
-                object-fit: contain
-            }
-        </style>
-    </head>
+    #ContextMenu a:hover {
+      background: #666;
+      color: #fff;
+    }
+
+    /* Presplash styling */
+    #presplash {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      background: #000;
+      z-index: 1000;
+      opacity: 1;
+      transition: opacity 0.75s ease-in-out;
+    }
+  </style>
+</head>
 
 <body>
-    <canvas id="canvas" oncontextmenu="event.preventDefault()" tabindex=-1></canvas>
-    <div id="overlayDiv"></div>         
-    <!-- Load presplash from the same directory as this HTML file (ignores the <base> tag).
-         Put your custom image named "web-presplash.jpg" next to this index.html, or
-         override with a full URL using ?presplash=/path/to/image.jpg
-    -->
-    <img id="presplash" data-local-src="hahafunny.gif" alt="pre-splash image">
-    <script>
-        (function(){
-            const img = document.getElementById('presplash');
-            if(!img) return;
-            // Query-string override: ?presplash=https://example.com/my.jpg
-            try {
-                const params = new URLSearchParams(location.search);
-                const override = params.get('presplash');
-                if (override) { img.src = override; return; }
+  <canvas id="canvas" oncontextmenu="event.preventDefault()" tabindex="-1"></canvas>
+  <div id="overlayDiv"></div>
 
-                // Build an absolute URL pointing to the same directory as this HTML file.
-                // This avoids resolution against the <base> tag (which pointed to a CDN).
-                const loc = window.location;
-                const pagePath = loc.pathname.replace(/\/[^\/]*$/, '/');
-                const localName = img.getAttribute('data-local-src') || 'web-presplash.jpg';
-                const src = (loc.protocol === 'file:' ? '' : loc.origin) + pagePath + localName;
-                img.src = src;
-            } catch (e) {
-                // Fallback to the filename (may still be resolved by base, but better than nothing)
-                img.src = img.getAttribute('data-local-src') || 'web-presplash.jpg';
-            }
-        })();
-            function mergeFiles(fileParts) {
-                return new Promise((resolve, reject) => {
-                    let buffers = [];
-    
-                    function fetchPart(index) {
-                        if (index >= fileParts.length) {
-                            let mergedBlob = new Blob(buffers);
-                            let mergedFileUrl = URL.createObjectURL(mergedBlob);
-                            resolve(mergedFileUrl);
-                            return;
-                        }
-                        fetch(fileParts[index]).then((response) => response.arrayBuffer()).then((data) => {
-                            buffers.push(data);
-                            fetchPart(index + 1);
-                        }).catch(reject);
-                    }
-                    fetchPart(0);
-                });
-            }
-    
-            function getParts(file, start, end) {
-                let parts = [];
-                for (let i = start; i <= end; i++) {
-                    parts.push(file + ".part" + i);
-                }
-                return parts;
-            }
-            mergeFiles(getParts("game.zip", 1, 2)).then(async url => {
-                window.gameZipUrl = url;
-                let renpypre = document.createElement("script");
-                renpypre.src = "https://cdn.jsdelivr.net/gh/genizy/web-port@725a19f20c3f376529284c9f86299581719e8d19/class-of-09/renpy-pre.js"
-                let renpy = document.createElement("script");
-                renpy.src = "https://cdn.jsdelivr.net/gh/genizy/web-port@725a19f20c3f376529284c9f86299581719e8d19/class-of-09/renpy.js"
-                document.body.appendChild(renpypre);
-                document.body.appendChild(renpy);
-            });
-        </script>
-        <canvas id=canvas oncontextmenu=event.preventDefault() tabindex=-1></canvas><img id=presplash>
-        <div id=ContextContainer><a id=ContextButton>≡</a><br>
-            <div id=ContextMenu style=display:none><input id=ID_SavegamesImport accept=application/zip onchange=onSavegamesImport(this) style=display:none type=file><a href="javascript:document.getElementById('ID_SavegamesImport').click();">Import Saves</a><a href=javascript:onSavegamesExport();>Export Saves</a><a href="javascript:FSDownload('/log.txt', 'text/plain');">Download Log</a><a href=https://www.renpy.org/ target=_blank>Powered by Ren'Py</a></div>
-        </div>
-        <div id=statusDiv class=hidden>
-            <div id=statusTextDiv></div><progress id=statusProgress max=100 value=0></progress>
-        </div>
-        <div id=inputDiv class=hidden>
-            <form id=inputForm>
-                <div id=inputPrompt></div><input id=inputText>
-            </form>
-        </div>
-        <script>
-            navigator.serviceWorker && (navigator.serviceWorker.controller || navigator.serviceWorker.register("./service-worker.js", {
-                updateViaCache: "all"
-            }))
-        </script>
-    </body>
+  <!-- Presplash -->
+  <img id="presplash" alt="pre-splash image">
 
-    </html>
+  <script>
+    // --- Presplash loader ---
+    (function () {
+      const img = document.getElementById('presplash');
+      if (!img) return;
+
+      try {
+        const params = new URLSearchParams(location.search);
+        const override = params.get('presplash');
+        img.src = override || new URL('presplash.jpg', window.location.href).href;
+      } catch {
+        img.src = './presplash.jpg';
+      }
+
+      // Fade out automatically after game load
+      window.addEventListener('load', () => {
+        setTimeout(() => {
+          img.style.opacity = 0;
+          setTimeout(() => img.remove(), 800);
+        }, 500); // slight delay before fade
+      });
+    })();
+
+    // --- ZIP Merge Logic ---
+    function mergeFiles(fileParts) {
+      return new Promise((resolve, reject) => {
+        let buffers = [];
+
+        function fetchPart(index) {
+          if (index >= fileParts.length) {
+            let mergedBlob = new Blob(buffers);
+            let mergedFileUrl = URL.createObjectURL(mergedBlob);
+            resolve(mergedFileUrl);
+            return;
+          }
+          fetch(fileParts[index])
+            .then(response => response.arrayBuffer())
+            .then(data => {
+              buffers.push(data);
+              fetchPart(index + 1);
+            })
+            .catch(reject);
+        }
+        fetchPart(0);
+      });
+    }
+
+    function getParts(file, start, end) {
+      let parts = [];
+      for (let i = start; i <= end; i++) {
+        parts.push(file + ".part" + i);
+      }
+      return parts;
+    }
+
+    // Merge and load game
+    mergeFiles(getParts("game.zip", 1, 2)).then(async url => {
+      window.gameZipUrl = url;
+      let renpypre = document.createElement("script");
+      renpypre.src = "https://cdn.jsdelivr.net/gh/genizy/web-port@725a19f20c3f376529284c9f86299581719e8d19/class-of-09/renpy-pre.js";
+      let renpy = document.createElement("script");
+      renpy.src = "https://cdn.jsdelivr.net/gh/genizy/web-port@725a19f20c3f376529284c9f86299581719e8d19/class-of-09/renpy.js";
+      document.body.appendChild(renpypre);
+      document.body.appendChild(renpy);
+    });
+  </script>
+
+  <!-- Context Menu -->
+  <div id="ContextContainer">
+    <a id="ContextButton">≡</a><br>
+    <div id="ContextMenu" style="display:none">
+      <input id="ID_SavegamesImport" accept="application/zip" onchange="onSavegamesImport(this)" style="display:none" type="file">
+      <a href="javascript:document.getElementById('ID_SavegamesImport').click();">Import Saves</a>
+      <a href="javascript:onSavegamesExport();">Export Saves</a>
+      <a href="javascript:FSDownload('/log.txt', 'text/plain');">Download Log</a>
+      <a href="https://www.renpy.org/" target="_blank">Powered by Ren'Py</a>
+    </div>
+  </div>
+
+  <div id="statusDiv" class="hidden">
+    <div id="statusTextDiv"></div>
+    <progress id="statusProgress" max="100" value="0"></progress>
+  </div>
+
+  <div id="inputDiv" class="hidden">
+    <form id="inputForm">
+      <div id="inputPrompt"></div>
+      <input id="inputText">
+    </form>
+  </div>
+
+  <script>
+    // Register service worker if available
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register("./service-worker.js", { updateViaCache: "all" });
+    }
+  </script>
+</body>
+</html>

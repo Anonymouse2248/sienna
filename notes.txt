@@ -1,0 +1,83 @@
+make emulated games insta load instead of having start game
+fix some icons
+
+genizy + ugs external
+BuildNow.GG
+Doki Doki Literature Club
+Class of ’09
+Steal A Brain Rot Online
+Subway Surfers San Francisco
+Subway Surfers Barcelona
+Subway Surfers Beijing
+Subway Surfers Berlin
+Subway Surfers Buenos Aires
+Subway Surfers Havana
+Subway Surfers Houston
+Subway Surfers Iceland
+Subway Surfers London
+Subway Surfers Mexico
+Subway Surfers Miami
+Subway Surfers New Orleans
+Subway Surfers Saint Petersburg
+Subway Surfers Winter Wonderland
+Subway Surfers Zurich
+Five Night’s At Shrek’s Hotel
+genizy external
+That’s Not My Neighbor
+Yandere Simulator DEMO
+Omori
+R.E.P.O
+Ultrakill DEMO
+Buckshot Roulette
+Bendy and the Ink Machine
+Webfishing
+Sprunki
+OvO 3: Dimensional
+Karlson
+Deltarune
+Deltatraveler
+Undertale Yellow
+Bad Monday Simulator
+Bergentruck 201x
+Google Baseball
+Drive Mad
+Five Night’s At Freddy’s 4 Halloween Ed.
+Five Night’s At Freddy’s Sister Location
+Five Night’s At Freddy’s Pizza Simulator
+FNAF World
+FNAF UCN
+Baldi’s Basics Classic Remastered
+Soundboard 2
+ugs external
+Granny
+Granny 2
+Clash of Vikings
+Hollow Knight Beta Demake
+60 Seconds Santa Run
+Steal A Brain Rot RU
+Only Up
+Core Ball
+Burrito Bison
+Burrito Bison Revenge
+Get Yoked
+Unfair Dyne
+Slope 3
+Survival Race
+Solar Smash
+Friday Night Funkin’ Indie Cross
+Friday Night Funkin’ Soft
+Friday Night Funkin’ Neo
+Friday Night Funkin’ Hit Single Real
+Friday Night Funkin’ B-Sides
+Friday Night Funkin’ vs. Tricky
+Friday Night Funkin’ vs. Whitty
+Friday Night Funkin’ vs. Sonic.EXE
+Friday Night Funkin’ vs. Sky
+Friday Night Funkin’ vs. KAPI
+Friday Night Funkin’ vs. Hex
+Friday Night Funkin’ vs. Hatsune Miku
+Friday Night Funkin’ vs. Mario’s Madness
+Friday Night Funkin’ vs. Shaggy
+Friday Night Funkin’ vs. Garcello
+Friday Night Funkin’ vs. Cyber Sensation
+Friday Night Funkin’ vs. Hypno Lullaby

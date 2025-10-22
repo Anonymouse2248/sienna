@@ -101,14 +101,14 @@
   },
 {
     "name": "Miss Inconspicuous",
-    "image": "static/icons/missInconspicuous.webp",
-    "url": "static/mages/missInconspicuous/index.html",
+    "image": "static/icons/mimco.webp",
+    "url": "static/mages/mimco/index.html",
     "categories": ["Casual"]
   },
 {
     "name": "Miss Inconspicuous 2",
-    "image": "static/icons/missInconspicuous2.webp",
-    "url": "static/mages/missInconspicuous2/index.html",
+    "image": "static/icons/mimco2.webp",
+    "url": "static/mages/mimco2/index.html",
     "categories": ["Casual"]
   },
 {
@@ -346,18 +346,6 @@
     "image": "static/icons/speedstars.webp",
     "url": "static/mages/speedstars/index.html",
     "categories": ["Action"]
-  },
-{
-    "name": "Beach Club!",
-    "image": "static/icons/beachclub.webp",
-    "url": "static/mages/beachclub/index.html",
-    "categories": ["Casual"]
-  },
-{
-    "name": "Pet Simulator",
-    "image": "static/icons/petsimulator.webp",
-    "url": "static/mages/petsimulator/index.html",
-    "categories": ["Casual"]
   },
 {
     "name": "OvO",
@@ -900,6 +888,12 @@
     "name": "Bitlife",
     "image": "static/icons/bitlife.webp",
     "url": "static/mages/bitlife/index.html",
+    "categories": ["Casual"]
+  },
+{
+    "name": "Nova Craft",
+    "image": "static/icons/novacraft.webp",
+    "url": "static/mages/novacraft/index.html",
     "categories": ["Casual"]
   },
 {
@@ -2490,12 +2484,6 @@
     "categories": ["Casual"]
   },
 {
-    "name": "House Of Hazards",
-    "image": "static/icons/houseofhazards.webp",
-    "url": "static/mages/houseofhazards/index.html",
-    "categories": ["Casual"]
-  },
-{
     "name": "Idle Breakout",
     "image": "static/icons/idlebreakout.webp",
     "url": "static/mages/idlebreakout/index.html",
@@ -2547,6 +2535,24 @@
     "name": "Lazy Jump 3D",
     "image": "static/icons/lazyjump3d.webp",
     "url": "static/mages/lazyjump3d/index.html",
+    "categories": ["Casual"]
+  },
+{
+    "name": "Recoil",
+    "image": "static/icons/recoil.webp",
+    "url": "static/mages/recoil/index.html",
+    "categories": ["Casual"]
+  },
+{
+    "name": "Tube Jumpers",
+    "image": "static/icons/tubejumpers.webp",
+    "url": "static/mages/tubejumpers/index.html",
+    "categories": ["Casual"]
+  },
+{
+    "name": "House Of Hazards",
+    "image": "static/icons/houseofhazards.webp",
+    "url": "static/mages/houseofhazards/index.html",
     "categories": ["Casual"]
   },
 {
@@ -2980,12 +2986,6 @@
     "image": "static/icons/realflyingtruck.webp",
     "url": "static/mages/realflyingtruck/index.html",
     "categories": ["Cars"]
-  },
-{
-    "name": "Recoil",
-    "image": "static/icons/recoil.webp",
-    "url": "static/mages/recoil/index.html",
-    "categories": ["Casual"]
   },
 {
     "name": "Red Ball",
@@ -3664,12 +3664,6 @@
     "name": "Bitplanes",
     "image": "static/icons/bitplanes.webp",
     "url": "static/mages/bitplanes/index.html",
-    "categories": ["Casual"]
-  },
-{
-    "name": "Tube Jumpers",
-    "image": "static/icons/tubejumpers.webp",
-    "url": "static/mages/tubejumpers/index.html",
     "categories": ["Casual"]
   },
 {

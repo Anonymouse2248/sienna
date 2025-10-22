@@ -89,7 +89,8 @@
     config.buttonOpts = window.EJS_Buttons;
     config.volume = window.EJS_volume;
     config.defaultControllers = window.EJS_defaultControls;
-    config.startOnLoad = window.EJS_startOnLoaded;
+    // Default to auto-starting the emulator if not explicitly set on the page
+    config.startOnLoad = (typeof window.EJS_startOnLoaded !== "undefined") ? window.EJS_startOnLoaded : true;
     config.fullscreenOnLoad = window.EJS_fullscreenOnLoaded;
     config.filePaths = window.EJS_paths;
     config.loadState = window.EJS_loadStateURL;

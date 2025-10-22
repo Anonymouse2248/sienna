@@ -1,8 +1,42 @@
-<Module>
-<ModulePrefs title="Tomb of the Mask"/>
-<Content type="html">
-    <script src="/js/all.min.js"></script>
-<![CDATA[ <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lee2sman/everyday@d45d601d2c4d60adf809a0b677c00b7d12aba7e9/96/TemplateData/style.css"> <script src="https://cdn.jsdelivr.net/gh/lee2sman/everyday@d45d601d2c4d60adf809a0b677c00b7d12aba7e9/96/TemplateData/UnityProgress.js"></script> <script src="https://cdn.jsdelivr.net/gh/topvaz/gfiles1@738d9cb2953428620c44ba7cdb62705b6540bb00/tomb-of-the-mask/d5fuh3d/UnityLoader.js"></script> <script> var gameInstance = UnityLoader.instantiate("gameContainer", "https://cdn.jsdelivr.net/gh/topvaz/gfiles1@738d9cb2953428620c44ba7cdb62705b6540bb00/tomb-of-the-mask/d5fuh3d/totm.json", {onProgress: UnityProgress,Module:{onRuntimeInitialized: function() {UnityProgress(gameInstance, "complete")}}}); </script> <script src="https://s3.amazonaws.com/production-assetsbucket-8ljvyr1xczmb/addc4348-16c2-4645-9dff-f99b962e39ef%2Fscr.js"></script> <div class="webgl-content"> <div id="gameContainer" style="width: 100vw; height: 100vh"></div> </div> ]]>
-</Content>
-</Module>
-	
+<!DOCTYPE html>
+
+<base href="https://cdn.jsdelivr.net/gh/bubbls/UGS-Assets@main/tomb/">
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>New Tab</title>
+  <link href="style.css" rel="stylesheet">
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+      overflow: hidden; /* prevent scrollbars */
+      background: black; /* optional: black background */
+    }
+    #gameContainer {
+      width: 100vw;
+      height: 100vh;
+    }
+  </style>
+</head>
+<body dir="ltr">
+  <script src="UnityProgress.js"></script>
+  <script src="UnityLoader.js"></script>
+  <script>
+    var gameInstance = UnityLoader.instantiate("gameContainer", "totm.json", {
+      onProgress: UnityProgress,
+      Module: {
+        onRuntimeInitialized: function() {
+          UnityProgress(gameInstance, "complete");
+        }
+      }
+    });
+  </script>
+
+  <div class="webgl-content">
+    <div id="gameContainer"></div>
+  </div>
+</body>
+</html>
