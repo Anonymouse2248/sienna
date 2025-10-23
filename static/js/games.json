@@ -139,7 +139,7 @@
     "//": "genizy external"
   },
 {
-    "name": "Omori",
+    "name": "Omori (Bugged)",
     "image": "static/icons/omori.webp",
     "url": "static/mages/omori/index.html",
     "categories": ["Strategy"],
@@ -515,6 +515,12 @@
     "categories": ["Strategy"]
   },
 {
+    "name": "President Simulator",
+    "image": "static/icons/presidentsimulator.webp",
+    "url": "static/mages/presidentsimulator/index.html",
+    "categories": ["Casual"]
+  },
+{
     "name": "Happy Cat Tavern",
     "image": "static/icons/happycattavern.webp",
     "url": "static/mages/happycattavern/index.html",
@@ -704,6 +710,12 @@
     "name": "Undertale Last Breath",
     "image": "static/icons/undertalelastbreath.webp",
     "url": "static/mages/undertalelastbreath/index.html",
+    "categories": ["Adventure"]
+  },
+{
+    "name": "Undertale 10th Anniversary",
+    "image": "static/icons/undertale10thanniversary.webp",
+    "url": "static/mages/undertale10thanniversary/index.html",
     "categories": ["Adventure"]
   },
 {
@@ -960,12 +972,6 @@
     "name": "Bubble Shooter",
     "image": "static/icons/bubbleshooter.webp",
     "url": "static/mages/bubbleshooter/index.html",
-    "categories": ["Flash", "Action"]
-  },
-{
-    "name": "Bullet Fury",
-    "image": "static/icons/bulletfury.webp",
-    "url": "static/mages/bulletfury/index.html",
     "categories": ["Flash", "Action"]
   },
 {
@@ -1572,22 +1578,10 @@
     "categories": ["Casual"]
   },
 {
-    "name": "Flappy Dino",
-    "image": "static/icons/flappydino.webp",
-    "url": "static/mages/flappydino/index.html",
-    "categories": ["Casual"]
-  },
-{
     "name": "Flappy Duck",
     "image": "static/icons/flappyduck.webp",
     "url": "static/mages/flappyduck/index.html",
     "categories": ["Casual"]
-  },
-{
-    "name": "Flappy Race",
-    "image": "static/icons/flappyrace.webp",
-    "url": "static/mages/flappyrace/index.html",
-    "categories": ["Cars"]
   },
 {
     "name": "Flash Flappy",
@@ -2201,6 +2195,12 @@
     "categories": ["Casual"]
   },
 {
+    "name": "Papa's Pizzeria",
+    "image": "static/icons/papaspizzeria.webp",
+    "url": "static/mages/papaspizzeria/index.html",
+    "categories": ["Flash", "Casual"]
+  },
+{
     "name": "Papa's Bakeria",
     "image": "static/icons/papasbakeria.webp",
     "url": "static/mages/papasbakeria/index.html",
@@ -2381,13 +2381,6 @@
     "categories": ["Adventure"]
   },
 {
-    "name": "Solar Smash",
-    "image": "static/icons/solarsmash.webp",
-    "url": "static/mages/solarsmash/index.html",
-    "categories": ["Adventure"],
-    "//": "ugs external"
-  },
-{
     "name": "Gummibar",
     "image": "static/icons/gummibar.webp",
     "url": "static/mages/gummibar/index.html",
@@ -2496,9 +2489,9 @@
     "categories": ["Strategy"]
   },
 {
-    "name": "Idle Shark",
-    "image": "static/icons/idleshark.webp",
-    "url": "static/mages/idleshark/index.html",
+    "name": "Shark Game",
+    "image": "static/icons/sharkgame.webp",
+    "url": "static/mages/sharkgame/index.html",
     "categories": ["Strategy"]
   },
 {
@@ -2514,21 +2507,9 @@
     "categories": ["Casual"]
   },
 {
-    "name": "Jewel",
-    "image": "static/icons/jewel.webp",
-    "url": "static/mages/jewel/index.html",
-    "categories": ["Flash", "Strategy"]
-  },
-{
     "name": "Kick That Buddy",
     "image": "static/icons/kickthatbuddy.webp",
     "url": "static/mages/kickthatbuddy/index.html",
-    "categories": ["Casual"]
-  },
-{
-    "name": "Last Horizon",
-    "image": "static/icons/lasthorizon.webp",
-    "url": "static/mages/lasthorizon/index.html",
     "categories": ["Casual"]
   },
 {
@@ -2694,6 +2675,18 @@
     "categories": ["Casual"]
   },
 {
+    "name": "Super Smash Bros",
+    "image": "static/icons/supersmashbros.webp",
+    "url": "static/mages/supersmashbros/index.html",
+    "categories": ["Casual"]
+  },
+{
+    "name": "Super Smash Flash",
+    "image": "static/icons/supersmashflash.webp",
+    "url": "static/mages/supersmashflash/index.html",
+    "categories": ["Flash", "Casual"]
+  },
+{
     "name": "Glassworks",
     "image": "static/icons/glassworks.webp",
     "url": "static/mages/glassworks/index.html",
@@ -2734,12 +2727,6 @@
     "image": "static/icons/frogger.webp",
     "url": "static/mages/frogger/index.html",
     "categories": ["Flash", "Casual"]
-  },
-{
-    "name": "Meteor Run",
-    "image": "static/icons/meteorrun.webp",
-    "url": "static/mages/meteorrun/index.html",
-    "categories": ["Sports"]
   },
 {
     "name": "Metroid Zero Mission",
@@ -2802,12 +2789,6 @@
     "categories": ["Casual"]
   },
 {
-    "name": "Offroad",
-    "image": "static/icons/offroad.webp",
-    "url": "static/mages/offroad/index.html",
-    "categories": ["Flash", "Casual"]
-  },
-{
     "name": "Pacman",
     "image": "static/icons/pacman.webp",
     "url": "static/mages/pacman/index.html",
@@ -2847,12 +2828,6 @@
     "name": "Age Of War 2",
     "image": "static/icons/ageofwar2.webp",
     "url": "static/mages/ageofwar2/index.html",
-    "categories": ["Flash", "Casual"]
-  },
-{
-    "name": "Hover Bot Arena",
-    "image": "static/icons/hoverbotarena.webp",
-    "url": "static/mages/hoverbotarena/index.html",
     "categories": ["Flash", "Casual"]
   },
 {
@@ -2940,7 +2915,7 @@
     "categories": ["Flash", "Action"]
   },
 {
-    "name": "Pokemon",
+    "name": "Pokémon Games",
     "image": "static/icons/pokemon.webp",
     "url": "static/mages/pokemon/index.html",
     "categories": ["Casual"]
@@ -2952,7 +2927,7 @@
     "categories": ["Casual"]
   },
 {
-    "name": "Pool",
+    "name": "9 Ball Pool",
     "image": "static/icons/pool.webp",
     "url": "static/mages/pool/index.html",
     "categories": ["Flash", "Casual"]
@@ -2974,12 +2949,6 @@
     "image": "static/icons/quake3.webp",
     "url": "static/mages/quake3/index.html",
     "categories": ["Casual"]
-  },
-{
-    "name": "Rabbit Rescue",
-    "image": "static/icons/rabbitrescue.webp",
-    "url": "static/mages/rabbitrescue/index.html",
-    "categories": ["Flash", "Casual"]
   },
 {
     "name": "Real Flying Truck",
@@ -3355,18 +3324,6 @@
     "categories": ["Flash", "Casual"]
   },
 {
-    "name": "Super Smash Bros",
-    "image": "static/icons/supersmashbros.webp",
-    "url": "static/mages/supersmashbros/index.html",
-    "categories": ["Casual"]
-  },
-{
-    "name": "Super Smash Flash",
-    "image": "static/icons/supersmashflash.webp",
-    "url": "static/mages/supersmashflash/index.html",
-    "categories": ["Flash", "Casual"]
-  },
-{
     "name": "Tabs",
     "image": "static/icons/tabs.webp",
     "url": "static/mages/tabs/index.html",
@@ -3385,9 +3342,9 @@
     "categories": ["Flash", "Casual"]
   },
 {
-    "name": "Temple",
-    "image": "static/icons/temple.webp",
-    "url": "static/mages/temple/index.html",
+    "name": "Temple Of Boom",
+    "image": "static/icons/templeofboom.webp",
+    "url": "static/mages/templeofboom/index.html",
     "categories": ["Flash", "Casual"]
   },
 {

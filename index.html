@@ -29,24 +29,11 @@
       ><span class="letter">.</span>
     </div>
     <div class="beta">BETA</div>
-    <div class="clock" id="clock">00:00:00</div>
   </div>
 
 
   <script src="static/js/sidebar.js"></script>
   <script src="static/js/theme.js"></script>
-  <script>
-     // Clock logic
-    function updateClock() {
-      const now = new Date();
-      const hours = String(now.getHours()).padStart(2, "0");
-      const minutes = String(now.getMinutes()).padStart(2, "0");
-      const seconds = String(now.getSeconds()).padStart(2, "0");
-      document.getElementById("clock").textContent = `${hours}:${minutes}:${seconds}`;
-    }
-    updateClock();
-    setInterval(updateClock, 1000);
-  </script>
   <script src="static/js/cloak.js"></script>
 </body>
 

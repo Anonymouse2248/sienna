@@ -6,12 +6,34 @@
     <title>Unity WebGL Player | Tiny Islands</title>
     <script src="Build/UnityLoader.js"></script>
     <script src="/js/main.js"></script>
-    <link rel="icon" href="/favicon.ico">
+    <link rel="icon" href="/favicon.ico" />
+    <style>
+      html, body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        background: #000;
+      }
+      #unityContainer {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+      }
+    </style>
     <script>
-      UnityLoader.instantiate("unityContainer", "Build/TinyIslands_RuleTweak_v14.json");
+      window.addEventListener("load", () => {
+        UnityLoader.instantiate(
+          "unityContainer",
+          "Build/TinyIslands_RuleTweak_v14.json"
+        );
+      });
     </script>
   </head>
   <body>
-    <div id="unityContainer" style="width: 960px; height: 540px; margin: auto;"></div>
+    <div id="unityContainer"></div>
   </body>
 </html>
