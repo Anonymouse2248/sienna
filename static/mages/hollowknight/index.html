@@ -16,6 +16,34 @@
             height: 100%;
             overflow: hidden;
             background: #231F20;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-family: cursive;
+        }
+
+        #loading-text {
+            color: white;
+            font-size: 42px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        #note-container {
+            text-align: center;
+            color: white;
+            font-size: 22px;
+            line-height: 1.5;
+            margin-top: 10px;
+            max-width: 800px;
+        }
+
+        #note-title {
+            font-weight: bold;
+            font-size: 26px;
+            text-decoration: underline;
+            margin-bottom: 10px;
         }
 
         #unity-container {
@@ -25,12 +53,18 @@
             top: 0;
             left: 0;
         }
-
     </style>
 </head>
 
 <body>
-    <div id="loading-text" style="color: white; font-size: 48px; font-family: cursive; text-align: center; margin-top: 20px;"> LOADING... </div>
+    <div id="loading-text">LOADING...</div>
+
+    <div id="note-container">
+        <div id="note-title">NOTE:</div>
+        Hollow Knight Soft Locks you at the Dreamers,<br>
+        The only possible ending is Godhome.
+    </div>
+
     <div hidden id="unity-container" class="unity-desktop">
         <canvas id="unity-canvas"></canvas>
         <div id="unity-loading-bar">
@@ -39,40 +73,42 @@
                 <div id="unity-progress-bar-full"></div>
             </div>
         </div>
-        <div id="unity-mobile-warning"> WebGL builds are not supported on mobile devices. </div>
+        <div id="unity-mobile-warning">WebGL builds are not supported on mobile devices.</div>
     </div>
+
     <script>
-        var loadingText = document.querySelector("#loading-text");
+        const loadingText = document.querySelector("#loading-text");
+        const noteContainer = document.querySelector("#note-container");
         let totalBytes = 0;
         let loadedBytes = 0;
+
         async function getSize(url) {
             try {
-                const res = await fetch(url, {
-                    method: "HEAD"
-                });
+                const res = await fetch(url, { method: "HEAD" });
                 return parseInt(res.headers.get("Content-Length") || "0", 10);
             } catch {
                 return 0;
             }
         }
+
         async function fetchWithProgress(url) {
             const response = await fetch(url);
             const reader = response.body.getReader();
             let chunks = [];
             let received = 0;
+
             while (true) {
-                const {
-                    done,
-                    value
-                } = await reader.read();
+                const { done, value } = await reader.read();
                 if (done) break;
                 received += value.length;
                 loadedBytes += value.length;
                 chunks.push(value);
-                let mbDone = (loadedBytes / (1024 * 1024)).toFixed(2);
-                let mbTotal = '860.36';
+
+                const mbDone = (loadedBytes / (1024 * 1024)).toFixed(2);
+                const mbTotal = '860.36';
                 loadingText.textContent = `LOADING... ${mbDone} MB / ${mbTotal} MB`;
             }
+
             let fullBuffer = new Uint8Array(received);
             let offset = 0;
             for (let chunk of chunks) {
@@ -81,6 +117,7 @@
             }
             return fullBuffer.buffer;
         }
+
         async function mergeFiles(fileParts) {
             const buffers = await Promise.all(fileParts.map(part => fetchWithProgress(part)));
             const mergedBlob = new Blob(buffers);
@@ -94,47 +131,46 @@
             }
             return parts;
         }
+
         (async () => {
-            const allParts = [...getParts("Build/hk.data", 1, 42), ...getParts("Build/hk.wasm", 1, 2), ];
+            const allParts = [
+                ...getParts("Build/hk.data", 1, 42),
+                ...getParts("Build/hk.wasm", 1, 2),
+            ];
+
             const sizes = await Promise.all(allParts.map(getSize));
             totalBytes = sizes.reduce((a, b) => a + b, 0);
-            const [dataUrl, wasmurl] = await Promise.all([
+
+            const [dataUrl, wasmUrl] = await Promise.all([
                 mergeFiles(getParts("Build/hk.data", 1, 42)),
                 mergeFiles(getParts("Build/hk.wasm", 1, 2)),
             ]);
-            var buildUrl = "Build";
-            var loaderUrl = buildUrl + "/hk.loader.js";
-            var config = {
+
+            const buildUrl = "Build";
+            const loaderUrl = buildUrl + "/hk.loader.js";
+            const config = {
                 dataUrl: dataUrl,
                 frameworkUrl: buildUrl + "/hk.framework.js",
-                codeUrl: wasmurl,
+                codeUrl: wasmUrl,
                 streamingAssetsUrl: "StreamingAssets",
                 companyName: "Team Cherry & Truffled",
                 productName: "Hollow Knight",
                 productVersion: "1.0",
             };
-            var container = document.querySelector("#unity-container");
+
+            const container = document.querySelector("#unity-container");
+            const canvas = document.querySelector("#unity-canvas");
+            const loadingBar = document.querySelector("#unity-loading-bar");
+            const progressBarFull = document.querySelector("#unity-progress-bar-full");
+            const mobileWarning = document.querySelector("#unity-mobile-warning");
+
             container.hidden = false;
-            var canvas = document.querySelector("#unity-canvas");
-            var loadingBar = document.querySelector("#unity-loading-bar");
-            var progressBarFull = document.querySelector("#unity-progress-bar-full");
-            var fullscreenButton = document.querySelector("#unity-fullscreen-button");
-            var mobileWarning = document.querySelector("#unity-mobile-warning");
+
             if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
                 container.className = "unity-mobile";
                 config.devicePixelRatio = 1;
                 mobileWarning.style.display = "block";
-                setTimeout(() => {
-                    mobileWarning.style.display = "none";
-                }, 5000);
-            } else {
-              if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
-                var meta = document.createElement('meta');
-                meta.name = 'viewport';
-                meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
-                document.getElementsByTagName('head')[0].appendChild(meta);
-                container.className = "unity-mobile";
-                canvas.className = "unity-mobile";
+                setTimeout(() => mobileWarning.style.display = "none", 5000);
             } else {
                 function resizeCanvas() {
                     canvas.width = window.innerWidth;
@@ -145,15 +181,16 @@
                 resizeCanvas();
                 window.addEventListener('resize', resizeCanvas);
             }
-            }
+
             loadingBar.style.display = "block";
-            var script = document.createElement("script");
+            const script = document.createElement("script");
             script.src = loaderUrl;
             script.onload = () => {
                 createUnityInstance(canvas, config, (progress) => {
                     progressBarFull.style.width = 100 * progress + "%";
                 }).then((unityInstance) => {
-                  loadingText.remove();
+                    loadingText.remove();
+                    noteContainer.remove();
                     loadingBar.style.display = "none";
                     canvas.style.display = "block";
                 }).catch((message) => {

@@ -5,6 +5,18 @@
     "url": "contact.html"
   },
 {
+    "name": "Unblocked Game Stash",
+    "image": "static/icons/ugssinglefile.webp",
+    "url": "static/mages/ugssinglefile/index.html",
+    "//": "ugs external"
+  },
+{
+    "name": "gn-math",
+    "image": "static/icons/gnmath.webp",
+    "url": "static/mages/gnmath/index.html",
+    "//": "ugs external"
+  },
+{
     "name": "1v1.lol",
     "image": "static/icons/1v1lol.webp",
     "url": "static/mages/1v1lol/index.html",
@@ -146,6 +158,19 @@
     "//": "genizy external"
   },
 {
+    "name": "Yume Nikki",
+    "image": "static/icons/yumenikki.webp",
+    "url": "static/mages/yumenikki/index.html",
+    "categories": ["Strategy"],
+    "//": "genizy external"
+  },
+{
+    "name": "OMORI x Yume Nikki Crossover",
+    "image": "static/icons/omorixyumenikki.webp",
+    "url": "static/mages/omorixyumenikki/index.html",
+    "categories": ["Strategy"]
+  },
+{
     "name": "Bad Parenting",
     "image": "static/icons/badparenting.webp",
     "url": "static/mages/badparenting/index.html",
@@ -204,7 +229,7 @@
     "//": "genizy external"
   },
 {
-    "name": "Ultrakill DEMO",
+    "name": "Ultrakill Prelude",
     "image": "static/icons/ultrakill.webp",
     "url": "static/mages/ultrakill/index.html",
     "categories": ["Action"],
@@ -257,7 +282,7 @@
     "categories": ["Adventure"]
   },
 {
-    "name": "Terra: Terraria Demake",
+    "name": "Terra: A Terraria Demake",
     "image": "static/icons/terra.webp",
     "url": "static/mages/terra/index.html",
     "categories": ["Adventure"]
@@ -428,22 +453,43 @@
     "categories": ["Casual"]
   },
 {
+    "name": "Grow A Garden",
+    "image": "static/icons/growagarden2.webp",
+    "url": "static/mages/growagarden2/index.html",
+    "categories": ["Casual"],
+    "//": "genizy external"
+  },
+{
+    "name": "Grow Your Garden",
+    "image": "static/icons/growyourgarden.webp",
+    "url": "static/mages/growyourgarden/index.html",
+    "categories": ["Casual"]
+  },
+{
     "name": "Plants vs. Brainrots",
     "image": "static/icons/plantsvsbrainrots.webp",
     "url": "static/mages/plantsvsbrainrots/index.html",
     "categories": ["Casual", "Strategy"]
   },
 {
-    "name": "Growden.io (external)",
+    "name": "Growden.io",
     "image": "static/icons/growdenio.webp",
-    "url": "https://cdn-sienna-growdenio-n4jcyz1r8k5m3w9x2t7b0vd6q.vercel.app",
+    "url": "static/mages/growdenio/index.html",
     "categories": ["Casual"]
   },
 {
     "name": "Steal A Brain Rot 🇷🇺",
     "image": "static/icons/sabr.webp",
     "url": "static/mages/sabr/index.html",
-    "categories": ["Casual"]
+    "categories": ["Casual"],
+    "//": "genizy+ugs external"
+  },
+{
+    "name": "Steal A Brain Rot",
+    "image": "static/icons/sabr2.webp",
+    "url": "static/mages/sabr2/index.html",
+    "categories": ["Casual"],
+    "//": "genizy+ugs external"
   },
 {
     "name": "Steal A Brain Rot Online",
@@ -462,6 +508,12 @@
     "name": "Italian Brainrot Clicker",
     "image": "static/icons/brainrotclicker.webp",
     "url": "static/mages/brainrotclicker/index.html",
+    "categories": ["Casual"]
+  },
+{
+    "name": "Cool Brainrot Clicker",
+    "image": "static/icons/coolbrainrotclicker.webp",
+    "url": "static/mages/coolbrainrotclicker/index.html",
     "categories": ["Casual"]
   },
 {
@@ -539,6 +591,12 @@
     "categories": ["Flash", "Casual"]
   },
 {
+    "name": "Pokémon Games",
+    "image": "static/icons/pokemon.webp",
+    "url": "static/mages/pokemon/index.html",
+    "categories": ["Casual"]
+  },
+{
     "name": "Minecraft Classic",
     "image": "static/icons/minecraftclassic.webp",
     "url": "static/mages/minecraft-classic/index.html",
@@ -548,6 +606,12 @@
     "name": "Minecraft Versions | Eaglercraft",
     "image": "static/icons/eaglercraft.webp",
     "url": "static/mages/eaglercraft/index.html",
+    "categories": ["Adventure"]
+  },
+{
+    "name": "2D Paper Minecraft V1.22",
+    "image": "static/icons/paperminecraft122.webp",
+    "url": "static/mages/paperminecraft122/index.html",
     "categories": ["Adventure"]
   },
 {
@@ -673,12 +737,6 @@
     "url": "static/mages/deltarune/index.html",
     "categories": ["Adventure"],
     "//": "genizy external"
-  },
-{
-    "name": "Deltarune Bossrush",
-    "image": "static/icons/deltarunebossrush.webp",
-    "url": "static/mages/deltarunebossrush/index.html",
-    "categories": ["Adventure"]
   },
 {
     "name": "Deltatraveler",
@@ -841,6 +899,13 @@
     "image": "static/icons/summerrider3d.webp",
     "url": "static/mages/summerrider3d/index.html",
     "categories": ["Casual"]
+  },
+{
+    "name": "Schoolboy Runaway",
+    "image": "static/icons/schoolboyrunaway.webp",
+    "url": "static/mages/schoolboyrunaway/index.html",
+    "categories": ["Casual"],
+    "//": "ugs external"
   },
 {
     "name": "Ballistic Chickens",
@@ -1073,7 +1138,7 @@
   },
 {
     "name": "HexGL",
-    "image": "static/icons/hexgl.webp",
+    "image": "static/icons/HexGL.webp",
     "url": "static/mages/hexgl/index.html",
     "categories": ["Casual"]
   },
@@ -1162,6 +1227,12 @@
     "categories": ["Casual"]
   },
 {
+    "name": "Beetle: A Typing Game",
+    "image": "static/icons/beetle.webp",
+    "url": "static/mages/beetle/index.html",
+    "categories": ["Casual"]
+  },
+{
     "name": "Crossy Road",
     "image": "static/icons/crossyroad.webp",
     "url": "static/mages/crossyroad/index.html",
@@ -1190,6 +1261,13 @@
     "image": "static/icons/cuttheropeholiday.webp",
     "url": "static/mages/cuttheropeholiday/index.html",
     "categories": ["Strategy"]
+  },
+{
+    "name": "Candy Crush Saga",
+    "image": "static/icons/candycrush.webp",
+    "url": "static/mages/candycrush/index.html",
+    "categories": ["Strategy"],
+    "//": "ugs external"
   },
 {
     "name": "Dadish",
@@ -1394,7 +1472,8 @@
     "name": "Drift Hunters",
     "image": "static/icons/drifthunters.webp",
     "url": "static/mages/drifthunters/index.html",
-    "categories": ["Cars"]
+    "categories": ["Cars"],
+    "//": "genizy external"
   },
 {
     "name": "Drift King",
@@ -1614,6 +1693,12 @@
     "categories": ["Casual"]
   },
 {
+    "name": "3 Night's Lobotomized",
+    "image": "static/icons/3nl.webp",
+    "url": "static/mages/3nl/index.html",
+    "categories": ["Casual", "Horror"]
+  },
+{
     "name": "A Bite At Freddy's",
     "image": "static/icons/abiteatfreddys.webp",
     "url": "static/mages/abiteatfreddys/index.html",
@@ -1654,19 +1739,22 @@
     "name": "Five Night's At Freddy's 2",
     "image": "static/icons/fnaf2.webp",
     "url": "static/mages/fnaf2/index.html",
-    "categories": ["Action", "Horror"]
+    "categories": ["Action", "Horror"],
+    "//": "genizy external"
   },
 {
     "name": "Five Night's At Freddy's 3",
     "image": "static/icons/fnaf3.webp",
     "url": "static/mages/fnaf3/index.html",
-    "categories": ["Action", "Horror"]
+    "categories": ["Action", "Horror"],
+    "//": "genizy external"
   },
 {
     "name": "Five Night's At Freddy's 4",
     "image": "static/icons/fnaf4.webp",
     "url": "static/mages/fnaf4/index.html",
-    "categories": ["Action", "Horror"]
+    "categories": ["Action", "Horror"],
+    "//": "genizy external"
   },
 {
     "name": "Five Night's At Freddy's 4 Halloween Ed.",
@@ -1912,7 +2000,7 @@
     "categories": ["Rhythm", "Casual"]
   },
 {
-    "name": "Friday Night Funkin",
+    "name": "Friday Night Funkin'",
     "image": "static/icons/fnf.webp",
     "url": "static/mages/fnf/index.html",
     "categories": ["Rhythm", "Action"],
@@ -1975,9 +2063,51 @@
     "//": "ugs external"
   },
 {
-    "name": "Friday Night Funkin' vs. Sonic.EXE",
+    "name": "Friday Night Funkin' vs. Sonic.exe",
     "image": "static/icons/fnfsonicexe.webp",
     "url": "static/mages/fnfsonicexe/index.html",
+    "categories": ["Rhythm", "Action"],
+    "//": "ugs external"
+  },
+{
+    "name": "Friday Night Funkin' vs. Sonic Legacy",
+    "image": "static/icons/fnfsl.webp",
+    "url": "static/mages/fnfsl/index.html",
+    "categories": ["Rhythm", "Action"],
+    "//": "ugs external"
+  },
+{
+    "name": "Friday Night Funkin': Tail's Gets Trolled",
+    "image": "static/icons/fnftgt.webp",
+    "url": "static/mages/fnftgt/index.html",
+    "categories": ["Rhythm", "Action"],
+    "//": "ugs external"
+  },
+{
+    "name": "Friday Night Funkin' vs. Rewrite",
+    "image": "static/icons/fnfr.webp",
+    "url": "static/mages/fnfr/index.html",
+    "categories": ["Rhythm", "Action"],
+    "//": "ugs external"
+  },
+{
+    "name": "Friday Night Funkin' vs. Pokepasta Perdition",
+    "image": "static/icons/fnfppp.webp",
+    "url": "static/mages/fnfppp/index.html",
+    "categories": ["Rhythm", "Action"],
+    "//": "ugs external"
+  },
+{
+    "name": "Friday Night Funkin' vs. Ourple Guy",
+    "image": "static/icons/fnfog.webp",
+    "url": "static/mages/fnfog/index.html",
+    "categories": ["Rhythm", "Action"],
+    "//": "ugs external"
+  },
+{
+    "name": "Friday Night Funkin' vs. Imposter",
+    "image": "static/icons/fnfi.webp",
+    "url": "static/mages/fnfi/index.html",
     "categories": ["Rhythm", "Action"],
     "//": "ugs external"
   },
@@ -2010,6 +2140,13 @@
     "//": "ugs external"
   },
 {
+    "name": "Friday Night Funkin': Doki Doki Takeover Plus!",
+    "image": "static/icons/fnfddtp.webp",
+    "url": "static/mages/fnfddtp/index.html",
+    "categories": ["Rhythm", "Action"],
+    "//": "ugs external"
+  },
+{
     "name": "Friday Night Funkin' vs. Mario's Madness",
     "image": "static/icons/fnfmm.webp",
     "url": "static/mages/fnfmm/index.html",
@@ -2020,6 +2157,13 @@
     "name": "Friday Night Funkin' vs. Shaggy",
     "image": "static/icons/fnfshaggy.webp",
     "url": "static/mages/fnfshaggy/index.html",
+    "categories": ["Rhythm", "Action"],
+    "//": "ugs external"
+  },
+{
+    "name": "Friday Night Funkin' vs. Shaggy x Matty",
+    "image": "static/icons/fnfshaggyxmatty.webp",
+    "url": "static/mages/fnfshaggyxmatty/index.html",
     "categories": ["Rhythm", "Action"],
     "//": "ugs external"
   },
@@ -2100,8 +2244,8 @@
   },
 {
     "name": "Friday Night Funkin': 17 Bucks: Floor 1",
-    "image": "static/icons/fnf.webp",
-    "url": "static/mages/fnf/index.html",
+    "image": "static/icons/fnf17bf1.webp",
+    "url": "static/mages/fnf17bf1/index.html",
     "categories": ["Rhythm", "Action"]
   },
 {
@@ -2157,6 +2301,13 @@
     "image": "static/icons/exo.webp",
     "url": "static/mages/exo/index.html",
     "categories": ["Casual"]
+  },
+{
+    "name": "Solar Sandbox",
+    "image": "static/icons/solarsandbox.webp",
+    "url": "static/mages/solarsandbox/index.html",
+    "categories": ["Casual"],
+    "//": "ugs external"
   },
 {
     "name": "Geometry Dash",
@@ -2327,10 +2478,11 @@
     "categories": ["Casual"]
   },
 {
-    "name": "Amazing Rope Police",
+    "name": "Amazing Strange Rope Police",
     "image": "static/icons/amazingropepolice.webp",
     "url": "static/mages/amazingropepolice/index.html",
-    "categories": ["Casual"]
+    "categories": ["Casual"],
+    "//": "genizy+ugs external"
   },
 {
     "name": "Grand Shift Auto",
@@ -2915,12 +3067,6 @@
     "categories": ["Flash", "Action"]
   },
 {
-    "name": "Pokémon Games",
-    "image": "static/icons/pokemon.webp",
-    "url": "static/mages/pokemon/index.html",
-    "categories": ["Casual"]
-  },
-{
     "name": "Polytrack",
     "image": "static/icons/polytrack.webp",
     "url": "static/mages/polytrack/index.html",
@@ -2949,12 +3095,6 @@
     "image": "static/icons/quake3.webp",
     "url": "static/mages/quake3/index.html",
     "categories": ["Casual"]
-  },
-{
-    "name": "Real Flying Truck",
-    "image": "static/icons/realflyingtruck.webp",
-    "url": "static/mages/realflyingtruck/index.html",
-    "categories": ["Cars"]
   },
 {
     "name": "Red Ball",
@@ -3306,12 +3446,6 @@
     "categories": ["Casual"]
   },
 {
-    "name": "Super Auto Pets",
-    "image": "static/icons/superautopets.webp",
-    "url": "static/mages/superautopets/index.html",
-    "categories": ["Casual"]
-  },
-{
     "name": "Superhero",
     "image": "static/icons/superhero.webp",
     "url": "static/mages/superhero/index.html",
@@ -3340,6 +3474,13 @@
     "image": "static/icons/talkingtom2.webp",
     "url": "static/mages/talkingtom2/index.html",
     "categories": ["Flash", "Casual"]
+  },
+{
+    "name": "Pou",
+    "image": "static/icons/pou.webp",
+    "url": "static/mages/pou/index.html",
+    "categories": ["Flash", "Casual"],
+    "//": "genizy external"
   },
 {
     "name": "Temple Of Boom",
@@ -3771,30 +3912,6 @@
     "name": "Kitten Cannon",
     "image": "static/icons/kittencannon.webp",
     "url": "static/mages/kittencannon/index.html",
-    "categories": ["Flash", "Casual"]
-  },
-{
-    "name": "Wheely",
-    "image": "static/icons/wheely.webp",
-    "url": "static/mages/wheely/index.html",
-    "categories": ["Flash", "Casual"]
-  },
-{
-    "name": "Wheely 2",
-    "image": "static/icons/wheely2.webp",
-    "url": "static/mages/wheely2/index.html",
-    "categories": ["Flash", "Casual"]
-  },
-{
-    "name": "Wheely 3",
-    "image": "static/icons/wheely3.webp",
-    "url": "static/mages/wheely3/index.html",
-    "categories": ["Flash", "Casual"]
-  },
-{
-    "name": "Wheely 4",
-    "image": "static/icons/wheely4.webp",
-    "url": "static/mages/wheely4/index.html",
     "categories": ["Flash", "Casual"]
   },
 {

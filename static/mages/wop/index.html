@@ -5,6 +5,9 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, user-scalable=no">
 		<title>Ken</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Bitcount+Grid+Single&display=swap" rel="stylesheet">
 		<style>
 body {
 	touch-action: none;
@@ -116,6 +119,21 @@ body {
 
 	</head>
 	<body>
+		<!-- Custom loader overlay -->
+		<div id="wop-loader" style="position:fixed;inset:0;background:#000;color:#fff;z-index:9999;display:flex;flex-direction:column;">
+			<div style="position:absolute;top:24px;left:50%;transform:translateX(-50%);width:100%;text-align:center;padding:0 16px;box-sizing:border-box;">
+				<div id="wop-loader-text" style="font-family:'Bitcount Grid Single', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;font-size:18px;letter-spacing:0.02em;">
+					Loading Assets, Sienna. — 0%
+				</div>
+			</div>
+			<div style="margin:auto;flex:1 1 auto;"></div>
+			<div style="position:absolute;left:0;right:0;bottom:28px;padding:0 24px;">
+				<div id="wop-progress" style="height:6px;border:1px solid #fff;background:transparent;">
+					<div id="wop-progress-inner" style="height:100%;width:0;background:#fff;"></div>
+				</div>
+			</div>
+		</div>
+
 		<canvas id="canvas">
 			HTML5 canvas appears to be unsupported in the current browser.<br >
 			Please try updating or use a different browser.
@@ -139,6 +157,174 @@ body {
 
 		<script src="index.js"></script>
 		<script>
+// --- WOP: Split-file merge loader and progress UI ---
+(function(){
+	const CDN_BASE = 'https://cdn.jsdelivr.net/gh/yellowdevelopmnt/jsdelivr-cdns/wop/';
+	const PARTS = 3; // number of parts for both wasm and pck
+
+	const loaderEl = document.getElementById('wop-loader');
+	const textEl = document.getElementById('wop-loader-text');
+	const barEl = document.getElementById('wop-progress-inner');
+
+	// Guard if elements are missing
+	if (!loaderEl || !textEl || !barEl) return;
+
+	const state = {
+		totalBytes: 0,
+		loadedBytes: 0,
+		stage: 'pre', // pre: merging parts | engine: godot onProgress
+	};
+
+	function fmtPct(n){
+		return Math.max(0, Math.min(100, Math.floor(n))) + '%';
+	}
+	function updateUI(pct){
+		const pctText = fmtPct(pct);
+		barEl.style.width = pctText;
+		textEl.textContent = `Loading Assets, Sienna. — ${pctText}`;
+	}
+	updateUI(0);
+
+	// Stream download with progress
+	async function fetchWithProgress(url){
+		const res = await fetch(url, { credentials: 'omit' });
+		if (!res.ok) throw new Error('Failed to fetch ' + url + ' (' + res.status + ')');
+		const len = Number(res.headers.get('Content-Length')) || 0;
+		if (len) state.totalBytes += len;
+		const reader = res.body && res.body.getReader ? res.body.getReader() : null;
+		if (!reader){
+			const buf = await res.arrayBuffer();
+			state.loadedBytes += buf.byteLength;
+			if (state.totalBytes > 0) updateUI((state.loadedBytes / state.totalBytes) * 100);
+			return new Uint8Array(buf);
+		}
+		const chunks = [];
+		let received = 0;
+		while (true){
+			const { done, value } = await reader.read();
+			if (done) break;
+			chunks.push(value);
+			received += value.byteLength;
+			state.loadedBytes += value.byteLength;
+			if (state.totalBytes > 0) updateUI((state.loadedBytes / state.totalBytes) * 100);
+		}
+		const merged = new Uint8Array(received);
+		let offset = 0;
+		for (const chunk of chunks){
+			merged.set(chunk, offset);
+			offset += chunk.byteLength;
+		}
+		return merged;
+	}
+
+	function shouldIntercept(url){
+		try{
+			const u = new URL(url, location.href);
+			const path = u.pathname;
+			return /\.pck$/.test(path) || /\.wasm$/.test(path) || /nothreads\.wasm$/.test(path);
+		}catch{ return false; }
+	}
+
+	function buildPartUrls(kind){
+		if (kind === 'pck'){
+			return Array.from({length: PARTS}, (_,i)=> `${CDN_BASE}index.pck.part${i+1}`);
+		}
+		// wasm: try index.wasm.part# first, fall back to wasm.part# if needed (lazy fallback during fetch)
+		return Array.from({length: PARTS}, (_,i)=> `${CDN_BASE}index.wasm.part${i+1}`);
+	}
+
+	async function downloadAndConcat(kind){
+		const primary = buildPartUrls(kind);
+		let parts;
+		try {
+			// Try first part to validate pattern
+			await (await fetch(primary[0], { method:'HEAD' })).ok;
+			parts = primary;
+		} catch {
+			// Fallback pattern wasm.part#
+			if (kind === 'wasm'){
+				parts = Array.from({length: PARTS}, (_,i)=> `${CDN_BASE}wasm.part${i+1}`);
+			} else {
+				parts = primary; // no alternative for pck
+			}
+		}
+		// Reset totals for fresh progress accounting per resource
+		state.totalBytes = 0;
+		state.loadedBytes = 0;
+		const arrays = [];
+		for (const url of parts){
+			arrays.push(await fetchWithProgress(url));
+		}
+		const total = arrays.reduce((a,b)=> a + b.byteLength, 0);
+		const out = new Uint8Array(total);
+		let offset = 0;
+		for (const a of arrays){ out.set(a, offset); offset += a.byteLength; }
+		return out.buffer;
+	}
+
+	// Intercept fetch for .wasm so the engine receives the merged binary
+	const originalFetch = window.fetch.bind(window);
+	window.fetch = async function(url, init){
+		if (shouldIntercept(url)){
+			const kind = /\.pck($|\?)/.test(url) ? 'pck' : 'wasm';
+			try {
+				state.stage = 'pre';
+				updateUI(1); // start animating
+				const buffer = await downloadAndConcat(kind);
+				updateUI(100);
+				const resp = new Response(new Blob([buffer], { type: 'application/octet-stream' }), { status: 200 });
+				return resp;
+			} catch (e){
+				textEl.textContent = 'Failed to load assets. ' + (e && e.message ? e.message : e);
+				throw e;
+			}
+		}
+		return originalFetch(url, init);
+	};
+
+	// Intercept the minimal XMLHttpRequest usage pattern emscripten uses (for safety)
+	const OriginalXHR = window.XMLHttpRequest;
+	window.XMLHttpRequest = function(){
+		this.responseType = '';
+		this.onload = null;
+		this.onerror = null;
+		this.status = 0;
+		this.response = null;
+		this._method = 'GET';
+		this._url = '';
+		this._delegate = null;
+	};
+	window.XMLHttpRequest.prototype.open = function(method, url /*, async */){
+		this._method = method;
+		this._url = url;
+	};
+	window.XMLHttpRequest.prototype.send = function(/* body */){
+		if (shouldIntercept(this._url)){
+			const kind = /\.pck($|\?)/.test(this._url) ? 'pck' : 'wasm';
+			downloadAndConcat(kind).then((buffer)=>{
+				this.status = 200;
+				this.response = buffer;
+				try { this.onload && this.onload(); } catch(e) { /* ignore */ }
+			}).catch((e)=>{
+				this.status = 404;
+				try { this.onerror && this.onerror(e); } catch(_) {}
+			});
+		} else {
+			// delegate to a real XHR for everything else
+			this._delegate = new OriginalXHR();
+			this._delegate.responseType = this.responseType;
+			this._delegate.onload = () => {
+				this.status = this._delegate.status;
+				this.response = this._delegate.response;
+				this.onload && this.onload();
+			};
+			this._delegate.onerror = (e) => { this.onerror && this.onerror(e); };
+			this._delegate.open(this._method, this._url, true);
+			this._delegate.send(null);
+		}
+	};
+})();
+
 const GODOT_CONFIG = {"args":[],"canvasResizePolicy":2,"ensureCrossOriginIsolationHeaders":false,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":46021152,"index.wasm":42426310},"focusCanvas":true,"gdextensionLibs":[],"serviceWorker":"index.service.worker.js"};
 const GODOT_THREADS_ENABLED = false;
 const engine = new Engine(GODOT_CONFIG);
@@ -245,18 +431,25 @@ const engine = new Engine(GODOT_CONFIG);
 			const missingMsg = 'Error\nThe following features required to run Godot projects on the Web are missing:\n';
 			displayFailureNotice(missingMsg + missing.join('\n'));
 		}
-	} else {
+    } else {
 		setStatusMode('indeterminate');
 		engine.startGame({
 			'onProgress': function (current, total) {
 				if (total > 0) {
-					statusProgressInner.style.width = `${(current / total) * 100}%`;
+					const pct = (current / total) * 100;
+					statusProgressInner.style.width = `${pct}%`;
 					setStatusMode('progress');
+					// Mirror progress to custom top text + bottom bar
+					try { (function(){
+						const textEl = document.getElementById('wop-loader-text');
+						const barEl = document.getElementById('wop-progress-inner');
+						if (textEl && barEl){
+							barEl.style.width = `${Math.floor(pct)}%`;
+							textEl.textContent = `Loading Assets, Sienna. — ${Math.floor(pct)}%`;
+						}
+					})(); } catch(e) {}
 					if (current === total) {
-						// wait for progress bar animation
-						setTimeout(() => {
-							setStatusMode('indeterminate');
-						}, 500);
+						setTimeout(() => { setStatusMode('indeterminate'); }, 300);
 					}
 				} else {
 					setStatusMode('indeterminate');
@@ -264,6 +457,8 @@ const engine = new Engine(GODOT_CONFIG);
 			},
 		}).then(() => {
 			setStatusMode('hidden');
+			// Hide custom loader overlay once engine is ready
+			try { const el = document.getElementById('wop-loader'); if (el) el.style.display = 'none'; } catch(e) {}
 			initializing = false;
 		}, displayFailureNotice);
 	}

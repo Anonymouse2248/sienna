@@ -1,8 +1,0 @@
-{
-  "__comment": "Map Russian strings to English here for UnityPy-based patching.",
-  "map": {
-    "Играть": "Play",
-    "Настройки": "Settings",
-    "Выход": "Exit"
-  }
-}

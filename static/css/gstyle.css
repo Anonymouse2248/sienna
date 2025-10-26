@@ -501,6 +501,8 @@ body.performance-mode::after {
       line-height: 1.3;
       overflow: hidden;
       text-overflow: ellipsis;
+      /* Leave room for the favorite button so long titles don't sit underneath it */
+      padding-right: 52px; /* favorite button is 36px + ~10px gap; keep a safe buffer */
   display: -webkit-box;
   -webkit-line-clamp: 2;
   line-clamp: 2;

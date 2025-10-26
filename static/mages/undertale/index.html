@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
-    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/yellowdevelopmnt/jsdelivr-cdns/undertale/favicon.png">
     <title>UNDERTALE</title>
     <style>
       @-webkit-keyframes rotation {
@@ -132,7 +132,7 @@
 
     <div class="loading">
       <div class="spinner" id="spinner"></div>
-      <div class="emscripten" id="status">Downloading...</div>
+      <div class="emscripten" id="status">Downloading Files, This Might Take A Moment... SIENNA</div>
       <progress value="0" max="100" id="progress" hidden></progress>
     </div>
 
@@ -166,7 +166,7 @@
         return parts;
       }
 
-      mergeFiles(getParts("game.unx", 1, 7)).then(url => {
+      mergeFiles(getParts("https://cdn.jsdelivr.net/gh/yellowdevelopmnt/jsdelivr-cdns/undertale/game.unx", 1, 7)).then(url => {
         window.gameUnxUrl = url;
 
         // Intercept fetch and XHR for the merged file
@@ -189,16 +189,66 @@
           return originalOpen.call(this, method, url, ...rest);
         };
 
-        // Load scripts from same directory
+        // Load scripts from CDN
         const index = document.createElement("script");
         index.src = "index.js";
         document.body.appendChild(index);
 
         const runner = document.createElement("script");
-        runner.src = "runner.js";
+        runner.src = "https://cdn.jsdelivr.net/gh/yellowdevelopmnt/jsdelivr-cdns/undertale/runner.js";
         document.body.appendChild(runner);
+
+        // Add error handling for visibility changes
+        document.addEventListener("visibilitychange", (event) => {
+          try {
+            if (document.visibilityState !== "visible") {
+              // Only call pause if it exists and canvas is active
+              if (typeof pause === "function" && document.getElementById("canvas")?.classList.contains("active")) {
+                pause();
+              }
+            }
+          } catch (error) {
+            console.warn("Error handling visibility change:", error);
+          }
+        });
+
+        // Add error handling for window focus/blur
+        window.addEventListener("blur", (event) => {
+          try {
+            if (typeof pause === "function" && document.getElementById("canvas")?.classList.contains("active")) {
+              pause();
+            }
+          } catch (error) {
+            console.warn("Error handling window blur:", error);
+          }
+        });
+
+        window.addEventListener("focus", (event) => {
+          try {
+            if (typeof resume === "function" && document.getElementById("canvas")?.classList.contains("active")) {
+              resume();
+            }
+          } catch (error) {
+            console.warn("Error handling window focus:", error);
+          }
+        });
+
       }).catch(err => {
         console.error("Failed to merge files:", err);
+      });
+
+      // Global error handler to catch any unhandled exceptions
+      window.addEventListener("error", (event) => {
+        console.error("Global error caught:", event.error);
+        // Prevent the error from showing in the UI
+        event.preventDefault();
+        return true;
+      });
+
+      // Handle unhandled promise rejections
+      window.addEventListener("unhandledrejection", (event) => {
+        console.error("Unhandled promise rejection:", event.reason);
+        event.preventDefault();
       });
     </script>
   </body>

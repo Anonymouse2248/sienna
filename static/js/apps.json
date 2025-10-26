@@ -98,6 +98,13 @@
   "favicon": "static/apps/htmlcoder/htmlcoder.webp"
   },
   {
+    "name": "auk.lol",
+    "image": "static/icons/auk.webp",
+  "url": "static/apps/auk/index.html",
+    "category": "Game",
+  "favicon": "static/apps/auk/favicon.ico"
+  },
+  {
     "name": "Text Editor",
     "image": "static/icons/txtedit.webp",
   "url": "static/apps/texteditor/index.html",

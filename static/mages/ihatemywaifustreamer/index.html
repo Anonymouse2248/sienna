@@ -6,15 +6,8 @@
   <title>I Hate My Waifu Streamer</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="manifest" href="manifest.json" crossorigin="use-credentials" />
-  <link rel="icon" href="icons/icon-72x72.png" sizes="72x72" type="image/png" />
-  <link rel="icon" href="icons/icon-96x96.png" sizes="96x96" type="image/png" />
-  <link rel="icon" href="icons/icon-128x128.png" sizes="128x128" type="image/png" />
-  <link rel="icon" href="icons/icon-144x144.png" sizes="144x144" type="image/png" />
-  <link rel="icon" href="icons/icon-152x152.png" sizes="152x152" type="image/png" />
-  <link rel="icon" href="icons/icon-192x192.png" sizes="192x192" type="image/png" />
-  <link rel="icon" href="icons/icon-384x384.png" sizes="384x384" type="image/png" />
-  <link rel="icon" href="icons/icon-512x512.png" sizes="512x512" type="image/png" />
   <meta name="theme-color" content="#000" />
+
   <style>
     html { background: #444; font-family: sans-serif; }
     body, html { overscroll-behavior: none; }
@@ -53,6 +46,7 @@
   <canvas id="canvas" oncontextmenu="event.preventDefault()" tabindex="-1"></canvas>
   <div id="overlayDiv"></div>
   <img id="presplash" src="web-presplash.jpg">
+
   <div id="ContextContainer">
     <a id="ContextButton">&#8801;</a><br />
     <div id="ContextMenu" style="display: none;">
@@ -77,47 +71,90 @@
   </div>
 
   <script>
-    // === Load and Combine Split Game ZIP Parts ===
-    async function combineGameZipParts() {
-      const partFiles = ["game.zip.part1", "game.zip.part2"];
-      const responses = await Promise.all(partFiles.map(p => fetch(p)));
-      const buffers = await Promise.all(responses.map(r => r.arrayBuffer()));
-
-      // Merge binary data
-      const totalSize = buffers.reduce((sum, b) => sum + b.byteLength, 0);
+    async function loadGameFiles() {
+      // JSDelivr CDN-only approach
+      const base = "https://cdn.jsdelivr.net/gh/yellowdevelopmnt/jsdelivr-cdns/ihatemywaifustreamer/";
+      const partCount = 8;
+      const partFiles = Array.from({ length: partCount }, (_, i) => `${base}game.zip.part${i + 1}`);
+      
+      console.log("🔄 Loading game parts from JSDelivr CDN (latest)...");
+      console.log("📦 Base URL:", base);
+      
+      // Fetch all parts
+      const responses = await Promise.all(
+        partFiles.map(async (url, index) => {
+          console.log(`� Fetching part ${index + 1}: ${url}`);
+          const response = await fetch(url);
+          if (!response.ok) {
+            throw new Error(`Failed to fetch part ${index + 1} from ${url} (Status: ${response.status} ${response.statusText})`);
+          }
+          console.log(`✅ Part ${index + 1} loaded successfully (${response.headers.get('content-length')} bytes)`);
+          return response.arrayBuffer();
+        })
+      );
+      
+      console.log("� Combining all parts...");
+      
+      // Combine all binary parts
+      const totalSize = responses.reduce((sum, buf) => sum + buf.byteLength, 0);
+      console.log(`📊 Total size: ${totalSize} bytes (${(totalSize / 1024 / 1024).toFixed(2)} MB)`);
+      
       const merged = new Uint8Array(totalSize);
       let offset = 0;
-      for (const buf of buffers) {
+      for (const buf of responses) {
         merged.set(new Uint8Array(buf), offset);
         offset += buf.byteLength;
       }
-
-      // Create Blob URL for Ren'Py to use
+      
+      // Create Blob for Ren'Py
       const blob = new Blob([merged], { type: "application/zip" });
       const zipURL = URL.createObjectURL(blob);
+      console.log("✅ Game ZIP ready:", zipURL);
       return zipURL;
     }
 
     (async () => {
-      // Combine the ZIP parts, then set it as the game URL
-      const combinedZip = await combineGameZipParts();
-      window.gameZipURL = combinedZip;
+      try {
+        const combinedZip = await loadGameFiles();
+        window.gameZipURL = combinedZip; // Use this instead of local game.zip
 
-      // Register service worker
-      if (navigator.serviceWorker && !navigator.serviceWorker.controller) {
-        navigator.serviceWorker.register('./service-worker.js', { updateViaCache: 'all' });
+        // Register Service Worker
+        if (navigator.serviceWorker && !navigator.serviceWorker.controller) {
+          navigator.serviceWorker.register('./service-worker.js', { updateViaCache: 'all' });
+        }
+
+        // Dynamically load Ren'Py engine
+        const script = document.createElement("script");
+        script.src = "renpy-pre.js";
+        script.onload = () => {
+          const mainScript = document.createElement("script");
+          mainScript.src = "renpy.js";
+          mainScript.async = true;
+          document.body.appendChild(mainScript);
+        };
+        document.body.appendChild(script);
+      } catch (err) {
+        console.error("❌ Error loading game:", err);
+        
+        // Show detailed error message
+        const errorDiv = document.getElementById("statusTextDiv");
+        errorDiv.innerHTML = `
+          <h3>Failed to load game files from JSDelivr CDN</h3>
+          <p><strong>Error:</strong> ${err.message}</p>
+          <p><strong>CDN URL:</strong><br>
+          <code>https://cdn.jsdelivr.net/gh/yellowdevelopmnt/jsdelivr-cdns/ihatemywaifustreamer/</code></p>
+          <p><strong>Expected files:</strong> game.zip.part1 through game.zip.part8</p>
+          <p><strong>Troubleshooting:</strong></p>
+          <ol>
+            <li>Check that all 8 part files exist in your GitHub repository</li>
+            <li>Verify the repository is public</li>
+            <li>JSDelivr may need time to index your repository (usually 15-30 minutes)</li>
+            <li>Try accessing the files directly: <a href="https://cdn.jsdelivr.net/gh/yellowdevelopmnt/jsdelivr-cdns/ihatemywaifustreamer/game.zip.part1" target="_blank">game.zip.part1</a></li>
+          </ol>
+          <p><em>Repository confirmed at: <a href="https://github.com/yellowdevelopmnt/jsdelivr-cdns/tree/main/ihatemywaifustreamer" target="_blank">GitHub</a></em></p>
+        `;
+        document.getElementById("statusDiv").classList.remove("hidden");
       }
-
-      // Start the game
-      const script = document.createElement("script");
-      script.src = "renpy-pre.js";
-      script.onload = () => {
-        const mainScript = document.createElement("script");
-        mainScript.src = "renpy.js";
-        mainScript.async = true;
-        document.body.appendChild(mainScript);
-      };
-      document.body.appendChild(script);
     })();
   </script>
 </body>

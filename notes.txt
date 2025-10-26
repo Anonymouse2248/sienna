@@ -1,27 +1,24 @@
 Largest Folders in the mages Directory
-ihatemywaifustreamer - 191.88 MB
 pokemon - 184.30 MB
 eaglercraft - 157.82 MB
-undertale - 145.19 MB
-superautopets - 141.81 MB
-drifthunters - 134.75 MB
-adventurecapitalist - 124.86 MB
-sabr - 108.40 MB
-backrooms2d - 102.02 MB
-realflyingtruck - 101.41 MB
-pakohighway - 93.66 MB
-pleasedontfeedme - 92.40 MB
-mimco - 90.31 MB
-roborunner - 88.22 MB
-baldisbasicsplus - 87.76 MB
-wop - 84.96 MB
-winthewhitehouse - 83.36 MB
-crimsonfantasia - 77.51 MB
-fnaf4 - 72.65 MB
-amazingropepolice - 72.27 MB
+adventurecapitalist - 124.86 MB // REPLACE
+backrooms2d - 102.02 MB // UPLOAD
+pakohighway - 93.66 MB // UPLOAD
+winthewhitehouse - 83.36 MB // UPLOAD
+crimsonfantasia - 77.51 MB // UPLOAD
+Deltarune Boss rush // BROKEN
 
 
 Lows adventure 1 and 2
+
+// Split Files Prompt:
+I split my files into multiple parts. Combine them into a working loader that merges all the parts,
+ and make it look like loading screen — black background, Bitcount Grid Single font https://fonts.google.com/specimen/Bitcount+Grid+Single,
+  white top-centered loading text like “Loading Assets, Sienna. — 0%”, and a simple white progress bar at the bottom. the jsdelivr url is https://cdn.jsdelivr.net/gh/yellowdevelopmnt/jsdelivr-cdns/gamename/
+
+  I split my files into multiple parts. index.pck and my index.wasm are split like index.pck or wasm.part# <- 1, 2, and 3 Combine them into a working loader that merges all the parts,
+ and make it look like loading screen — black background, Bitcount Grid Single font https://fonts.google.com/specimen/Bitcount+Grid+Single,
+  white top-centered loading text like “Loading Assets, Sienna. — 0%” the jsdelivr url is https://cdn.jsdelivr.net/gh/yellowdevelopmnt/jsdelivr-cdns/wop/
 
 genizy + ugs external
 BuildNow.GG

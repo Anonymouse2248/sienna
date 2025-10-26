@@ -34,10 +34,14 @@
 	  console.log("*************************");
 	  console.log("BetterRunner v1.2");
 	  console.log("_____by burnedpopcorn180");
+    console.log("Undertale Web Port Patch by yellowdevelopmnt");
 	  console.log("*************************");
 
       let clearRollbackMessagesTimeoutId = -1;
       const showRollbackMessage = function (message) {
+        if (!messagesElement || !messageContainerElement) {
+          return;
+        }
         let messages = "";
         rollbackMessages.push(message);
         rollbackMessages.forEach(m => messages += "<p>" + m + "</p>");
@@ -54,7 +58,9 @@
       const clearRollbackMessages = function () {
         clearRollbackMessagesTimeoutId = -1;
         rollbackMessages = [];
-        messageContainerElement.style.display = 'none';
+        if (messageContainerElement) {
+          messageContainerElement.style.display = 'none';
+        }
       };
 		
 	  // for displaying contents of console to display as a single line of text
@@ -189,6 +195,9 @@
 	  
 		// Stock Toggle Console Function
       function toggleConsole() {
+        if (!outputElement) {
+          return;
+        }
         var isShown = outputElement.style.display === "flex";
         if (isShown) {
           outputElement.style.display = "none";
@@ -409,13 +418,17 @@
         }
         
         GM_pause();
-        pauseMenu.hidden = false;
+        if (pauseMenu) {
+          pauseMenu.hidden = false;
+        }
         canvasElement.classList.add("paused");
       }
 		// To Resume when it detects the Tab is Active
       function resume() {
         GM_unpause();
-        pauseMenu.hidden = true;
+        if (pauseMenu) {
+          pauseMenu.hidden = true;
+        }
         canvasElement.classList.remove("paused");
         canvasElement.classList.add("unpaused");
         enterFullscreenIfSupported();
@@ -464,7 +477,9 @@
       if (/Android|iPhone|iPod/i.test(navigator.userAgent)) {
         bodyElement.className = "scrollingDisabled";
         canvasElement.classList.add("animatedSizeTransitions");
-        outputContainerElement.hidden = true;
+        if (outputContainerElement) {
+          outputContainerElement.hidden = true;
+        }
       }
 
       document.addEventListener("visibilitychange", (event) => {
@@ -475,7 +490,9 @@
 
       window.addEventListener("load", (event) => {
         if ((!window.oprt || !window.oprt.enterFullscreen) && (!window.chrome || !window.chrome.runtime || !window.chrome.runtime.sendMessage)) {
-          quitButton.hidden = true;
+          if (quitButton) {
+            quitButton.hidden = true;
+          }
         }
       });
 

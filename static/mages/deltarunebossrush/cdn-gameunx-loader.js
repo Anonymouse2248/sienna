@@ -1,7 +1,7 @@
 // Intercept requests for game.unx and serve a concatenation of parts from jsDelivr
 // Safe to include before runner.js; it shims XMLHttpRequest only for the specific URL.
 (function () {
-  const CDN_BASE = 'https://cdn.jsdelivr.net/gh/vinhutl/jsdelivr-cdns@main/deltarunebossrush';
+  const CDN_BASE = 'https://cdn.jsdelivr.net/gh/yellowdevelopmnt/jsdelivr-cdns/deltarunebossrush/';
   const PARTS = [
     'game.unx.part1',
     'game.unx.part2',
