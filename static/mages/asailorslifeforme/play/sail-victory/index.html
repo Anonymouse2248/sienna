@@ -1,0 +1,174 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<title>A Sailor's Life for Me</title>
+
+<style>
+  html, body { margin: 0; background-color:#000 !important; height: 100%; }
+  body { overflow:hidden; }
+  #gameContainer { position: absolute; top: 0; bottom: 0; width: 100%; background:#000; }
+  canvas { width: 100%; height: 100%; }
+  /* Loader styling: top-centered white text on black background */
+  #assetLoader { position: fixed; top: 0; left: 0; right: 0; height: 48px; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 16px; z-index: 10000; pointer-events: none; font-family: 'Bitcount Grid Single', monospace; }
+  @media (min-width: 768px) { #assetLoader { height: 64px; font-size: 20px; } }
+  
+  #thinnav ul {
+  	list-style-type: none;
+  	margin: 0;
+  	padding: 0;
+  	overflow: hidden;
+  	background-color: #333333;
+  	font-size: 12px;
+  	height: 20px;
+  	font-family: 'Roboto',sans-serif;
+  }
+
+  #thinnav li {
+  	float: left;
+  }
+
+  #thinnav li p {
+  	display: block;
+  	color: #888;
+  	text-align: center;
+  	padding-top: 3px;
+  	padding-bottom: 3px;
+  	margin: 0px;
+  	text-decoration: none;
+  }
+  #thinnav li a {
+  	display: block;
+  	color: #888;
+  	text-align: center;
+  	padding-left: 20px;
+  	padding-right: 20px;
+  	padding-top: 4px;
+  	padding-bottom: 3px;
+  	text-decoration: none;
+  	font-weight: normal;
+  	line-height:14.5px;
+  }
+
+  #thinnav li a:hover {
+  	background-color: #111111;
+  }
+
+.no-copy li, h2 {
+  -webkit-user-select: none;  /* Chrome all / Safari all */
+  -moz-user-select: none;     /* Firefox all */
+  -ms-user-select: none;      /* IE 10+ */
+  user-select: none;          /* Likely future */      
+}
+</style>
+	
+<!-- Removed Unity TemplateData stylesheet to avoid default white loading UI -->
+<link href="https://fonts.googleapis.com/css2?family=Bitcount+Grid+Single&display=swap" rel="stylesheet">
+<link rel="icon" href="https://asailorslifeforme.org/wp-content/uploads/2020/04/favicon.png" type="image/x-icon" />
+<link rel="shortcut icon" href="https://asailorslifeforme.org/wp-content/uploads/2020/04/favicon.png" type="image/x-icon" />
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-2909676-8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-2909676-8');
+</script>
+<script src="../../wp-content/FullGame/Build/UnityLoader.js"></script>
+<script>
+  // Custom minimal loader UI: update an existing element, or create as fallback
+  (function() {
+    var el = document.getElementById('assetLoader');
+    if (!el) {
+      el = document.createElement('div');
+      el.id = 'assetLoader';
+      el.textContent = '';
+      if (document.body) document.body.appendChild(el);
+      else document.addEventListener('DOMContentLoaded', function(){ document.body.appendChild(el); });
+    }
+    window.__setLoaderPercent = function(p) {
+      if (!el) return;
+      var pct = Math.max(0, Math.min(100, Math.floor(p)));
+      el.textContent = 'Loading Assets, Sienna. — ' + pct + '%';
+      if (pct >= 100) {
+        setTimeout(function(){ if (el && el.parentNode) el.parentNode.removeChild(el); }, 1500);
+      }
+    };
+  })();
+
+  // Register a root-scoped Service Worker to supply the merged data file
+  (function(){
+    if ('serviceWorker' in navigator) {
+      // Register at the web root so it can intercept /wp-content/... requests
+      navigator.serviceWorker.register('/sw.js', { scope: '/' }).then(function(reg){
+        // Ensure it activates and controls this page immediately
+        function waitUntilActive() {
+          return new Promise(function(resolve){
+            if (reg.active) return resolve();
+            if (reg.installing) reg.installing.addEventListener('statechange', function(e){ if (e.target.state === 'activated') resolve(); });
+            if (reg.waiting) reg.waiting.addEventListener('statechange', function(e){ if (e.target.state === 'activated') resolve(); });
+            navigator.serviceWorker.addEventListener('controllerchange', function(){ resolve(); });
+          });
+        }
+        // Listen for SW progress pings
+        navigator.serviceWorker.addEventListener('message', function(e){
+          var data = e.data || {};
+          if (data.type === 'merge-progress' && typeof data.percent === 'number' && window.__setLoaderPercent) {
+            window.__setLoaderPercent(data.percent);
+          }
+        });
+        return waitUntilActive();
+      }).catch(function(err){
+        console.warn('ServiceWorker registration failed:', err);
+      }).finally(function(){
+        // Regardless, Unity boot will be triggered in the onload below
+      });
+    }
+  })();
+
+  // Instantiate Unity after Service Worker controls the page (for reliable part merging/progress)
+  (function(){
+    function onUnityProgress(unityInstance, progress) {
+      if (typeof progress === 'number' && window.__setLoaderPercent) {
+        var p = 80 + Math.round(progress * 20);
+        window.__setLoaderPercent(p);
+      }
+    }
+    function startUnity() {
+      if (window.__unityStarted) return; window.__unityStarted = true;
+      window.unityInstance = UnityLoader.instantiate('gameContainer', '../../wp-content/FullGame/Build/SailorsLife.json', { onProgress: onUnityProgress });
+      // Safety: remove loader after a maximum grace period even if progress callback stalls
+      setTimeout(function(){ if (window.__setLoaderPercent) window.__setLoaderPercent(100); }, 30000);
+    }
+    window.addEventListener('load', function(){
+      if ('serviceWorker' in navigator) {
+        var started = false;
+        function startOnce(){ if (!started) { started = true; startUnity(); } }
+        navigator.serviceWorker.ready.then(function(){
+          if (navigator.serviceWorker.controller) startOnce();
+          else {
+            // Wait briefly for controller to attach, then fallback
+            var to = setTimeout(startOnce, 2500);
+            navigator.serviceWorker.addEventListener('controllerchange', function(){ clearTimeout(to); startOnce(); });
+          }
+        }).catch(startOnce);
+      } else {
+        startUnity();
+      }
+    });
+  })();
+</script>
+
+
+</head>
+<body>
+  <div id="assetLoader"></div>
+  <div id="gameContainer"></div>
+</body>
+</html>
+
+
+
+

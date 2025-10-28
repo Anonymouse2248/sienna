@@ -9,6 +9,7 @@ crimsonfantasia - 77.51 MB // UPLOAD
 Deltarune Boss rush // BROKEN
 
 
+
 Lows adventure 1 and 2
 
 // Split Files Prompt:
@@ -16,9 +17,9 @@ I split my files into multiple parts. Combine them into a working loader that me
  and make it look like loading screen — black background, Bitcount Grid Single font https://fonts.google.com/specimen/Bitcount+Grid+Single,
   white top-centered loading text like “Loading Assets, Sienna. — 0%”, and a simple white progress bar at the bottom. the jsdelivr url is https://cdn.jsdelivr.net/gh/yellowdevelopmnt/jsdelivr-cdns/gamename/
 
-  I split my files into multiple parts. index.pck and my index.wasm are split like index.pck or wasm.part# <- 1, 2, and 3 Combine them into a working loader that merges all the parts,
+  I split my files into multiple parts. SailorsLife.data.unityweb.part# <-- 1, 2 & 3 Combine them into a working loader that merges all the parts,
  and make it look like loading screen — black background, Bitcount Grid Single font https://fonts.google.com/specimen/Bitcount+Grid+Single,
-  white top-centered loading text like “Loading Assets, Sienna. — 0%” the jsdelivr url is https://cdn.jsdelivr.net/gh/yellowdevelopmnt/jsdelivr-cdns/wop/
+  white top-centered loading text like “Loading Assets, Sienna. — 0%” the jsdelivr url is https://cdn.jsdelivr.net/gh/yellowdevelopmnt/jsdelivr-cdns/asailorslifeforme/
 
 genizy + ugs external
 BuildNow.GG

@@ -83,14 +83,23 @@
 
   const buttons = document.querySelectorAll(".nav-btn");
   buttons.forEach((btn) => {
-    btn.addEventListener("mouseenter", (e) => {
-      tooltip.textContent = btn.getAttribute("data-tooltip");
-      tooltip.style.opacity = "1";
-      const rect = btn.getBoundingClientRect();
-      tooltip.style.top = `${rect.top + rect.height / 2 - 10}px`;
-      tooltip.style.left = `${rect.right + 10}px`;
+    let hoverTimer = null;
+    btn.addEventListener("mouseenter", () => {
+      // small delay to avoid accidental show on initial load
+      hoverTimer = setTimeout(() => {
+        if (!btn.matches(":hover")) return;
+        tooltip.textContent = btn.getAttribute("data-tooltip");
+        const rect = btn.getBoundingClientRect();
+        tooltip.style.top = `${rect.top + rect.height / 2}px`;
+        tooltip.style.left = `${rect.right + 10}px`;
+        tooltip.style.opacity = "1";
+      }, 120);
     });
     btn.addEventListener("mouseleave", () => {
+      if (hoverTimer) {
+        clearTimeout(hoverTimer);
+        hoverTimer = null;
+      }
       tooltip.style.opacity = "0";
     });
   });

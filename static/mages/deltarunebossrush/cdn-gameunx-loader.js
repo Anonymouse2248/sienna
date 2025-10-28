@@ -1,7 +1,7 @@
 // Intercept requests for game.unx and serve a concatenation of parts from jsDelivr
 // Safe to include before runner.js; it shims XMLHttpRequest only for the specific URL.
 (function () {
-  const CDN_BASE = 'https://cdn.jsdelivr.net/gh/yellowdevelopmnt/jsdelivr-cdns/deltarunebossrush/';
+  const CDN_BASE = 'https://cdn.jsdelivr.net/gh/vinhutl/jsdelivr-cdns@main/deltarunebossrush';
   const PARTS = [
     'game.unx.part1',
     'game.unx.part2',
@@ -104,9 +104,16 @@
           // Proceed with native send (no body for GET)
           OriginalXHR.prototype.send.call(this, null);
         } catch (err) {
-          // Bubble an error similar to network failure
-          try { this.dispatchEvent(new Event('error')); } catch (_) {}
-          try { this.dispatchEvent(new Event('readystatechange')); } catch (_) {}
+          // Fallback: if CDN assembly fails, try the original URL normally
+          try {
+            // Ensure we bypass our own open/send overrides
+            OriginalXHR.prototype.open.call(this, 'GET', this.__interceptUrl, true);
+            OriginalXHR.prototype.send.call(this, body || null);
+          } catch (_) {
+            // As a last resort, bubble an error similar to network failure
+            try { this.dispatchEvent(new Event('error')); } catch (_) {}
+            try { this.dispatchEvent(new Event('readystatechange')); } catch (_) {}
+          }
         }
       })();
     }
