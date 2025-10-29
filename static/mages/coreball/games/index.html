@@ -10,12 +10,27 @@
 <link rel="shortcut icon" href="logo.png" type="image/png">
 
 <style>
+  html, body {
+    width: 100%;
+    height: 100%;
+  }
   body {
     background-color: #c8c8c8;
     overflow: hidden;
     padding: 0;
     margin: 0;
     font-family: Lato, sans-serif;
+    min-height: 100dvh; /* modern mobile browsers */
+    min-height: 100vh;  /* fallback */
+  }
+  /* Make canvas fill the viewport when shown */
+  #stage {
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100dvh;
+    height: 100vh; /* fallback */
+    touch-action: none;
   }
   .center-box {
     text-align: center;
@@ -101,16 +116,34 @@
     font-weight: bolder;
     font-size: 1.5rem;
   }
+
+  /* Brand label in play page, top-right */
+  #gameBrand {
+    position: fixed;
+    /* Align with score text (x=30, y=90) and account for safe areas */
+    top: calc(env(safe-area-inset-top, 0px) + 90px);
+    right: calc(env(safe-area-inset-right, 0px) + 30px);
+    color: #000;
+    z-index: 9999; /* ensure above canvas */
+    pointer-events: none;
+    /* Match the score font: 500 25px Courier New */
+    font-weight: 500;
+    font-size: 25px;
+    font-family: "Courier New", Courier, monospace;
+    display: none; /* hidden on homepage */
+  }
 </style>
 </head>
 
 <body>
 <canvas id="stage" style="display:none;"></canvas>
 
+<div id="gameBrand">On Sienna.</div>
+
 <div id="begin">
   <section class="center-box">
     <span class="title">Core Ball</span>
-    <div class="subtitle">Port on sienna</div>
+    <div class="subtitle">port by yellowdevelopmnt</div>
     <div class="button">
       <div id="txtAr"></div>
       <div class="text" style="font-size:2.5rem"></div>
@@ -142,6 +175,7 @@
 <!-- Local JavaScript files only -->
 <script src="coreball.js"></script>
 <script src="index.js"></script>
+<script src="fullscreen-fix.js"></script>
 
 </body>
 </html>

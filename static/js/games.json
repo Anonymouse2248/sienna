@@ -915,6 +915,13 @@
     "//": "ugs external"
   },
 {
+    "name": "Real Flight Simulator",
+    "image": "static/icons/realflightsim.webp",
+    "url": "static/mages/realflightsim/index.html",
+    "categories": ["Casual"],
+    "//": "ugs external"
+  },
+{
     "name": "Kindergarten",
     "image": "static/icons/kindergarten.webp",
     "url": "static/mages/kindergarten/index.html",
@@ -2037,6 +2044,13 @@
     "//": "ugs external"
   },
 {
+    "name": "Friday Night Funkin' Gamebreaker Bundle",
+    "image": "static/icons/fnfgamebreakerbundle.webp",
+    "url": "static/mages/fnfgamebreakerbundle/index.html",
+    "categories": ["Rhythm", "Action"],
+    "//": "ugs external"
+  },
+{
     "name": "Friday Night Funkin' Soft",
     "image": "static/icons/fnfsoft.webp",
     "url": "static/mages/fnfsoft/index.html",
@@ -2149,6 +2163,13 @@
     "//": "ugs external"
   },
 {
+    "name": "Friday Night Funkin' vs. Imposter: Desolation",
+    "image": "static/icons/fnfdesolation.webp",
+    "url": "static/mages/fnfdesolation/index.html",
+    "categories": ["Rhythm", "Action"],
+    "//": "ugs external"
+  },
+{
     "name": "Friday Night Funkin' vs. Sky",
     "image": "static/icons/fnfsky.webp",
     "url": "static/mages/fnfsky/index.html",
@@ -2187,6 +2208,27 @@
     "name": "Friday Night Funkin' vs. Mario's Madness",
     "image": "static/icons/fnfmm.webp",
     "url": "static/mages/fnfmm/index.html",
+    "categories": ["Rhythm", "Action"],
+    "//": "ugs external"
+  },
+{
+    "name": "Friday Night Funkin' vs. SMB Funk Mix: Game Over",
+    "image": "static/icons/fnfsmbgameover.webp",
+    "url": "static/mages/fnfsmbgameover/index.html",
+    "categories": ["Rhythm", "Action"],
+    "//": "ugs external"
+  },
+{
+    "name": "Friday Night Funkin' vs. BFDI 26'",
+    "image": "static/icons/fnfindiecross.webp",
+    "url": "static/mages/fnfindiecross/index.html",
+    "categories": ["Rhythm", "Action"],
+    "//": "ugs external"
+  },
+{
+    "name": "Friday Night Funkin' vs. BFDI HORKGLORPGLOOP",
+    "image": "static/icons/fnfhorkglorpgloop.webp",
+    "url": "static/mages/fnfhorkglorpgloop/index.html",
     "categories": ["Rhythm", "Action"],
     "//": "ugs external"
   },
@@ -2476,12 +2518,6 @@
     "name": "Gladihoppers",
     "image": "static/icons/gladihoppers.webp",
     "url": "static/mages/gladihoppers/index.html",
-    "categories": ["Casual"]
-  },
-{
-    "name": "Gold Digger FRVR",
-    "image": "static/icons/golddiggerfrvr.webp",
-    "url": "static/mages/golddiggerfrvr/index.html",
     "categories": ["Casual"]
   },
 {
