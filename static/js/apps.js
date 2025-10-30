@@ -452,6 +452,7 @@ function loadGames() {
         this.tabs = new Map();
         this.activeTabId = null;
         this.nextTabId = 1;
+        this.MAX_TABS = 10;
         
         this.initializeElements();
         this.setupEventListeners();
@@ -543,6 +544,7 @@ toggleFullscreen() {
         this.openNewTabBtn = document.getElementById('open-new-tab-btn');
         this.closeModalBtn = document.getElementById('close-modal-btn');
         this.newTabBtn = document.getElementById('new-tab-btn');
+        this.closeAllBtn = document.getElementById('close-all-tabs-btn');
         this.keepAliveToggle = document.getElementById('keep-alive-toggle');
         this.modalHelper = document.querySelector('.modal-helper-text');
 
@@ -553,6 +555,7 @@ toggleFullscreen() {
         // Modal controls
         this.closeModalBtn?.addEventListener('click', () => this.closeModal());
         this.newTabBtn?.addEventListener('click', () => this.createNewTab());
+        this.closeAllBtn?.addEventListener('click', () => this.closeAllTabs());
         
         // Firefox navigation
         this.backBtn?.addEventListener('click', () => this.navigateBack());
@@ -571,12 +574,7 @@ toggleFullscreen() {
           this.filterGameSelection(e.target.value);
         });
         
-        // Modal events
-        this.modal?.addEventListener('click', (e) => {
-          if (e.target.id === 'game-modal') {
-            this.closeModal();
-          }
-        });
+        // Disable click-outside-to-close: no backdrop click closes the modal
 
         // Keyboard shortcuts
         document.addEventListener('keydown', (e) => {
@@ -616,41 +614,14 @@ toggleFullscreen() {
         this.setupExitMessage();
       }
 
-      setupExitMessage() {
-        this.modal?.addEventListener('mousemove', (e) => {
-          if (this.modal.classList.contains('active')) {
-            this.updateExitMessagePosition(e);
-            // Only show exit message when outside iframe container
-            if (!this.iframeContainer?.contains(e.target)) {
-              this.exitMessage?.classList.add('show');
-            } else {
-              this.exitMessage?.classList.remove('show');
-            }
-          }
-        });
-
-        this.modal?.addEventListener('mouseenter', (e) => {
-          if (this.modal.classList.contains('active') && !this.iframeContainer?.contains(e.target)) {
-            this.updateExitMessagePosition(e);
-            this.exitMessage?.classList.add('show');
-          }
-        });
-
-        this.modal?.addEventListener('mouseleave', () => {
-          this.exitMessage?.classList.remove('show');
-        });
-
-        this.iframeContainer?.addEventListener('mouseenter', () => {
-          this.exitMessage?.classList.remove('show');
-        });
-
-        this.iframeContainer?.addEventListener('mouseleave', (e) => {
-          if (this.modal?.contains(e.relatedTarget) && this.modal.classList.contains('active')) {
-            this.updateExitMessagePosition(e);
-            this.exitMessage?.classList.add('show');
-          }
-        });
+      closeAllTabs() {
+        const ids = Array.from(this.tabs.keys());
+        ids.forEach(id => this.closeTab(id));
+        this.showEmptyState();
+        this.saveTabsToCookies();
       }
+
+      setupExitMessage() { /* disabled */ }
 
       updateExitMessagePosition(e) {
         if (this.exitMessage) {
@@ -668,9 +639,10 @@ toggleFullscreen() {
         // Position helper below modal when the modal opens
         this.updateModalHelperPosition(true);
 
-        // Update URL hash with game name (replace spaces with underscores)
-        const hashName = gameName.replace(/ /g, '_');
-        window.history.replaceState(null, '', `#${encodeURIComponent(hashName)}`);
+        // Clear any existing URL hash to avoid white flash
+        if (window.location.hash) {
+          window.history.replaceState(null, '', window.location.pathname + window.location.search);
+        }
 
         // Disable topbar if available
         if (window.topbarControl) {
@@ -762,6 +734,10 @@ toggleFullscreen() {
       }
 
       createNewTab() {
+        if (this.tabs.size >= this.MAX_TABS) {
+          this.showNotification('Tabs are Limited to 10 Tabs Only');
+          return null;
+        }
         const tabId = this.nextTabId++;
         
         // Create tab element
@@ -812,6 +788,10 @@ toggleFullscreen() {
       }
 
       createTab(gameUrl, gameName) {
+        if (this.tabs.size >= this.MAX_TABS) {
+          this.showNotification('Tabs are Limited to 10 Tabs Only');
+          return null;
+        }
         const tabId = this.nextTabId++;
         
   // Create iframe
@@ -936,11 +916,7 @@ toggleFullscreen() {
             window.history.replaceState(null, '', window.location.pathname + window.location.search);
           }
         } else if (tab.iframe) {
-          // Update URL hash with current game name only if updateHash is true
-          if (updateHash) {
-            const hashName = tab.name.replace(/ /g, '_');
-            window.history.replaceState(null, '', `#${encodeURIComponent(hashName)}`);
-          }
+          // Do not update URL hash to avoid flash
           
           // Handle iframe display
           if (tab.keepAlive || !tab.loaded) {
@@ -1003,7 +979,7 @@ toggleFullscreen() {
               this.gameSelectionGrid.innerHTML = `
                 <div style="grid-column: 1 / -1; text-align: center; padding: 40px; color: #9ca3af;">
                   <i class="fas fa-exclamation-triangle" style="font-size: 24px; margin-bottom: 16px;"></i>
-                  <p>Games not loaded yet. Please try refreshing.</p>
+                  <p>Apps not loaded yet. Please try refreshing.</p>
                 </div>
               `;
             }
@@ -1035,7 +1011,7 @@ toggleFullscreen() {
             <div class="game-selection-card" onclick="gameTabManager.selectGameFromSelection('${safeUrl}', '${safeName}')">
               ${game.image ? `<img src="${game.image}" alt="${safeName}" loading="lazy">` : `<div style="width: 100%; height: 80px; background: linear-gradient(45deg, #4a5568, #2d3748); border-radius: 8px; margin-bottom: 12px; display: flex; align-items: center; justify-content: center;"><i class="fas fa-gamepad" style="font-size: 24px; color: #9ca3af;"></i></div>`}
               <h3>${game.name}</h3>
-              <p>Click to play</p>
+              <p>Click to open</p>
             </div>
           `;
         }).join('');
@@ -1117,9 +1093,7 @@ toggleFullscreen() {
           tabTitle.textContent = gameName;
         }
 
-        // Update URL hash with game name (replace spaces with underscores)
-        const hashName = gameName.replace(/ /g, '_');
-        window.history.replaceState(null, '', `#${encodeURIComponent(hashName)}`);
+  // Do not update URL hash to avoid flash
 
   // Create and setup iframe
   const iframe = document.createElement('iframe');
@@ -1235,6 +1209,7 @@ toggleFullscreen() {
           let activeTabFound = false;
           
           tabData.forEach(savedTab => {
+            if (this.tabs.size >= this.MAX_TABS) return; // respect max tabs on restore
             if (savedTab.url && savedTab.name) {
               const tabId = this.createTabFromSave(savedTab.url, savedTab.name, savedTab.keepAlive, savedTab.id);
               if (savedTab.isActive && !activeTabFound) {
@@ -1259,6 +1234,10 @@ toggleFullscreen() {
       }
 
       createTabFromSave(gameUrl, gameName, keepAlive, savedId) {
+        if (this.tabs.size >= this.MAX_TABS) {
+          this.showNotification('Tabs are Limited to 10 Tabs Only');
+          return null;
+        }
         const tabId = savedId || this.nextTabId++;
         if (savedId >= this.nextTabId) {
           this.nextTabId = savedId + 1;
@@ -1428,7 +1407,10 @@ toggleFullscreen() {
       updateUrlBar(gameName) {
         if (this.urlBar) {
           const safeName = (gameName || '').replace(/ /g, '_');
-          this.urlBar.value = `yellownet://${safeName}`;
+          let display;
+          if (!safeName) display = 'sienna://home';
+          else display = `sienna://${safeName}`;
+          this.urlBar.value = display;
         }
       }
 
@@ -1655,29 +1637,42 @@ toggleFullscreen() {
 
     // Function to show a notification (keeping your original function)
     function showNotification(message) {
-      const notificationContainer = document.getElementById('notification-container');
-      if (notificationContainer) {
-        const notification = document.createElement('div');
-        notification.className = 'notification';
-        notification.innerHTML = `
-          <div>${message}</div>
-          <div class="close-btn"></div>
-          <div class="timer-bar"></div>
-        `;
-
-        const closeBtn = notification.querySelector('.close-btn');
-        if (closeBtn) {
-          closeBtn.addEventListener('click', () => {
-            notification.remove();
-          });
+      let notificationContainer = document.getElementById('notification-container');
+      if (!notificationContainer) {
+        // Create a fallback container inside the modal so notifications are in-modal
+        const modalContent = document.querySelector('#game-modal .game-modal-content') || document.getElementById('game-modal');
+        if (modalContent) {
+          notificationContainer = document.createElement('div');
+          notificationContainer.id = 'notification-container';
+          modalContent.appendChild(notificationContainer);
         }
-
-        setTimeout(() => {
-          notification.remove();
-        }, 4000);
-
-        notificationContainer.appendChild(notification);
       }
+
+      if (!notificationContainer) {
+        console.log('Notification:', message);
+        return;
+      }
+
+      const notification = document.createElement('div');
+      notification.className = 'notification';
+      notification.innerHTML = `
+        <div>${message}</div>
+        <div class="close-btn"></div>
+        <div class="timer-bar"></div>
+      `;
+
+      const closeBtn = notification.querySelector('.close-btn');
+      if (closeBtn) {
+        closeBtn.addEventListener('click', () => {
+          notification.remove();
+        });
+      }
+
+      setTimeout(() => {
+        notification.remove();
+      }, 4000);
+
+      notificationContainer.appendChild(notification);
     }
 
     // Handle fullscreen change events (keeping your original logic)
@@ -1697,12 +1692,7 @@ toggleFullscreen() {
     // Close modal when clicking outside (keeping your original logic)
     const modal = document.getElementById('game-modal');
     if (modal) {
-      modal.addEventListener('click', (e) => {
-        if (e.target.id === 'game-modal') {
-          closeGameModal();
-        }
-      });
-
+      // Disable backdrop click-to-close
       // Keep favorites UI up to date
       try { renderFavorites(); } catch (e) { /* noop */ }
     }

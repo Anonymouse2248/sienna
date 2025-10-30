@@ -5,6 +5,11 @@
     "url": "contact.html"
   },
 {
+    "name": "Sienna Padlet",
+    "image": "static/icons/padlet.webp",
+    "url": "static/assets/padlet.html"
+  },
+{
     "name": "Ultimate Game Stash",
     "image": "static/icons/ugssinglefile.webp",
     "url": "static/mages/ugssinglefile/index.html",
@@ -2290,6 +2295,13 @@
     "image": "static/icons/fnfpb.webp",
     "url": "static/mages/fnfpb/index.html",
     "categories": ["Rhythm", "Action"]
+  },
+{
+    "name": "Friday Night Funkin': Wednesday Infidelity",
+    "image": "static/icons/fnfwi.webp",
+    "url": "static/mages/fnfwi/index.html",
+    "categories": ["Rhythm", "Action"],
+    "//": "ugs external"
   },
 {
     "name": "Friday Night Funkin': Mistful Crimson Morning Reboot",

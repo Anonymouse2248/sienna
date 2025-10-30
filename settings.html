@@ -148,6 +148,19 @@
         .cloak-btn:hover, .circular-button:hover { background: var(--primary-bg-1) !important; transform: scale(1.1) rotate(5deg) !important; border-color: var(--primary-text) !important; }
         .cloak-btn.active, .circular-button.active { border-color: var(--primary-text) !important; box-shadow: 0 0 0 3px var(--primary-bg-1),0 4px 12px rgba(0,0,0,0.2) !important; background: var(--primary-bg-1) !important; }
         .cloak-btn.active img, .circular-button.active img { transform: scale(1.05) !important; }
+
+        /* Danger button for destructive actions */
+        .theme-btn.danger-btn {
+            background: #7f1d1d;
+            border-color: #ef4444;
+            color: #ffffff;
+        }
+        .theme-btn.danger-btn:hover {
+            background: #991b1b;
+            color: #ffffff;
+            border-color: #fca5a5;
+            transform: translateY(-2px);
+        }
     </style>
 </head>
 <body>
@@ -194,10 +207,11 @@
     <div class="theme-grid" style="grid-auto-flow: column; gap:8px;">
         <button id="downloadSaveBtn" class="theme-btn">Download Save</button>
         <button id="uploadSaveBtn" class="theme-btn">Upload Save</button>
+        <button id="wipeDataBtn" class="theme-btn danger-btn">Wipe Data</button>
         <input type="file" id="uploadSaveInput" style="display:none;" accept=".save">
     </div>
     <div style="margin-top:12px; color:var(--accent-text); font-size:13px;">
-        <small>Download Save 50/50 if it works idk</small>
+        <small>Download/Upload saves data stored in this site. Wipe Data permanently clears site data.</small>
     </div>
 </div>
 
@@ -216,6 +230,7 @@
     const downloadBtn = document.getElementById('downloadSaveBtn');
     const uploadBtn = document.getElementById('uploadSaveBtn');
     const uploadInput = document.getElementById('uploadSaveInput');
+    const wipeBtn = document.getElementById('wipeDataBtn');
 
     function gatherData() {
         const ls = {};
@@ -277,6 +292,79 @@
         };
         reader.readAsText(file);
     });
+
+    // Wipe all site data (best-effort similar to Chrome's "Clear browsing data" for this origin)
+    async function wipeAllSiteData() {
+        const step1 = confirm('This will erase ALL site data for this site (local storage, session storage, cookies, caches, indexedDB, and service workers). This cannot be undone. Continue?');
+        if (!step1) return;
+        const confirmText = prompt('Type DIDDLER to confirm. This action is permanent.');
+        if ((confirmText || '').toUpperCase() !== 'DIDDLER') return;
+
+        // Clear local and session storage
+        try { localStorage.clear(); } catch(_) {}
+        try { sessionStorage.clear(); } catch(_) {}
+
+        // Delete cookies (attempt across domain variants)
+        try {
+            const cookies = (document.cookie || '').split('; ').filter(Boolean);
+            const hostParts = location.hostname.split('.');
+            const domains = [];
+            for (let i = 0; i < hostParts.length; i++) {
+                const d = '.' + hostParts.slice(i).join('.');
+                domains.push(d);
+            }
+            const expire = 'Thu, 01 Jan 1970 00:00:00 GMT';
+            cookies.forEach(c => {
+                const eq = c.indexOf('=');
+                const name = eq === -1 ? c : c.slice(0, eq);
+                // Try without domain
+                document.cookie = `${name}=; expires=${expire}; path=/`;
+                // Try each domain variant
+                domains.forEach(domain => {
+                    document.cookie = `${name}=; expires=${expire}; path=/; domain=${domain}`;
+                });
+            });
+        } catch (e) { console.warn('Cookie clear warning:', e); }
+
+        // Clear Cache Storage
+        try {
+            if (window.caches && caches.keys) {
+                const keys = await caches.keys();
+                await Promise.all(keys.map(k => caches.delete(k)));
+            }
+        } catch (e) { console.warn('Cache clear warning:', e); }
+
+        // Clear IndexedDB databases
+        try {
+            if (indexedDB) {
+                if (indexedDB.databases) {
+                    const dbs = await indexedDB.databases();
+                    await Promise.all((dbs || []).map(db => db && db.name ? new Promise((res) => {
+                        const req = indexedDB.deleteDatabase(db.name);
+                        req.onsuccess = req.onerror = req.onblocked = () => res();
+                    }) : Promise.resolve()));
+                } else {
+                    // Fallback: attempt to delete a few common names if known; otherwise skip
+                }
+            }
+        } catch (e) { console.warn('IndexedDB clear warning:', e); }
+
+        // Unregister all service workers for this origin
+        try {
+            if (navigator.serviceWorker && navigator.serviceWorker.getRegistrations) {
+                const regs = await navigator.serviceWorker.getRegistrations();
+                await Promise.all(regs.map(r => r.unregister()));
+            }
+        } catch (e) { console.warn('Service worker unregister warning:', e); }
+
+        // Give the browser a tick to settle, then reload
+        setTimeout(() => {
+            alert('All site data for this origin has been cleared. The page will reload.');
+            location.reload();
+        }, 200);
+    }
+
+    wipeBtn.addEventListener('click', wipeAllSiteData);
 
 })();
 </script>

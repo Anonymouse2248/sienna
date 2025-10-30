@@ -57,6 +57,10 @@
                 <button class="new-tab-btn" id="new-tab-btn" title="Open new tab">
                     <i class="fas fa-plus"></i>
                 </button>
+                <button class="close-all-tabs-btn" id="close-all-tabs-btn" title="Close all tabs">
+                    <i class="fas fa-window-close"></i>
+                    <span class="label">Close all</span>
+                </button>
             </div>
             <div class="modal-progress" id="modal-progress">
                 <div class="modal-progress-bar" id="modal-progress-bar"></div>
@@ -80,9 +84,9 @@
                         type="text"
                         id="url-bar"
                         class="url-bar"
-                        value="yellownet://Night_Games"
+                        value="sienna://Night_Apps"
                         readonly
-                        title="Game URL"
+                        title="App URL"
                     >
                     <div id="keep-alive-toggle" class="keep-alive-toggle inactive" title="Click to toggle keep game loaded" role="button" aria-pressed="false">
                         <i class="keep-alive-icon fas fa-play" aria-hidden="true"></i>
@@ -115,7 +119,7 @@
                             <input
                                 type="text"
                                 id="game-selection-search"
-                                placeholder="Search games..."
+                                placeholder="Search apps..."
                             />
                         </div>
                         <div id="game-selection-grid" class="game-selection-grid"></div>
