@@ -42,6 +42,18 @@
             <line x1="10" y1="14" x2="21" y2="3"/>
           </svg>
         </button>
+
+        <!-- Open Browser (game modal) button -->
+        <button class="nav-btn" onclick="openGameBrowser()" data-page="/games.html#browser" data-tooltip="Browser">
+          <!-- Simple browser window icon -->
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="3" y="5" width="18" height="16" rx="2" ry="2"/>
+            <line x1="3" y1="9" x2="21" y2="9"/>
+            <circle cx="7" cy="7" r="1"/>
+            <circle cx="11" cy="7" r="1"/>
+            <circle cx="15" cy="7" r="1"/>
+          </svg>
+        </button>
       </div>
 
       <div class="bottom-section">
@@ -154,3 +166,17 @@ function openInBlank() {
 document.addEventListener("DOMContentLoaded", () => {
   loadSidebar();
 });
+
+// Open the in-site game browser (modal with tabs). If we're on games.html and
+// the browser is available, open it directly; otherwise navigate to games.html#browser.
+function openGameBrowser() {
+  try {
+    const isGames = /\bgames\.html$/i.test(window.location.pathname);
+    if (isGames && typeof window.__openBrowserModal === 'function') {
+      window.__openBrowserModal();
+      return;
+    }
+  } catch (e) { /* fall through to navigation */ }
+  // Navigate to games page with a hash that triggers the modal
+  window.location.href = window.location.origin + '/games.html#browser';
+}

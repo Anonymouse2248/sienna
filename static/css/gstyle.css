@@ -507,6 +507,7 @@ body.performance-mode::after {
   -webkit-line-clamp: 2;
   line-clamp: 2;
   -webkit-box-orient: vertical;
+      overflow-wrap: anywhere; /* allow breaking very long words */
     }
 
     .game-card-description {
@@ -1180,6 +1181,7 @@ body.performance-mode::after {
   line-clamp: 2;
   -webkit-box-orient: vertical;
   min-height: 36px;
+  overflow-wrap: anywhere; /* allow breaking very long words */
 }
 
 .game-selection-card p {

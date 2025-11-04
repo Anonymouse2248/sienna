@@ -176,6 +176,48 @@
     "categories": ["Strategy"]
   },
 {
+    "name": "Nijika's Ahoge",
+    "image": "static/icons/nijikasahoge.webp",
+    "url": "static/mages/nijikasahoge/index.html",
+    "categories": ["Casual"],
+    "//": "genizy+ugs external"
+  },
+{
+    "name": "BLOODMONEY",
+    "image": "static/icons/bloodmoney.webp",
+    "url": "static/mages/bloodmoney/index.html",
+    "categories": ["Casual"],
+    "//": "genizy+ugs external"
+  },
+{
+    "name": "Human Expenditure Program",
+    "image": "static/icons/humanexpenditureprogram.webp",
+    "url": "static/mages/humanexpenditureprogram/index.html",
+    "categories": ["Casual"],
+    "//": "genizy+ugs external"
+  },
+{
+    "name": "Hotline Miami",
+    "image": "static/icons/hotlinemiami.webp",
+    "url": "static/mages/hotlinemiami/index.html",
+    "categories": ["Casual"],
+    "//": "genizy+ugs external"
+  },
+{
+    "name": "Tanuki Sunset",
+    "image": "static/icons/tanukisunset.webp",
+    "url": "static/mages/tanukisunset/index.html",
+    "categories": ["Casual"],
+    "//": "genizy+ugs external"
+  },
+{
+    "name": "Jelly Drift",
+    "image": "static/icons/jellydrift.webp",
+    "url": "static/mages/jellydrift/index.html",
+    "categories": ["Casual"],
+    "//": "genizy+ugs external"
+  },
+{
     "name": "Bad Parenting",
     "image": "static/icons/badparenting.webp",
     "url": "static/mages/badparenting/index.html",
@@ -268,6 +310,20 @@
     "//": "genizy external"
   },
 {
+    "name": "Do Not Take This Cat Home",
+    "image": "static/icons/donttakethiscathome.webp",
+    "url": "static/mages/donttakethiscathome/index.html",
+    "categories": ["Casual"],
+    "//": "genizy+ugs external"
+  },
+{
+    "name": "Kitty Toy",
+    "image": "static/icons/kittytoy.webp",
+    "url": "static/mages/kittytoy/index.html",
+    "categories": ["Casual"],
+    "//": "genizy+ugs external"
+  },
+{
     "name": "Webfishing",
     "image": "static/icons/webfishing.webp",
     "url": "static/mages/webfishing/index.html",
@@ -293,10 +349,59 @@
     "categories": ["Adventure"]
   },
 {
+    "name": "Lacey's Flash Games DEMO",
+    "image": "static/icons/laceysflashgames.webp",
+    "url": "static/mages/laceysflashgames/index.html",
+    "categories": ["Casual"],
+    "//": "genizy+ugs external"
+  },
+{
+    "name": "Layer's Roll",
+    "image": "static/icons/layersroll.webp",
+    "url": "static/mages/layersroll/index.html",
+    "categories": ["Casual"],
+    "//": "genizy+ugs external"
+  },
+{
+    "name": "Supermarket 3D",
+    "image": "static/icons/supermarket3d.webp",
+    "url": "static/mages/supermarket3d/index.html",
+    "categories": ["Casual"],
+    "//": "genizy+ugs external"
+  },
+{
     "name": "Appel",
     "image": "static/icons/appel.webp",
     "url": "static/mages/appel/index.html",
     "categories": ["Adventure"]
+  },
+{
+    "name": "Andy's Apple Farm",
+    "image": "static/icons/andysapplefarm.webp",
+    "url": "static/mages/andysapplefarm/index.html",
+    "categories": ["Casual"],
+    "//": "genizy+ugs external"
+  },
+{
+    "name": "The Man From The Window",
+    "image": "static/icons/themanfromthewindow.webp",
+    "url": "static/mages/themanfromthewindow/index.html",
+    "categories": ["Casual"],
+    "//": "genizy+ugs external"
+  },
+{
+    "name": "Tomodachi Collection",
+    "image": "static/icons/tomodachicollection.webp",
+    "url": "static/mages/tomodachicollection/index.html",
+    "categories": ["Casual"],
+    "//": "genizy+ugs external"
+  },
+{
+    "name": "Twerk Race 3D",
+    "image": "static/icons/twerkrace3d.webp",
+    "url": "static/mages/twerkrace3d/index.html",
+    "categories": ["Casual"],
+    "//": "genizy+ugs external"
   },
 {
     "name": "Sprunki",
@@ -352,6 +457,13 @@
     "image": "static/icons/squidgame2minigames.webp",
     "url": "static/mages/squidgame2minigames/index.html",
     "categories": ["Casual"]
+  },
+{
+    "name": "Dalgona Candy Challenge",
+    "image": "static/icons/dalgonagame.webp",
+    "url": "static/mages/dalgonagame/index.html",
+    "categories": ["Casual"],
+    "//": "genizy+ugs external"
   },
 {
     "name": "Speed Each Click",
@@ -597,6 +709,27 @@
     "categories": ["Casual"]
   },
 {
+    "name": "Angry Birds",
+    "image": "static/icons/angrybirds.webp",
+    "url": "static/mages/angrybirds/index.html",
+    "categories": ["Casual"],
+    "//": "genizy+ugs external"
+  },
+{
+    "name": "Angry Birds Chrome",
+    "image": "static/icons/angrybirdschrome.webp",
+    "url": "static/mages/angrybirdschrome/index.html",
+    "categories": ["Casual"],
+    "//": "genizy+ugs external"
+  },
+{
+    "name": "Angry Birds Showdown",
+    "image": "static/icons/angrybirdsshowdown.webp",
+    "url": "static/mages/angrybirdsshowdown/index.html",
+    "categories": ["Casual"],
+    "//": "genizy+ugs external"
+  },
+{
     "name": "Bad Piggies",
     "image": "static/icons/badpiggies.webp",
     "url": "static/mages/badpiggies/index.html",
@@ -639,10 +772,17 @@
     "categories": ["Adventure"]
   },
 {
-    "name": "Getting Over It",
+    "name": "Getting Over It Scratch" ,
     "image": "static/icons/gettingoverit.webp",
     "url": "static/mages/gettingoverit/index.html",
     "categories": ["Adventure"]
+  },
+{
+    "name": "Getting Over it with Bennett Foddy",
+    "image": "static/icons/gettingoveritwbf.webp",
+    "url": "static/mages/gettingoveritwbf/index.html",
+    "categories": ["Casual"],
+    "//": "genizy+ugs external"
   },
 {
     "name": "Burrito Bison",
@@ -927,6 +1067,27 @@
     "//": "ugs external"
   },
 {
+    "name": "Fitness Empire",
+    "image": "static/icons/fitnessempire.webp",
+    "url": "static/mages/fitnessempire/index.html",
+    "categories": ["Casual"],
+    "//": "genizy+ugs external"
+  },
+{
+    "name": "Flick Goal",
+    "image": "static/icons/flickgoal.webp",
+    "url": "static/mages/flickgoal/index.html",
+    "categories": ["Casual"],
+    "//": "genizy+ugs external"
+  },
+{
+    "name": "Flip Master",
+    "image": "static/icons/flipmaster.webp",
+    "url": "static/mages/flipmaster/index.html",
+    "categories": ["Casual"],
+    "//": "genizy+ugs external"
+  },
+{
     "name": "Kindergarten",
     "image": "static/icons/kindergarten.webp",
     "url": "static/mages/kindergarten/index.html",
@@ -1000,6 +1161,13 @@
     "image": "static/icons/volleyrandom.webp",
     "url": "static/mages/volleyrandom/index.html",
     "categories": ["Sports"]
+  },
+{
+    "name": "Blade Ball",
+    "image": "static/icons/bladeball.webp",
+    "url": "static/mages/bladeball/index.html",
+    "categories": ["Casual"],
+    "//": "genizy+ugs external"
   },
 {
     "name": "Bitlife",
@@ -1097,6 +1265,13 @@
     "url": "static/mages/googlebaseball/index.html",
     "categories": ["Adventure"],
     "//": "genizy external"
+  },
+{
+    "name": "Baseball Bros",
+    "image": "static/icons/baseballbros.webp",
+    "url": "static/mages/baseballbros/index.html",
+    "categories": ["Casual"],
+    "//": "genizy+ugs external"
   },
 {
     "name": "Google Snake",
@@ -1328,6 +1503,13 @@
     "categories": ["Casual"]
   },
 {
+    "name": "Dadish 3D",
+    "image": "static/icons/dadish3d.webp",
+    "url": "static/mages/dadish3d/index.html",
+    "categories": ["Casual"],
+    "//": "genizy+ugs external"
+  },
+{
     "name": "Death Run 3D",
     "image": "static/icons/deathrun3d.webp",
     "url": "static/mages/deathrun3d/index.html",
@@ -1364,9 +1546,22 @@
     "categories": ["Casual"]
   },
 {
+    "name": "Draw Climber",
+    "image": "static/icons/drawclimber.webp",
+    "url": "static/mages/drawclimber/index.html",
+    "categories": ["Casual"],
+    "//": "genizy+ugs external"
+  },
+{
     "name": "Doom",
     "image": "static/icons/doom.webp",
     "url": "static/mages/doom/index.html",
+    "categories": ["Action"]
+  },
+{
+    "name": "Doom 2",
+    "image": "static/icons/doom2.webp",
+    "url": "static/mages/doom2/index.html",
     "categories": ["Action"]
   },
 {
@@ -1577,6 +1772,20 @@
     "categories": ["Casual"]
   },
 {
+    "name": "Dan The Man",
+    "image": "static/icons/dantheman.webp",
+    "url": "static/mages/dantheman/index.html",
+    "categories": ["Casual"],
+    "//": "genizy+ugs external"
+  },
+{
+    "name": "Destiny Run 3D",
+    "image": "static/icons/destinyrun3d.webp",
+    "url": "static/mages/destinyrun3d/index.html",
+    "categories": ["Casual"],
+    "//": "genizy+ugs external"
+  },
+{
     "name": "Eggy Car",
     "image": "static/icons/eggycar.webp",
     "url": "static/mages/eggycar/index.html",
@@ -1635,6 +1844,20 @@
     "image": "static/icons/fancypantsadventures2.webp",
     "url": "static/mages/fancypantsadventures2/index.html",
     "categories": ["Flash", "Adventure"]
+  },
+{
+    "name": "Find The Alien",
+    "image": "static/icons/findthealien.webp",
+    "url": "static/mages/findthealien/index.html",
+    "categories": ["Casual"],
+    "//": "genizy+ugs external"
+  },
+{
+    "name": "Fire and Frost Master",
+    "image": "static/icons/fireandfrostmaster.webp",
+    "url": "static/mages/fireandfrostmaster/index.html",
+    "categories": ["Casual"],
+    "//": "genizy+ugs external"
   },
 {
     "name": "Fireboy Watergirl",
@@ -2175,9 +2398,65 @@
     "//": "ugs external"
   },
 {
+    "name": "Friday Night Funkin' vs. Imposter: Black Betrayal",
+    "image": "static/icons/fnfbb.webp",
+    "url": "static/mages/fnfbb/index.html",
+    "categories": ["Rhythm", "Action"],
+    "//": "ugs external"
+  },
+{
+    "name": "Friday Night Funkin' vs. Shucks V2",
+    "image": "static/icons/fnfsv2.webp",
+    "url": "static/mages/fnfsv2/index.html",
+    "categories": ["Rhythm", "Action"],
+    "//": "ugs external"
+  },
+{
+    "name": "Friday Night Funkin' vs. Carol V2",
+    "image": "static/icons/fnfcv2.webp",
+    "url": "static/mages/fnfcv2/index.html",
+    "categories": ["Rhythm", "Action"],
+    "//": "ugs external"
+  },
+{
+    "name": "Friday Night Funkin': Rev-Mixed",
+    "image": "static/icons/fnfrm.webp",
+    "url": "static/mages/fnfrm/index.html",
+    "categories": ["Rhythm", "Action"],
+    "//": "ugs external"
+  },
+{
+    "name": "Friday Night Funkin': MOBMOD",
+    "image": "static/icons/fnfmobmod.webp",
+    "url": "static/mages/fnfmobmod/index.html",
+    "categories": ["Rhythm", "Action"],
+    "//": "ugs external"
+  },
+{
+    "name": "Friday Night Funkin' vs. Camellia RUDE BUSTER",
+    "image": "static/icons/fnfcrb.webp",
+    "url": "static/mages/fnfcrb/index.html",
+    "categories": ["Rhythm", "Action"],
+    "//": "ugs external"
+  },
+{
+    "name": "Friday Night Funkin' vs. A.G.O.T.I",
+    "image": "static/icons/fnfa.webp",
+    "url": "static/mages/fnfa/index.html",
+    "categories": ["Rhythm", "Action"],
+    "//": "ugs external"
+  },
+{
     "name": "Friday Night Funkin' vs. Sky",
     "image": "static/icons/fnfsky.webp",
     "url": "static/mages/fnfsky/index.html",
+    "categories": ["Rhythm", "Action"],
+    "//": "ugs external"
+  },
+{
+    "name": "Friday Night Funkin' vs. Sunday Remastered",
+    "image": "static/icons/fnfsur.webp",
+    "url": "static/mages/fnfsur/index.html",
     "categories": ["Rhythm", "Action"],
     "//": "ugs external"
   },
@@ -2386,6 +2665,20 @@
     "image": "static/icons/exo.webp",
     "url": "static/mages/exo/index.html",
     "categories": ["Casual"]
+  },
+{
+    "name": "Endoparasitic",
+    "image": "static/icons/endoparasitic.webp",
+    "url": "static/mages/endoparasitic/index.html",
+    "categories": ["Casual"],
+    "//": "genizy+ugs external"
+  },
+{
+    "name": "Escape Road",
+    "image": "static/icons/escaperoad.webp",
+    "url": "static/mages/escaperoad/index.html",
+    "categories": ["Casual"],
+    "//": "genizy+ugs external"
   },
 {
     "name": "Solar Sandbox",
@@ -2606,6 +2899,13 @@
     "categories": ["Casual"]
   },
 {
+    "name": "Destroy the Car 3D",
+    "image": "static/icons/destroythecar3d.webp",
+    "url": "static/mages/destroythecar3d/index.html",
+    "categories": ["Casual"],
+    "//": "genizy+ugs external"
+  },
+{
     "name": "Among Us",
     "image": "static/icons/amongus.webp",
     "url": "static/mages/amongus/index.html",
@@ -2646,6 +2946,13 @@
     "image": "static/icons/gunmayhemredux.webp",
     "url": "static/mages/gunmayhemredux/index.html",
     "categories": ["Flash", "Action"]
+  },
+{
+    "name": "Half Life",
+    "image": "static/icons/halflife.webp",
+    "url": "static/mages/halflife/index.html",
+    "categories": ["Casual"],
+    "//": "genizy+ugs external"
   },
 {
     "name": "Half Life 2",
@@ -2996,6 +3303,41 @@
     "categories": ["Casual"]
   },
 {
+    "name": "Idle Lumber Inc.",
+    "image": "static/icons/idlelumberinc.webp",
+    "url": "static/mages/idlelumberinc/index.html",
+    "categories": ["Casual"],
+    "//": "genizy+ugs external"
+  },
+{
+    "name": "Makeover Run",
+    "image": "static/icons/makeoverrun.webp",
+    "url": "static/mages/makeoverrun/index.html",
+    "categories": ["Casual"],
+    "//": "genizy+ugs external"
+  },
+{
+    "name": "Office Fight",
+    "image": "static/icons/officefight.webp",
+    "url": "static/mages/officefight/index.html",
+    "categories": ["Casual"],
+    "//": "genizy+ugs external"
+  },
+{
+    "name": "Pizza Tower",
+    "image": "static/icons/pizzatower.webp",
+    "url": "static/mages/pizzatower/index.html",
+    "categories": ["Casual"],
+    "//": "genizy+ugs external"
+  },
+{
+    "name": "Rich Run 3D",
+    "image": "static/icons/richrun3d.webp",
+    "url": "static/mages/richrun3d/index.html",
+    "categories": ["Casual"],
+    "//": "genizy+ugs external"
+  },
+{
     "name": "Mutiny",
     "image": "static/icons/mutiny.webp",
     "url": "static/mages/mutiny/index.html",
@@ -3343,6 +3685,41 @@
     "image": "static/icons/russiancardriver.webp",
     "url": "static/mages/russiancardriver/index.html",
     "categories": ["Cars"]
+  },
+{
+    "name": "Teen Titans Go Jump Jousts",
+    "image": "static/icons/teentitansgojumpjousts.webp",
+    "url": "static/mages/teentitansgojumpjousts/index.html",
+    "categories": ["Casual"],
+    "//": "genizy+ugs external"
+  },
+{
+    "name": "Telekenesis",
+    "image": "static/icons/telekenesis.webp",
+    "url": "static/mages/telekenesis/index.html",
+    "categories": ["Casual"],
+    "//": "genizy+ugs external"
+  },
+{
+    "name": "Telekenesis Attack",
+    "image": "static/icons/telekenesisattack.webp",
+    "url": "static/mages/telekenesisattack/index.html",
+    "categories": ["Casual"],
+    "//": "genizy+ugs external"
+  },
+{
+    "name": "Telekenesis Drive",
+    "image": "static/icons/telekenesisdrive.webp",
+    "url": "static/mages/telekenesisdrive/index.html",
+    "categories": ["Casual"],
+    "//": "genizy+ugs external"
+  },
+{
+    "name": "Telekenesis Car",
+    "image": "static/icons/telekenesiscar.webp",
+    "url": "static/mages/telekenesiscar/index.html",
+    "categories": ["Casual"],
+    "//": "genizy+ugs external"
   },
 {
     "name": "Sandboxels",

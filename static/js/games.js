@@ -48,6 +48,87 @@ function getCategories() {
   return ['All', ...Array.from(set).sort((a,b)=>a.localeCompare(b))];
 }
 
+// -------------------------------
+// Title autoshrink utilities
+// -------------------------------
+function getNumericPx(value, fallback) {
+  const n = parseFloat(value);
+  return isFinite(n) ? n : fallback;
+}
+
+// Shrink a multi-line clamped title to fit within maxLines
+function shrinkMultilineToFit(el, maxLines = 2, minFontPx = 11) {
+  if (!el) return;
+  // If element has no width yet, skip
+  const width = el.clientWidth;
+  if (!width) return;
+
+  const cs = getComputedStyle(el);
+  let fontSize = getNumericPx(cs.fontSize, 16);
+  const lh = cs.lineHeight === 'normal' ? fontSize * 1.3 : getNumericPx(cs.lineHeight, fontSize * 1.3);
+  const allowedHeight = lh * maxLines;
+
+  // Clone for natural height measurement without clamping
+  const clone = el.cloneNode(true);
+  clone.style.position = 'absolute';
+  clone.style.visibility = 'hidden';
+  clone.style.pointerEvents = 'none';
+  clone.style.zIndex = '-1';
+  clone.style.width = width + 'px';
+  clone.style.overflow = 'visible';
+  clone.style.whiteSpace = 'normal';
+  clone.style.display = 'block';
+  clone.style.webkitLineClamp = 'unset';
+  clone.style.lineClamp = 'unset';
+  clone.style.webkitBoxOrient = 'initial';
+  clone.style.textOverflow = 'clip';
+  clone.style.paddingRight = cs.paddingRight; // respect padding so measurement matches
+  clone.style.fontSize = fontSize + 'px';
+  document.body.appendChild(clone);
+
+  let guard = 0;
+  while (clone.scrollHeight > allowedHeight && fontSize > minFontPx && guard++ < 20) {
+    fontSize -= 1;
+    clone.style.fontSize = fontSize + 'px';
+  }
+
+  // Apply result to original
+  if (fontSize < getNumericPx(cs.fontSize, fontSize)) {
+    el.style.fontSize = fontSize + 'px';
+  }
+
+  clone.remove();
+}
+
+// Shrink a single-line title (e.g., tab title) to avoid ellipsis
+function shrinkSingleLineToFit(el, minFontPx = 10) {
+  if (!el) return;
+  const width = el.clientWidth;
+  if (!width) return;
+  const cs = getComputedStyle(el);
+  let fontSize = getNumericPx(cs.fontSize, 12);
+  let guard = 0;
+  // Reduce until scrollWidth fits clientWidth or min size reached
+  while (el.scrollWidth > el.clientWidth && fontSize > minFontPx && guard++ < 20) {
+    fontSize -= 1;
+    el.style.fontSize = fontSize + 'px';
+  }
+}
+
+function autoshrinkAllTitles() {
+  // Defer to ensure layout is complete
+  requestAnimationFrame(() => {
+    try {
+      // Main and favorites grids
+      document.querySelectorAll('.game-card-title').forEach(el => shrinkMultilineToFit(el, 2, 11));
+      // Selection cards
+      document.querySelectorAll('.game-selection-card h3').forEach(el => shrinkMultilineToFit(el, 2, 11));
+      // Tab titles (single line)
+      document.querySelectorAll('.game-tab .tab-title').forEach(el => shrinkSingleLineToFit(el, 10));
+    } catch (e) { /* ignore */ }
+  });
+}
+
 function renderCategoryFilters() {
   const container = document.getElementById('category-dropdown');
   if (!container) return;
@@ -248,6 +329,9 @@ function renderFavorites() {
 
     favGrid.appendChild(card);
   });
+
+  // After render, shrink any overflowing favorite titles
+  try { autoshrinkAllTitles(); } catch (e) {}
 }
 
 // load favorites initially
@@ -434,6 +518,8 @@ function loadGames() {
       renderFavorites();
       // Re-apply any active search filter now that cards are present
       try { if (window.__applyGameSearch) window.__applyGameSearch(); } catch (e) {}
+      // Adjust title sizes to fit
+      try { autoshrinkAllTitles(); } catch (e) {}
     }
   };
 
@@ -1033,6 +1119,9 @@ toggleFullscreen() {
         this.switchToTab(tabId);
         this.hideEmptyState();
 
+  // Shrink tab title if needed
+  try { shrinkSingleLineToFit(tabElement.querySelector('.tab-title'), 10); } catch (e) {}
+
         // Setup iframe loading
         console.log('[GameTabManager] createTab:', { tabId, gameName, gameUrl });
         // Attach onload before assigning src where possible
@@ -1241,6 +1330,9 @@ toggleFullscreen() {
           card.style.position = 'relative';
           card.appendChild(favBtn);
         });
+
+        // After render, shrink overflowing titles in selection grid
+        try { autoshrinkAllTitles(); } catch (e) {}
       }
 
       filterGameSelection(searchQuery) {
@@ -1276,6 +1368,7 @@ toggleFullscreen() {
         const tabTitle = tab.element.querySelector('.tab-title');
         if (tabTitle) {
           tabTitle.textContent = gameName;
+          try { shrinkSingleLineToFit(tabTitle, 10); } catch (e) {}
         }
 
   // Do not modify the URL hash
@@ -1800,7 +1893,22 @@ toggleFullscreen() {
     function checkUrlHash() {
       const hash = window.location.hash;
       if (hash && hash.length > 1) {
-        const gameNameFromHash = decodeURIComponent(hash.substring(1)).replace(/_/g, ' '); // Remove # and replace _ with spaces
+        const hashValueRaw = decodeURIComponent(hash.substring(1));
+        const gameNameFromHash = hashValueRaw.replace(/_/g, ' '); // Remove # and replace _ with spaces
+        const hv = normalizeText(hashValueRaw);
+
+        // Special hashes to open the browser modal with a new tab
+        if (hv === 'browser' || hv === 'openbrowser' || hv === 'open-browser' || hv === 'newtab' || hv === 'new-tab') {
+          try {
+            if (!gameTabManager.modal?.classList.contains('active')) {
+              gameTabManager.modal?.classList.add('active');
+              document.body.style.overflow = 'hidden';
+              if (window.topbarControl) { window.topbarControl.disableTopbar(); }
+            }
+            gameTabManager.createNewTab();
+          } catch (e) { console.error('Could not open browser modal from hash:', e); }
+          return; // handled
+        }
         
         // Wait for games data to load
         const checkGamesData = setInterval(() => {
@@ -1855,6 +1963,20 @@ toggleFullscreen() {
       currentGameUrl = gameUrl;
       gameTabManager.openModal(gameUrl, gameName);
     }
+
+    // Expose a helper for sidebar to open the browser modal directly when on games.html
+    try {
+      window.__openBrowserModal = function() {
+        try {
+          if (!gameTabManager.modal?.classList.contains('active')) {
+            gameTabManager.modal?.classList.add('active');
+            document.body.style.overflow = 'hidden';
+            if (window.topbarControl) { window.topbarControl.disableTopbar(); }
+          }
+          gameTabManager.createNewTab();
+        } catch (e) { console.error('__openBrowserModal failed', e); }
+      };
+    } catch (e) { /* ignore */ }
 
     // Enhanced closeGameModal function (keeping your original structure) 
     function closeGameModal() {
@@ -1967,4 +2089,13 @@ toggleFullscreen() {
         }
       });
     });
+
+    // Re-apply autoshrink on resize (debounced)
+    (function(){
+      let rsTimer = null;
+      window.addEventListener('resize', () => {
+        if (rsTimer) clearTimeout(rsTimer);
+        rsTimer = setTimeout(() => { try { autoshrinkAllTitles(); } catch (e) {} }, 120);
+      });
+    })();
 
